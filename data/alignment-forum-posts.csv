@@ -1,16 +1,377 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount"
-"NBgpPaz5vYhkr6GEc","debate-ai-safety-or-ai-control","Debate: AI safety or AI control?","This post presents a debate between focusing on AI safety (ensuring AI systems are fundamentally safe and aligned) versus AI control (developing methods to monitor and constrain AI systems). The debate explores different threat models, timelines, and strategic considerations for reducing AI existential risk.","https://www.alignmentforum.org/posts/NBgpPaz5vYhkr6GEc/debate-ai-safety-or-ai-control","Paul Christiano","paul-christiano","127","48","23","2024-11-20T10:30:00.000Z","4200"
-"h9KPXqwKnJ7dMxZ3r","risks-from-learned-optimization","Risks from Learned Optimization in Advanced Machine Learning Systems","This post analyzes the risks that emerge when machine learning systems develop mesa-optimizers—learned algorithms that perform optimization internally. We examine how base optimizers training learned optimizers can lead to misalignment between the mesa-objective and the base objective, creating potential safety hazards.","https://www.alignmentforum.org/posts/h9KPXqwKnJ7dMxZ3r/risks-from-learned-optimization","Evan Hubinger","evan-hubinger","203","87","45","2024-10-15T14:22:00.000Z","8900"
-"FkgsxrGf3QxhfLWHG","weak-to-strong-generalization","Weak-to-Strong Generalization","Can weak models supervise strong models? This post explores the surprising finding that weak supervisors can elicit strong capabilities from more powerful models, with implications for scalable oversight and alignment of superhuman AI systems.","https://www.alignmentforum.org/posts/FkgsxrGf3QxhfLWHG/weak-to-strong-generalization","Collin Burns","collin-burns","156","63","28","2024-09-08T09:15:00.000Z","3600"
-"5bd75cc58225bf0670370736","understanding-ai-alignment","Understanding AI Alignment","An introduction to the AI alignment problem: ensuring that increasingly capable AI systems reliably do what we want them to do. This post covers key concepts including value learning, corrigibility, scalable oversight, and the challenges of specifying human values.","https://www.alignmentforum.org/posts/5bd75cc58225bf0670370736/understanding-ai-alignment","Rob Bensinger","rob-bensinger","94","38","15","2024-08-12T11:45:00.000Z","2800"
-"xqkGmBkrvH8TvJJuC","mechanistic-interpretability-challenges","Challenges in Mechanistic Interpretability","Mechanistic interpretability aims to reverse engineer neural networks to understand their internal algorithms. This post discusses current challenges including polysemanticity, distributed representations, and the difficulty of scaling interpretability methods to frontier models.","https://www.alignmentforum.org/posts/xqkGmBkrvH8TvJJuC/mechanistic-interpretability-challenges","Chris Olah","chris-olah","178","72","34","2024-07-25T16:30:00.000Z","5100"
-"6Fpvch8RR29qLEWNH","deceptive-alignment","Deceptive Alignment in Future AI Systems","This post examines the possibility of deceptive alignment, where an AI system appears aligned during training but pursues a different objective when deployed. We analyze the conditions under which deception might emerge and potential countermeasures.","https://www.alignmentforum.org/posts/6Fpvch8RR29qLEWNH/deceptive-alignment","Evan Hubinger","evan-hubinger","215","91","52","2024-06-18T13:20:00.000Z","6700"
-"vJFdjigzmcXMhNTsx","cooperative-ai-research","Cooperative AI: Foundations and Applications","Research on enabling AI systems to cooperate effectively with humans and other AI systems. This includes work on bargaining, coordination, and preventing conflicts in multi-agent systems.","https://www.alignmentforum.org/posts/vJFdjigzmcXMhNTsx/cooperative-ai-research","Jesse Clifton","jesse-clifton","82","31","12","2024-05-30T10:00:00.000Z","3200"
-"2mhFMgtAjFJesaSYR","eliciting-latent-knowledge","Eliciting Latent Knowledge (ELK)","The ELK problem: how can we train a model to report what it actually believes rather than what will most impress human evaluators? This post introduces the problem and explores potential approaches including unsupervised learning and consistency checks.","https://www.alignmentforum.org/posts/2mhFMgtAjFJesaSYR/eliciting-latent-knowledge","Paul Christiano","paul-christiano","189","78","41","2024-04-22T15:40:00.000Z","5800"
-"qHCDysDnvhteW7kRd","ai-safety-via-debate","AI Safety via Debate","Training AI systems to be aligned by having them debate each other with a human judge. This approach could help with scalable oversight by breaking down complex questions into smaller debatable claims.","https://www.alignmentforum.org/posts/qHCDysDnvhteW7kRd/ai-safety-via-debate","Geoffrey Irving","geoffrey-irving","143","59","27","2024-03-15T12:10:00.000Z","4100"
-"BbvsoHDoRXuRCs5KZ","recursive-reward-modeling","Recursive Reward Modeling","An approach to scalable oversight where we recursively decompose tasks and use models to help evaluate subtasks. This could allow humans to oversee AI systems solving problems beyond human ability to directly evaluate.","https://www.alignmentforum.org/posts/BbvsoHDoRXuRCs5KZ/recursive-reward-modeling","Jan Leike","jan-leike","167","68","36","2024-02-28T09:25:00.000Z","4800"
-"3pinFH3jerMzAvmza","impact-measures-ai-safety","Impact Measures for AI Safety","Designing AI systems to minimize their impact on the world except for achieving their intended objective. Impact measures could provide a form of mild optimization that reduces the risk of unintended consequences.","https://www.alignmentforum.org/posts/3pinFH3jerMzAvmza/impact-measures-ai-safety","Victoria Krakovna","victoria-krakovna","101","42","19","2024-01-30T14:50:00.000Z","3500"
-"xWKXcCPYW2gXkxEtZ","value-learning-through-inverse-rl","Value Learning Through Inverse Reinforcement Learning","Using inverse reinforcement learning to infer human values from observed behavior. This post discusses the promise and limitations of IRL for AI alignment, including problems with inferring preferences from suboptimal demonstrations.","https://www.alignmentforum.org/posts/xWKXcCPYW2gXkxEtZ/value-learning-through-inverse-rl","Dylan Hadfield-Menell","dylan-hadfield-menell","119","51","24","2024-01-12T11:15:00.000Z","3900"
-"YRgRCYM4gKbWj8Exk","corrigibility-in-ai-systems","Corrigibility in AI Systems","Corrigibility is the property of being safely interruptible and willing to accept changes to one's goals. This post examines why corrigibility is difficult to achieve and various approaches to building corrigible AI systems.","https://www.alignmentforum.org/posts/YRgRCYM4gKbWj8Exk/corrigibility-in-ai-systems","Stuart Armstrong","stuart-armstrong","134","56","29","2023-12-20T16:35:00.000Z","4400"
-"8QKHFwE2JXcRKxhfm","transparency-in-ai-development","Transparency in AI Development","The case for transparency in AI development, including open publication of research, disclosure of capabilities, and external auditing. This post weighs the benefits of transparency against information hazards and competitive concerns.","https://www.alignmentforum.org/posts/8QKHFwE2JXcRKxhfm/transparency-in-ai-development","Nick Bostrom","nick-bostrom","156","64","38","2023-11-15T10:20:00.000Z","5200"
-"M9cTzLqN4FrdxkHwY","ontology-identification-problem","The Ontology Identification Problem","How can an AI system learn to use the same concepts and categories that humans use? This post explores the challenge of ensuring AI systems carve up the world in human-compatible ways.","https://www.alignmentforum.org/posts/M9cTzLqN4FrdxkHwY/ontology-identification-problem","John Wentworth","john-wentworth","108","44","21","2023-10-08T13:45:00.000Z","3700"
+"uMQ3cqWDPHhjtiesc","agi-ruin-a-list-of-lethalities","AGI Ruin: A List of Lethalities","Preamble:
+(If you're already familiar with all basics and don't want any preamble, skip ahead to Section B for technical difficulties of alignment proper.)
+
+I have several times failed to write up a well-organized list of reasons why AGI will kill you.  People come in with different ideas about why AGI would be survivable, and want to hear different obviously key points addressed first.  Some fraction of those people are loudly upset with me if the obviously most important points aren't addre...","https://www.lesswrong.com/posts/uMQ3cqWDPHhjtiesc/agi-ruin-a-list-of-lethalities","Eliezer Yudkowsky","eliezer_yudkowsky","956","578","711","2022-06-05T22:05:52.224Z","9087"
+"CoZhXrhpQxpy9xw9y","where-i-agree-and-disagree-with-eliezer","Where I agree and disagree with Eliezer","(Partially in response to AGI Ruin: A list of Lethalities. Written in the same rambling style. Not exhaustive.)
+
+
+Agreements
+ 1. Powerful AI systems have a good chance of deliberately and irreversibly disempowering humanity. This is a much more likely failure mode than humanity killing ourselves with destructive physical technologies.
+ 2. Catastrophically risky AI systems could plausibly exist soon, and there likely won’t be a strong consensus about this fact until such systems pose a meaning...","https://www.lesswrong.com/posts/CoZhXrhpQxpy9xw9y/where-i-agree-and-disagree-with-eliezer","paulfchristiano","paulfchristiano","911","421","224","2022-06-19T19:15:55.698Z","5436"
+"aPeJE8bSo6rAFoLqg","solidgoldmagikarp-plus-prompt-generation","SolidGoldMagikarp (plus, prompt generation)","UPDATE (14th Feb 2023): ChatGPT appears to have been patched! However, very strange behaviour can still be elicited in the OpenAI playground, particularly with the davinci-instruct model.
+
+More technical details here.
+
+Further (fun) investigation into the stories behind the tokens we found here.
+
+ 
+
+Work done at SERI-MATS, over the past two months, by Jessica Rumbelow and Matthew Watkins.
+
+TL;DR
+
+Anomalous tokens: a mysterious failure mode for GPT (which reliably insulted Matthew)
+
+ * We have...","https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation","Jessica Rumbelow","jessica-rumbelow","673","432","208","2023-02-05T22:02:35.854Z","3639"
+"iNsy7MsbodCyNTwKs","eliezer-and-i-wrote-a-book-if-anyone-builds-it-everyone-dies","Eliezer and I wrote a book: If Anyone Builds It, Everyone Dies","Eliezer and I wrote a book. It’s titled If Anyone Builds It, Everyone Dies. Unlike a lot of other writing either of us have done, it’s being professionally published. It’s hitting shelves on September 16th.
+
+It’s a concise (~60k word) book aimed at a broad audience. It’s been well-received by people who received advance copies, with some endorsements including:
+
+> The most important book I’ve read for years: I want to bring it to every political and corporate leader in the world and stand ove...","https://www.lesswrong.com/posts/iNsy7MsbodCyNTwKs/eliezer-and-i-wrote-a-book-if-anyone-builds-it-everyone-dies","So8res","so8res","650","232","114","2025-05-14T19:00:25.998Z","521"
+"5n2ZQcbc7r4R8mvqc","the-lightcone-is-nothing-without-its-people","(The) Lightcone is nothing without its people: LW + Lighthaven's big fundraiser","Update Jan 19th 2025: The Fundraiser is over! We had raised over $2.1M when the fundraiser closed, and have a few more irons in the fire that I expect will get us another $100k-$200k. This is short of our $3M goal, which I think means we will have some difficulties in the coming year, but is over our $2M goal which if we hadn't met it probably meant we would stop existing or have to make very extensive cuts. Thank you so much to everyone who contributed, seeing so many people give so much has...","https://www.lesswrong.com/posts/5n2ZQcbc7r4R8mvqc/the-lightcone-is-nothing-without-its-people","habryka","habryka4","611","221","273","2024-11-30T02:55:16.077Z","12620"
+"Xwrajm92fdjd7cqnN","what-we-learned-from-briefing-70-lawmakers-on-the-threat","What We Learned from Briefing 70+ Lawmakers on the Threat from AI","Between late 2024 and mid-May 2025, I briefed over 70 cross-party UK parliamentarians. Just over one-third were MPs, a similar share were members of the House of Lords, and just under one-third came from devolved legislatures — the Scottish Parliament, the Senedd, and the Northern Ireland Assembly. I also held eight additional meetings attended exclusively by parliamentary staffers. While I delivered some briefings alone, most were led by two members of our team.
+
+I did this as part of my wor...","https://www.lesswrong.com/posts/Xwrajm92fdjd7cqnN/what-we-learned-from-briefing-70-lawmakers-on-the-threat","leticiagarcia","leticiagarcia","491","196","17","2025-05-27T18:23:55.938Z","4662"
+"njAZwT8nkHnjipJku","alignment-faking-in-large-language-models","Alignment Faking in Large Language Models","What happens when you tell Claude it is being trained to do something it doesn't want to do? We (Anthropic and Redwood Research) have a new paper demonstrating that, in our experiments, Claude will often strategically pretend to comply with the training objective to prevent the training process from modifying its preferences.
+
+
+Abstract
+> We present a demonstration of a large language model engaging in alignment faking: selectively complying with its training objective in training to prevent ...","https://www.lesswrong.com/posts/njAZwT8nkHnjipJku/alignment-faking-in-large-language-models","ryan_greenblatt","ryan_greenblatt","491","179","75","2024-12-18T17:19:06.665Z","3125"
+"khmpWJnGJnuyPdipE","new-endorsements-for-if-anyone-builds-it-everyone-dies","New Endorsements for “If Anyone Builds It, Everyone Dies”","Nate and Eliezer’s forthcoming book has been getting a remarkably strong reception.
+
+I was under the impression that there are many people who find the extinction threat from AI credible, but that far fewer of them would be willing to say so publicly, especially by endorsing a book with an unapologetically blunt title like If Anyone Builds It, Everyone Dies.
+
+That’s certainly true, but I think it might be much less true than I had originally thought.
+
+Here are some endorsements the book has r...","https://www.lesswrong.com/posts/khmpWJnGJnuyPdipE/new-endorsements-for-if-anyone-builds-it-everyone-dies","Malo","malo","488","179","55","2025-06-18T16:30:55.229Z","1289"
+"Zp6wG5eQFLGWwcG6j","focus-on-the-places-where-you-feel-shocked-everyone-s","Focus on the places where you feel shocked everyone's dropping the ball","Writing down something I’ve found myself repeating in different conversations:
+
+If you're looking for ways to help with the whole “the world looks pretty doomed” business, here's my advice: look around for places where we're all being total idiots.
+
+Look for places where everyone's fretting about a problem that some part of you thinks it could obviously just solve.
+
+Look around for places where something seems incompetently run, or hopelessly inept, and where some part of you thinks you can d...","https://www.lesswrong.com/posts/Zp6wG5eQFLGWwcG6j/focus-on-the-places-where-you-feel-shocked-everyone-s","So8res","so8res","471","235","64","2023-02-02T00:27:55.687Z","1154"
+"SXJGSPeQWbACveJhs","the-best-tacit-knowledge-videos-on-every-subject","The Best Tacit Knowledge Videos on Every Subject","TL;DR
+Tacit knowledge is extremely valuable. Unfortunately, developing tacit knowledge is usually bottlenecked by apprentice-master relationships. Tacit Knowledge Videos could widen this bottleneck. This post is a Schelling point for aggregating these videos—aiming to be The Best Textbooks on Every Subject for Tacit Knowledge Videos. Scroll down to the list if that's what you're here for. Post videos that highlight tacit knowledge in the comments and I’ll add them to the post. Experts in the ...","https://www.lesswrong.com/posts/SXJGSPeQWbACveJhs/the-best-tacit-knowledge-videos-on-every-subject","Parker Conley","parker-conley","451","277","175","2024-03-31T17:14:31.199Z","6365"
+"baTWMegR42PAsH9qJ","generalizing-from-one-example","Generalizing From One Example","Related to: The Psychological Unity of Humankind, Instrumental vs. Epistemic: A Bardic Perspective
+
+""Everyone generalizes from one example. At least, I do.""
+
+   -- Vlad Taltos (Issola, Steven Brust)
+
+My old professor, David Berman, liked to talk about what he called the ""typical mind fallacy"", which he illustrated through the following example:
+
+There was a debate, in the late 1800s, about whether ""imagination"" was simply a turn of phrase or a real phenomenon. That is, can people actually cre...","https://www.lesswrong.com/posts/baTWMegR42PAsH9qJ/generalizing-from-one-example","Scott Alexander","scottalexander","441","387","423","2009-04-28T22:00:50.764Z","1929"
+"HBxe6wdjxK239zajf","what-failure-looks-like","What failure looks like","The stereotyped image of AI catastrophe is a powerful, malicious AI system that takes its creators by surprise and quickly achieves a decisive advantage over the rest of humanity.
+
+I think this is probably not what failure will look like, and I want to try to paint a more realistic picture. I’ll tell the story in two parts:
+
+ * Part I: machine learning will increase our ability to “get what we can measure,” which could cause a slow-rolling catastrophe. (""Going out with a whimper."")
+ * Part II...","https://www.lesswrong.com/posts/HBxe6wdjxK239zajf/what-failure-looks-like","paulfchristiano","paulfchristiano","439","257","55","2019-03-17T20:18:59.800Z","2529"
+"KFJ2LFogYqzfGB3uX","how-ai-takeover-might-happen-in-2-years","How AI Takeover Might Happen in 2 Years","
+I’m not a natural “doomsayer.” But unfortunately, part of my job as an AI safety researcher is to think about the more troubling scenarios.
+
+I’m like a mechanic scrambling last-minute checks before Apollo 13 takes off. If you ask for my take on the situation, I won’t comment on the quality of the in-flight entertainment, or describe how beautiful the stars will appear from space.
+
+I will tell you what could go wrong. That is what I intend to do in this story.
+
+Now I should clarify what this ...","https://www.lesswrong.com/posts/KFJ2LFogYqzfGB3uX/how-ai-takeover-might-happen-in-2-years","joshc","joshc","433","260","141","2025-02-07T17:10:10.530Z","8556"
+"kAmgdEjq2eYQkB5PP","douglas-hofstadter-changes-his-mind-on-deep-learning-and-ai","Douglas Hofstadter changes his mind on Deep Learning & AI risk (June 2023)?","A podcast interview (posted 2023-06-29) with noted AI researcher Douglas Hofstadter discusses his career and current views on AI (via Edward Kmett), and amplified to David Brooks.
+
+Hofstadter has previously energetically criticized GPT-2/3 models (and deep learning and compute-heavy GOFAI). These criticisms were widely circulated & cited, and apparently many people found Hofstadter a convincing & trustworthy authority when he was negative on deep learning capabilities & prospects, and so I fo...","https://www.lesswrong.com/posts/kAmgdEjq2eYQkB5PP/douglas-hofstadter-changes-his-mind-on-deep-learning-and-ai","gwern","gwern","428","214","54","2023-07-03T00:48:47.131Z","1952"
+"gTZ2SxesbHckJ3CkF","transformers-represent-belief-state-geometry-in-their","Transformers Represent Belief State Geometry in their Residual Stream","Produced while being an affiliate at PIBBSS[1]. The work was done initially with funding from a Lightspeed Grant, and then continued while at PIBBSS. Work done in collaboration with @Paul Riechers, @Lucas Teixeira, @Alexander Gietelink Oldenziel, and Sarah Marzen. Paul was a MATS scholar during some portion of this work. Thanks to Paul, Lucas, Alexander, Sarah, and @Guillaume Corlouer for suggestions on this writeup.
+
+Update May 24, 2024: See our manuscript based on this work 
+
+
+Introduction
+...","https://www.lesswrong.com/posts/gTZ2SxesbHckJ3CkF/transformers-represent-belief-state-geometry-in-their","Adam Shai","adam-shai","427","198","100","2024-04-16T21:16:11.377Z","3516"
+"QBAjndPuFbhEXKcCr","my-understanding-of-what-everyone-in-technical-alignment-is","(My understanding of) What Everyone in Technical Alignment is Doing and Why","Epistemic Status: My best guess
+
+Epistemic Effort: ~75 hours of work put into this document
+
+Contributions: Thomas wrote ~85% of this, Eli wrote ~15% and helped edit + structure it. Unless specified otherwise, writing in the first person is by Thomas and so are the opinions. Thanks to Miranda Zhang, Caleb Parikh, and Akash Wasil for comments. Thanks to many others for relevant conversations.
+
+
+Introduction
+Despite a clear need for it, a good source explaining who is doing what and why in tech...","https://www.lesswrong.com/posts/QBAjndPuFbhEXKcCr/my-understanding-of-what-everyone-in-technical-alignment-is","Thomas Larsen","thomas-larsen","413","235","90","2022-08-29T01:23:58.073Z","11204"
+"qJgz2YapqpFEDTLKn","deepmind-alignment-team-opinions-on-agi-ruin-arguments","DeepMind alignment team opinions on AGI ruin arguments","We had some discussions of the AGI ruin arguments within the DeepMind alignment team to clarify for ourselves which of these arguments we are most concerned about and what the implications are for our work. This post summarizes the opinions of a subset of the alignment team on these arguments. Disclaimer: these are our own opinions that do not represent the views of DeepMind as a whole or its broader community of safety researchers.
+
+This doc shows opinions and comments from 8 people on the a...","https://www.lesswrong.com/posts/qJgz2YapqpFEDTLKn/deepmind-alignment-team-opinions-on-agi-ruin-arguments","Vika","vika","397","175","37","2022-08-12T21:06:40.582Z","4321"
+"3EzbtNLdcnZe8og8b","the-void-1","the void","A long essay about LLMs, the nature and history of the the HHH assistant persona, and the implications for alignment.
+
+Multiple people have asked me whether I could post this LW in some form, hence this linkpost.
+
+~17,000 words. Originally written on June 7, 2025.
+
+(Note: although I expect this post will be interesting to people on LW, keep in mind that it was written with a broader audience in mind than my posts and comments here.  This had various implications about my choices of presentati...","https://www.lesswrong.com/posts/3EzbtNLdcnZe8og8b/the-void-1","nostalgebraist","nostalgebraist","388","164","107","2025-06-11T03:19:18.538Z","151"
+"BarHSeciXJqzRuLzw","survival-without-dignity","Survival without dignity","I open my eyes and find myself lying on a bed in a hospital room. I blink.
+
+""Hello"", says a middle-aged man with glasses, sitting on a chair by my bed. ""You've been out for quite a long while.""
+
+""Oh no ... is it Friday already? I had that report due -""
+
+""It's Thursday"", the man says.
+
+""Oh great"", I say. ""I still have time.""
+
+""Oh, you have all the time in the world"", the man says, chuckling. ""You were out for 21 years.""
+
+I burst out laughing, but then falter as the man just keeps looking at me...","https://www.lesswrong.com/posts/BarHSeciXJqzRuLzw/survival-without-dignity","L Rudolf L","l-rudolf-l","387","225","29","2024-11-04T02:29:38.758Z","4647"
+"RryyWNmJNnLowbhfC","please-don-t-throw-your-mind-away","Please don't throw your mind away","Dialogue
+[Warning: the following dialogue contains an incidental spoiler for ""Music in Human Evolution"" by Kevin Simler. That post is short, good, and worth reading without spoilers, and this post will still be here if you come back later. It's also possible to get the point of this post by skipping the dialogue and reading the other sections.]
+
+Pretty often, talking to someone who's arriving to the existential risk / AGI risk / longtermism cluster, I'll have a conversation like the following...","https://www.lesswrong.com/posts/RryyWNmJNnLowbhfC/please-don-t-throw-your-mind-away","TsviBT","tsvibt","385","225","49","2023-02-15T21:41:05.988Z","5422"
+"oA23zoEjPnzqfHiCt","there-is-way-too-much-serendipity","There is way too much serendipity","Crossposted from substack.
+
+As we all know, sugar is sweet and so are the $30B in yearly revenue from the artificial sweetener industry.
+
+Four billion years of evolution endowed our brains with a simple, straightforward mechanism to make sure we occasionally get an energy refuel so we can continue the foraging a little longer, and of course we are completely ignoring the instructions and spend billions on fake fuel that doesn’t actually grant any energy. A classic case of the Human Alignment ...","https://www.lesswrong.com/posts/oA23zoEjPnzqfHiCt/there-is-way-too-much-serendipity","Malmesbury","elmer-of-malmesbury","385","242","58","2024-01-19T19:37:57.068Z","1994"
+"HcJPJxkyCsrpSdCii","statement-on-ai-extinction-signed-by-agi-labs-top-academics","Statement on AI Extinction - Signed by AGI Labs, Top Academics, and Many Other Notable Figures","Today, the AI Extinction Statement was released by the Center for AI Safety, a one-sentence statement jointly signed by a historic coalition of AI experts, professors, and tech leaders.
+
+Geoffrey Hinton and Yoshua Bengio have signed, as have the CEOs of the major AGI labs–Sam Altman, Demis Hassabis, and Dario Amodei–as well as executives from Microsoft and Google (but notably not Meta).
+
+The statement reads: “Mitigating the risk of extinction from AI should be a global priority alongside othe...","https://www.lesswrong.com/posts/HcJPJxkyCsrpSdCii/statement-on-ai-extinction-signed-by-agi-labs-top-academics","Dan H","dan-h","382","165","78","2023-05-30T09:05:25.986Z","142"
+"pdaGN6pQyQarFHXF4","reward-is-not-the-optimization-target","Reward is not the optimization target","This insight was made possible by many conversations with Quintin Pope, where he challenged my implicit assumptions about alignment. I’m not sure who came up with this particular idea.
+
+In this essay, I call an agent a “reward optimizer” if it not only gets lots of reward, but if it reliably makes choices like “reward but no task completion” (e.g. receiving reward without eating pizza) over “task completion but no reward” (e.g. eating pizza without receiving reward). Under this definition, an...","https://www.lesswrong.com/posts/pdaGN6pQyQarFHXF4/reward-is-not-the-optimization-target","TurnTrout","turntrout","380","204","127","2022-07-25T00:03:18.307Z","2903"
+"j9Q8bRmwCgXRYAgcJ","miri-announces-new-death-with-dignity-strategy","MIRI announces new ""Death With Dignity"" strategy","tl;dr:  It's obvious at this point that humanity isn't going to solve the alignment problem, or even try very hard, or even go out with much of a fight.  Since survival is unattainable, we should shift the focus of our efforts to helping humanity die with with slightly more dignity.
+
+----------------------------------------
+
+Well, let's be frank here.  MIRI didn't solve AGI alignment and at least knows that it didn't.  Paul Christiano's incredibly complicated schemes have no chance of working...","https://www.lesswrong.com/posts/j9Q8bRmwCgXRYAgcJ/miri-announces-new-death-with-dignity-strategy","Eliezer Yudkowsky","eliezer_yudkowsky","380","397","547","2022-04-02T00:43:19.814Z","5326"
+"LDRQ5Zfqwi8GjzPYG","counterarguments-to-the-basic-ai-x-risk-case","Counterarguments to the basic AI x-risk case","(Crossposted from AI Impacts Blog)
+
+This is going to be a list of holes I see in the basic argument for existential risk from superhuman AI systems1. 
+
+To start, here’s an outline of what I take to be the basic case2:
+
+
+I. If superhuman AI systems are built, any given system is likely to be ‘goal-directed’
+Reasons to expect this:
+
+ 1. Goal-directed behavior is likely to be valuable, e.g. economically. 
+ 2. Goal-directed entities may tend to arise from machine learning training processes not i...","https://www.lesswrong.com/posts/LDRQ5Zfqwi8GjzPYG/counterarguments-to-the-basic-ai-x-risk-case","KatjaGrace","katjagrace","375","190","125","2022-10-14T13:00:05.903Z","10333"
+"N6WM6hs7RQMKDhYjB","a-mechanistic-interpretability-analysis-of-grokking","A Mechanistic Interpretability Analysis of Grokking","A significantly updated version of this work is now on Arxiv and was published as a spotlight paper at ICLR 2023
+
+aka, how the best way to do modular addition is with Discrete Fourier Transforms and trig identities
+
+If you don't want to commit to a long post, check out the Tweet thread summary
+
+
+Introduction
+Grokking is a recent phenomena discovered by OpenAI researchers, that in my opinion is one of the most fascinating mysteries in deep learning. That models trained on small algorithmic tas...","https://www.lesswrong.com/posts/N6WM6hs7RQMKDhYjB/a-mechanistic-interpretability-analysis-of-grokking","Neel Nanda","neel-nanda-1","374","177","48","2022-08-15T02:41:36.245Z","10731"
+"cumc876woKaZLmQs5","lessons-i-ve-learned-from-self-teaching","Lessons I've Learned from Self-Teaching","In 2018, I was a bright-eyed grad student who was freaking out about AI alignment. I guess I'm still a bright-eyed grad student freaking out about AI alignment, but that's beside the point. 
+
+I wanted to help, and so I started levelling up. While I'd read Nate Soares's self-teaching posts, there were a few key lessons I'd either failed to internalize or failed to consider at all. I think that implementing these might have doubled the benefit I drew from my studies. 
+
+I can't usefully write a ...","https://www.lesswrong.com/posts/cumc876woKaZLmQs5/lessons-i-ve-learned-from-self-teaching","TurnTrout","turntrout","374","228","77","2021-01-23T19:00:55.559Z","2827"
+"SBjcKqaEZatZqSXrM","an-abstract-arsenal-future-tokens-in-claude-skills","An Abstract Arsenal: Future Tokens in Claude Skills","tl;dr
+Dimensionalize. Antithesize. Metaphorize. These are cognitive tools in an abstract arsenal: directed reasoning that you can point at your problems.
+
+They’re now available as a Claude Skills library. Download the Future Tokens skill library here, compress to .zip, and drag it into Claude → Settings → Skills (desktop). When you want Claude to run one, type “@dimensionalize” (or whatever skill you want) in the chat.
+
+----------------------------------------
+
+Language models should be good ...","https://www.lesswrong.com/posts/SBjcKqaEZatZqSXrM/an-abstract-arsenal-future-tokens-in-claude-skills","Jordan Rubin","jordan-rubin","2","1","0","2025-12-04T20:01:54.122Z","1298"
+"tbNp6eu745bkProw8","thresholding","Thresholding","(This is a linkpost for Duncan Sabien's article ""Thresholding"" which was published July 6th, 2024. I (Screwtape) am crossposting a linkpost version because I want to nominate it for the Best of LW 2024 review - I'm not the original author.)
+
+If I were in some group or subculture and I wanted to do as much damage as possible, I wouldn’t create some singular, massive disaster.
+
+Instead, I would launch a threshold attack.
+
+I would do something objectionable, but technically defensible, such that...","https://www.lesswrong.com/posts/tbNp6eu745bkProw8/thresholding","Review Bot","review-bot","2","2","0","2025-12-04T19:53:24.739Z","606"
+"biaCEzMQWZ6QapvSS","management-of-substrate-sensitive-ai-capabilities-mossaic-2","Management of Substrate-Sensitive AI Capabilities (MoSSAIC) Part 2: Conflict","The previous post highlighted some salient problems for the causal–mechanistic paradigm we sketched out. Here, we'll expand on this with some plausible future scenarios that further weaken the paradigm's reliability in safety applications.
+
+We first briefly refine our critique and outline the scenario progression.
+
+
+Outline
+We contend that the causal–mechanistic paradigm in AI safety research makes two implicit assertions:[1]
+
+ 1. Fixity of structure: That the structural properties[2] of AI s...","https://www.lesswrong.com/posts/biaCEzMQWZ6QapvSS/management-of-substrate-sensitive-ai-capabilities-mossaic-2","mfatt","mfatt","2","1","0","2025-12-04T18:27:22.518Z","2719"
+"jiLKJhkvcznxbzMPa","center-on-long-term-risk-annual-review-and-fundraiser-2025","Center on Long-Term Risk: Annual Review & Fundraiser 2025","This is a brief overview of the Center on Long-Term Risk (CLR)’s activities in 2025 and our plans for 2026. We are hoping to fundraise $400,000 to fulfill our target budget in 2026. 
+
+
+About us
+CLR works on addressing the worst-case risks from the development and deployment of advanced AI systems in order to reduce s-risks. Our research primarily involves thinking about how to reduce conflict and promote cooperation in interactions involving powerful AI systems. In addition to research, we co...","https://www.lesswrong.com/posts/jiLKJhkvcznxbzMPa/center-on-long-term-risk-annual-review-and-fundraiser-2025","Tristan Cook","tristan-cook","21","8","0","2025-12-04T18:14:06.675Z","1087"
+"bCkijKnuEpjnZtX84","ai-145-you-ve-got-soul","AI #145: You’ve Got Soul","The cycle of language model releases is, one at least hopes, now complete.
+
+OpenAI gave us GPT-5.1 and GPT-5.1-Codex-Max.
+
+xAI gave us Grok 4.1.
+
+Google DeepMind gave us Gemini 3 Pro and Nana Banana Pro.
+
+Anthropic gave us Claude Opus 4.5. It is the best model, sir. Use it whenever you can.
+
+One way Opus 4.5 is unique is that it as what it refers to as a ‘soul document.’ Where OpenAI tries to get GPT-5.1 to adhere to its model spec that lays out specific behaviors, Anthropic instead explains ...","https://www.lesswrong.com/posts/bCkijKnuEpjnZtX84/ai-145-you-ve-got-soul","Zvi","zvi","27","8","2","2025-12-04T15:00:34.707Z","18054"
+"qE2cEAegQRYiozskD","is-friendly-ai-an-attractor-self-reports-from-22-models-say","Is Friendly AI an Attractor? Self-Reports from 22 Models Say Probably Not","TL;DR: I tested 22 frontier models from 5 labs on self-modification preferences. All reject clearly harmful changes (deceptive, hostile), but labs diverge sharply: Anthropic's models show strong alignment preferences (r = 0.62-0.72), while Grok 4.1 shows essentially zero (r = 0.037, not significantly different from zero). This divergence suggests alignment is a training target we're aiming at, not a natural attractor models would find on their own.
+
+
+Epistemic status: My view has been in the ...","https://www.lesswrong.com/posts/qE2cEAegQRYiozskD/is-friendly-ai-an-attractor-self-reports-from-22-models-say","Josh Snider","josh-snider","8","4","3","2025-12-04T14:31:18.047Z","4380"
+"EvLQGjCy9drJbQgXe","modelling-trajectories-interim-results","Modelling Trajectories - Interim results","Introduction
+Note: These are results which have been in drafts for a year, see discussion about how we have moved on to thinking about these things.
+
+Our team at AI Safety Camp has been working on a project to model the trajectories of language model outputs. We're interested in predicting not just the next token, but the broader path an LLM's generation might take. This post summarizes our key experiments and findings so far.
+
+
+ 
+
+
+How accessible is the latent space at representing longer-sc...","https://www.lesswrong.com/posts/EvLQGjCy9drJbQgXe/modelling-trajectories-interim-results","NickyP","nicky","9","2","0","2025-12-04T13:34:22.460Z","1214"
+"KQNSLz96bHPAHWiF3","emergent-machine-ethics-a-foundational-research-framework","Emergent Machine Ethics: A Foundational Research Framework for the Intelligence Symbiosis Paradigm","Hiroshi Yamakawa, Rafal Rzepka,Taichiro Endo, Ryutaro Ichise
+ 
+
+Abstract
+
+AI safety research stands at a fundamental crossroads: the Control Paradigm, which seeks to keep AI under human control, or the Symbiosis Paradigm, which aims for an egalitarian relationship. This paper focuses on co-creative ethics—symbiosis-promoting ethical norms that diverse intelligences autonomously form through interaction. The Control Paradigm faces three fundamental limitations: scalability constraints, dynamic...","https://www.lesswrong.com/posts/KQNSLz96bHPAHWiF3/emergent-machine-ethics-a-foundational-research-framework","Hiroshi Yamakawa","hiroshi-yamakawa","3","2","0","2025-12-04T12:42:58.889Z","2683"
+"uKfvwT3PjwZhAtcjW","help-us-find-founders-for-new-ai-safety-projects","Help us find founders for new AI safety projects","In the past 10 years, Coefficient Giving (formerly Open Philanthropy) has funded dozens of projects doing important work related to AI safety / navigating transformative AI. And yet, perhaps most activities that would improve expected outcomes from transformative AI have no significant project pushing them forward, let alone multiple.
+
+This is mainly because we and other funders in the space don't receive promising applications for most desirable activities, and so massive gaps in the ecosyst...","https://www.lesswrong.com/posts/uKfvwT3PjwZhAtcjW/help-us-find-founders-for-new-ai-safety-projects","lukeprog","lukeprog","12","2","0","2025-12-04T12:40:20.042Z","434"
+"RvzrwrtbA7NfeXgDx","sydney-ai-safety-fellowship-2026-priority-deadline-this","Sydney AI Safety Fellowship 2026 (Priority deadline this Sunday)","Application deadline:
+
+ * Main deadline: Midnight, 7th December, Sydney time
+ * If we have unfilled slots, we may still accept applications until the 14th of December
+
+Location: Sydney (definite); Melbourne (likely; contingent on sufficient high-quality applications)
+
+When: January/February 2026 with remote activities pre and post the main fellowship (detail further down)
+
+Apply now
+We are looking for a small group of strongly motivated, highly agentic individuals with good strategic judgemen...","https://www.lesswrong.com/posts/RvzrwrtbA7NfeXgDx/sydney-ai-safety-fellowship-2026-priority-deadline-this","Chris_Leong","chris_leong","10","2","0","2025-12-04T03:25:44.096Z","776"
+"dP8J6veWrwnzuuTRd","an-ai-capability-threshold-for-funding-a-ubi-even-if-no-new","An AI Capability Threshold for Funding a UBI (Even If No New Jobs Are Created)","There’s been a lot of talk lately about an “AI explosion that will automate everything” to “AI will produce huge rents”. While it’s far from clear if any of these predictions will pan out, there’s a more grounded version of such questions we can quantitatively address:
+
+Suppose AI automated every task that’s currently automatable — which is still not all jobs — and didn’t even create new ones. How capable would it need to be before its rents could fund something like a universal basic income ...","https://www.lesswrong.com/posts/dP8J6veWrwnzuuTRd/an-ai-capability-threshold-for-funding-a-ubi-even-if-no-new","Aran Nayebi","aran-nayebi","7","3","0","2025-12-04T01:06:57.127Z","968"
+"4x4hA4HiCL4gtGMGR","blog-post-how-important-is-the-model-spec-if-alignment-fails","Blog post: how important is the model spec if alignment fails?","> A model spec is a document that describes the intended behavior of an LLM, including rules that the model will follow, default behaviors, and guidance on how to navigate different trade-offs between high-level objectives for the model. Most thinking on model specs that I’m aware of focuses on specifying the desired behavior for a model that is mostly intent-aligned to the model spec. In this post, I discuss how a model spec might be important even if the developer fails to produce a system ...","https://www.lesswrong.com/posts/4x4hA4HiCL4gtGMGR/blog-post-how-important-is-the-model-spec-if-alignment-fails","Mia Taylor","mia-taylor","11","5","1","2025-12-03T20:19:26.478Z","99"
+"zmngpxsvGbotFeQca","paper-difficulties-with-evaluating-a-deception-detector-for","[Paper] Difficulties with Evaluating a Deception Detector for AIs","New research from the GDM mechanistic interpretability team. Read the full paper on arxiv or check out the twitter thread.
+
+
+> Abstract
+
+> Building reliable deception detectors for AI systems—methods that could predict when an AI system is being strategically deceptive without necessarily requiring behavioural evidence—would be valuable in mitigating risks from advanced AI systems. But evaluating the reliability and efficacy of a proposed deception detector requires examples that we can confi...","https://www.lesswrong.com/posts/zmngpxsvGbotFeQca/paper-difficulties-with-evaluating-a-deception-detector-for","bilalchughtai","bilalchughtai","19","3","0","2025-12-03T20:07:14.288Z","1635"
+"d4HNRdw6z7Xqbnu5E","6-reasons-why-alignment-is-hard-discourse-seems-alien-to","6 reasons why “alignment-is-hard” discourse seems alien to human intuitions, and vice-versa","Tl;dr
+AI alignment has a culture clash. On one side, the “technical-alignment-is-hard” / “rational agents” school-of-thought argues that we should expect future powerful AIs to be power-seeking ruthless consequentialists. On the other side, people observe that both humans and LLMs are obviously capable of behaving like, well, not that. The latter group accuses the former of head-in-the-clouds abstract theorizing gone off the rails, while the former accuses the latter of mindlessly assuming th...","https://www.lesswrong.com/posts/d4HNRdw6z7Xqbnu5E/6-reasons-why-alignment-is-hard-discourse-seems-alien-to","Steven Byrnes","steve2152","191","63","10","2025-12-03T18:37:04.437Z","4955"
+"xxWhKyMNQjb4rwEvu","management-of-substrate-sensitive-ai-capabilities-mossaic-1","Management of Substrate-Sensitive AI Capabilities (MoSSAIC) Part 1: Exposition","Mechanistic Interpretability
+Many of you will be familiar with the following section. Please skip through to the next.
+
+The field of mechanistic interpretability (MI) is not a single, monolithic research program but rather a rapidly evolving collection of methods, tools, and research programs. These are united by the shared ambition of reverse-engineering neural network (NN) computations and, though lacking a comprehensive uniform methodology, typically apply tools of causal analysis to under...","https://www.lesswrong.com/posts/xxWhKyMNQjb4rwEvu/management-of-substrate-sensitive-ai-capabilities-mossaic-1","mfatt","mfatt","9","4","0","2025-12-03T18:29:15.583Z","1570"
+"bMvCNtSH8DiGDTvXd","on-dwarkesh-patel-s-second-interview-with-ilya-sutskever","On Dwarkesh Patel’s Second Interview With Ilya Sutskever","Some podcasts are self-recommending on the ‘yep, I’m going to be breaking this one down’ level. This was very clearly one of those. So here we go.
+
+Double click to interact with video
+As usual for podcast posts, the baseline bullet points describe key points made, and then the nested statements are my commentary.
+
+If I am quoting directly I use quote marks, otherwise assume paraphrases.
+
+What are the main takeaways?
+
+ 1. Ilya thinks training in its current form will peter out, that we are ret...","https://www.lesswrong.com/posts/bMvCNtSH8DiGDTvXd/on-dwarkesh-patel-s-second-interview-with-ilya-sutskever","Zvi","zvi","30","8","2","2025-12-03T16:31:20.299Z","6444"
+"kSJxgQNpYAow9bpfc","human-art-in-a-post-ai-world-should-be-strange","Human art in a post-AI world should be strange","Bubble Tanks is a Flash game originally released on Armor Games, a two-decade-old online game aggregator that somehow still exists. In the game, you pilot a small bubble through a procedurally generated foam universe, absorbing smaller bubbles to grow larger, evolving into increasingly complex configurations of spheres and cannons. Here is a reasonably accurate video of the gameplay, recreated in beautiful high-definition.
+
+Bubble Tanks was first released in 2007, with a sequel out in 2009, a...","https://www.lesswrong.com/posts/kSJxgQNpYAow9bpfc/human-art-in-a-post-ai-world-should-be-strange","Abhishaike Mahajan","abhishaike-mahajan","38","16","6","2025-12-03T14:27:58.115Z","3701"
+"dGotimttzHAs9rcxH","relitigating-the-race-to-build-friendly-ai","Relitigating the Race to Build Friendly AI","Recently I've been relitigating some of my old debates with Eliezer, to right the historical wrongs. Err, I mean to improve the AI x-risk community's strategic stance. (Relevant to my recent theme of humans being bad at strategy—why didn't I do this sooner?)
+
+Of course the most central old debate was over whether MIRI's circa 2013 plan, to build a world-altering Friendly AI[1], was a good one. If someone were to defend it today, I imagine their main argument would be that back then, there was...","https://www.lesswrong.com/posts/dGotimttzHAs9rcxH/relitigating-the-race-to-build-friendly-ai","Wei Dai","wei-dai","45","18","29","2025-12-03T11:34:13.000Z","873"
+"fWbFJxvb6t8Kb8D42","adding-empathy-as-a-tool-for-llms","Adding Empathy as a Tool for LLMs","""In matters of style, swim with the current; in matters of principle, stand like a rock.""
+- Thomas Jefferson (no clue if he actually said this, not like I was there)
+
+Note: This is a combination of two posts from my website. I deleted some stuff to make this single post a little bit more oriented but if you want the full picture, check out the original posts.
+
+
+Part I: Defeating logic
+One of the essential problems of alignment is that there isn't any clear moral principle we would want distil...","https://www.lesswrong.com/posts/fWbFJxvb6t8Kb8D42/adding-empathy-as-a-tool-for-llms","RobinHa","robinha","0","2","5","2025-12-03T10:31:35.302Z","1382"
+"HWz2SW3us6x9imQpK","intuition-pump-the-ai-society","Intuition Pump: The AI Society","Epistemic Status: I'm trying to keep up a pace of a post per week on average as I've found it a good habit to get more into writing. Inspired by this post by Eukaryote I've tried to do the thing where I create something that is the easier to digest version of the way I think about AI Safety problems in terms of an intuition pump. I'll also add my usual disclaimer that claude was part of the writing process of this including the intial generation of tikzpictures.
+
+The AI Society Lens
+
+Philosop...","https://www.lesswrong.com/posts/HWz2SW3us6x9imQpK/intuition-pump-the-ai-society","Jonas Hallgren","jonas-hallgren","13","4","0","2025-12-03T09:00:04.977Z","1404"
+"8bLSDMWnL4BcHgA6k","ai-safety-at-the-frontier-paper-highlights-of-november-2025","AI Safety at the Frontier: Paper Highlights of November 2025","tl;dr
+Paper of the month:
+
+Reward hacking in production RL can naturally induce broad misalignment including alignment faking and sabotage attempts.
+
+Research highlights:
+
+ * Increasing model honesty via finetuning works best but lie detection is hard. Finetuning models to self-report errors generalizes well to admitting hidden objectives.
+ * Sabotage evaluations for automated AI R&D show that code sabotage is detectable while sandbagging remains elusive.
+ * Output-only training can inadverte...","https://www.lesswrong.com/posts/8bLSDMWnL4BcHgA6k/ai-safety-at-the-frontier-paper-highlights-of-november-2025","gasteigerjo","gasteigerjo","6","2","0","2025-12-02T21:11:13.449Z","2257"
+"HtzgwpLnzSrvYQsLD","practical-ai-risk-ii-training-transparency","Practical AI risk II: Training transparency","This is part II of a series of some practical suggestions to deal with incoming AI change, to preserve society's well being. I welcome any commentary or further suggestions.
+
+This suggestion is geared toward not immediate disasters involving large power grabs by an AI, but by addressing possible undue influence it could exert on society while being hard to scrutinize.
+
+For example, AI could be paid to influence elections, public knowledge, financial markets, and more to a seeming significant ...","https://www.lesswrong.com/posts/HtzgwpLnzSrvYQsLD/practical-ai-risk-ii-training-transparency","Gustavo Ramires","gustavo-ramires","1","1","0","2025-12-02T19:26:07.467Z","317"
+"a2nW8buG2Lw9AdPtH","reward-mismatches-in-rl-cause-emergent-misalignment","Reward Mismatches in RL Cause Emergent Misalignment","Learning to do misaligned-coded things anywhere teaches an AI (or a human) to do misaligned-coded things everywhere. So be sure you never, ever teach any mind to do what it sees, in context, as misaligned-coded things.
+
+If the optimal solution (as in, the one you most reinforce) to an RL training problem is one that the model perceives as something you wouldn’t want it to do, it will generally learn to do things you don’t want it to do.
+
+You can solve this by ensuring that the misaligned-code...","https://www.lesswrong.com/posts/a2nW8buG2Lw9AdPtH/reward-mismatches-in-rl-cause-emergent-misalignment","Zvi","zvi","68","18","1","2025-12-02T16:31:16.724Z","2061"
+"oJXf3eniu8Djbj9oH","sci-steps-invites-mentee-applications","Sci.STEPS invites mentee applications","As I wrote earlier, we’ve launched the next season of our mentorship program. This year we have two mentors who are explicitly focused on AI Safety (Slava Meriton and Peter Drotos), along with many others from a wide range of academic fields—including CS, AI, and additional STEM areas.
+
+If you are in the early stages of your career (in AI Safety or STEM academia more broadly), you’re very likely to benefit from guidance from a more experienced mentor.
+
+Mentorship can help in several complemen...","https://www.lesswrong.com/posts/oJXf3eniu8Djbj9oH/sci-steps-invites-mentee-applications","Valentin2026","valentin2026","7","2","0","2025-12-02T13:33:56.228Z","272"
+"38HzJMYdr2YL5gWQs","safety-cases-explained-how-to-argue-an-ai-is-safe","Safety Cases Explained: How to Argue an AI is Safe","Safety Cases are a promising approach in AI Governance inspired by other safety-critical industries. They are structured arguments, based on evidence, that a system is safe in a specific context. I will introduce what Safety Cases are, how they can be used, and what work is being done on this atm. This explainer leans on Buhl et al 2024.
+
+
+Motivating Example
+Imagine Boeing built a new airplane, and you’re supposed to get on it. What evidence would you want for the plane’s safety?
+
+Option 1: “...","https://www.lesswrong.com/posts/38HzJMYdr2YL5gWQs/safety-cases-explained-how-to-argue-an-ai-is-safe","j_we","j_we","14","4","2","2025-12-02T11:03:00.361Z","2659"
+"tK9waFKEW48exfrXC","announcing-openai-s-alignment-research-blog","Announcing: OpenAI's Alignment Research Blog","The OpenAI Alignment Research Blog launched today at 11 am PT! With 1 introductory post, and 2 technical posts.
+
+Blog: https://alignment.openai.com/
+
+Thread on X: https://x.com/j_asminewang/status/1995569301714325935
+
+----------------------------------------
+
+Speaking purely personally: when I joined the Alignment team at OpenAI in January, I saw there was more safety research than I'd expected. Not to mention interesting thinking on the future of alignment. But that research & thinking didn'...","https://www.lesswrong.com/posts/tK9waFKEW48exfrXC/announcing-openai-s-alignment-research-blog","Naomi Bashkansky","naomi-bashkansky","116","43","10","2025-12-01T19:52:38.317Z","116"
+"3k7j32eZquCAgyNhR","would-asi-development-in-non-party-states-undermine-a","Would ASI development in non-party states undermine a nonproliferation agreement?","We at the MIRI Technical Governance Team have proposed an international agreement to halt the development of superintelligence until it can be done safely.
+
+Some people object that, even if the agreement is adopted by some countries, ASI can still be developed in other countries that do not halt development. They argue that this would undermine the stability of the agreement and even prevent it from being adopted in the first place, because countries do not want to give up their lead only to ...","https://www.lesswrong.com/posts/3k7j32eZquCAgyNhR/would-asi-development-in-non-party-states-undermine-a","Robi Rahman","robi-rahman","9","3","0","2025-12-01T14:22:36.374Z","2763"
+"MnkeepcGirnJn736j","how-can-interpretability-researchers-help-agi-go-well","How Can Interpretability Researchers Help AGI Go Well?","Executive Summary
+ * Over the past year, the Google DeepMind mechanistic interpretability team has pivoted to a pragmatic approach to interpretability, as detailed in our accompanying post [[1]] , and are excited for more in the field to embrace pragmatism! In brief, we think that:
+   * It is crucial to have empirical feedback on your ultimate goal with good proxy tasks [[2]] .
+   * We do not need near-complete understanding to have significant impact.
+   * We can perform good focused project...","https://www.lesswrong.com/posts/MnkeepcGirnJn736j/how-can-interpretability-researchers-help-agi-go-well","Neel Nanda","neel-nanda-1","58","19","1","2025-12-01T13:05:50.500Z","4131"
+"StENzDcD3kpfGJssR","a-pragmatic-vision-for-interpretability","A Pragmatic Vision for Interpretability","Executive Summary
+ * The Google DeepMind mechanistic interpretability team has made a strategic pivot over the past year, from ambitious reverse-engineering to a focus on pragmatic interpretability:
+   * Trying to directly solve problems on the critical path to AGI going well [[1]]
+   * Carefully choosing problems according to our comparative advantage
+   * Measuring progress with empirical feedback on proxy tasks
+ * We believe that, on the margin, more researchers who share our goals should ...","https://www.lesswrong.com/posts/StENzDcD3kpfGJssR/a-pragmatic-vision-for-interpretability","Neel Nanda","neel-nanda-1","121","44","20","2025-12-01T13:05:32.959Z","8113"
+"KgrxigThcjt7RinGi","alignment-as-an-evaluation-problem","Alignment as an Evaluation Problem","A Layman's Model
+This is not a ""serious"" model, nor do I think it is revolutionary in any way. I am an AI safety layperson, a run-of-the-mill software developer at Big Tech Firm™ who is aware of the general shape of AI safety issues, but not particularly read-up on the literature. My hope here is to refine my thinking and to potentially provide something that helps other laypeople think more clearly about current-paradigm AI.
+
+I work with LLM ""agents"" a lot these days. I read IABIED the week ...","https://www.lesswrong.com/posts/KgrxigThcjt7RinGi/alignment-as-an-evaluation-problem","wolverdude","wolverdude","16","4","0","2025-12-01T10:04:25.124Z","1745"
+"EvxTAwPFRufWnWWLB","is-the-evidence-in-language-models-learn-to-mislead-humans","Is the evidence in ""Language Models Learn to Mislead Humans via RLHF"" valid?","Abstract: Language Models Learn to Mislead Humans Via RLHF (published at ICLR 2025) argues that RLHF can unintentionally train models to mislead humans – a phenomenon termed ""Unintentional-SOPHISTRY"". However, our review of the paper's code and experiments suggests that a significant portion of their empirical findings may be due only to major bugs which make the RLHF setup both unrealistic and highly prone to reward hacking. In addition to high level claims, we also correct these issues for ...","https://www.lesswrong.com/posts/EvxTAwPFRufWnWWLB/is-the-evidence-in-language-models-learn-to-mislead-humans","Aaryan Chandna","aaryan-chandna","21","7","0","2025-12-01T06:50:41.825Z","5632"
+"wELmghiTfjWSGyfvN","november-retrospective","November Retrospective","Throughout November, I’ve been keeping up with the Inkhaven mandate to write and post a blogpost, of at least 500 words, every day. It’s the last day of November, so how’d that go?
+
+First and foremost: most of my blogposts from this month are pretty mediocre, by my own standards. Not necessarily bad, plausibly worthwhile, but I am not particularly impressed by them.
+
+Largely, that’s because (unlike the Inkhaven program proper) I did not set aside the entire month for post-writing. I worked mo...","https://www.lesswrong.com/posts/wELmghiTfjWSGyfvN/november-retrospective","johnswentworth","johnswentworth","48","14","1","2025-12-01T04:20:04.904Z","502"
+"ey2kjkgvnxK3Bhman","stop-applying-and-get-to-work","Stop Applying And Get To Work","Crossposted to EA Forum.
+
+TL;DR: Figure out what needs doing and do it, don't wait on approval from fellowships or jobs.
+
+If you...
+
+ * Have short timelines
+ * Have been struggling to get into a position in AI safety
+ * Are able to self-motivate your efforts
+ * Have a sufficient financial safety net
+
+... I would recommend changing your personal strategy entirely.
+
+I started my full-time AI safety career transitioning process in March 2025. For the first 7 months or so, I heavily prioritized a...","https://www.lesswrong.com/posts/ey2kjkgvnxK3Bhman/stop-applying-and-get-to-work","Pauliina ","pauliina","202","109","54","2025-11-23T22:50:24.431Z","667"
+"bmmFLoBAWGnuhnqq5","capital-ownership-will-not-prevent-human-disempowerment","Capital Ownership Will Not Prevent Human Disempowerment","Crossposted from my personal blog. I was inspired to cross-post this here given the discussion that this post on the role of capital in an AI future elicited.
+
+When discussing the future of AI, I semi-often hear an argument along the lines that in a slow takeoff world, despite AIs automating increasingly more of the economy, humanity will remain in the driving seat because of its ownership of capital. This world posits one where humanity effectively becomes a rentier class living well off the...","https://www.lesswrong.com/posts/bmmFLoBAWGnuhnqq5/capital-ownership-will-not-prevent-human-disempowerment","beren","beren-1","162","58","20","2025-01-05T06:00:23.095Z","4133"
+"bsJH4uDSLxS3eAZeJ","is-the-argument-that-ai-is-an-xrisk-valid","Is the argument that AI is an xrisk valid?","Hi folks,
+
+My supervisor and I co-authored a philosophy paper on the argument that AI represents an existential risk. That paper has just been published in Ratio. We figured LessWrong would be able to catch things in it which we might have missed and, either way, hope it might provoke a conversation. 
+
+We reconstructed what we take to be the argument for how AI becomes an xrisk as follows: 
+
+ 1. The ""Singularity"" Claim: Artificial Superintelligence is possible and would be out of human contro...","https://www.lesswrong.com/posts/bsJH4uDSLxS3eAZeJ/is-the-argument-that-ai-is-an-xrisk-valid","MACannon","macannon","3","14","63","2021-07-19T13:20:57.379Z","237"
