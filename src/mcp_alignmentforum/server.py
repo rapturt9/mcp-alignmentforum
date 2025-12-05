@@ -149,7 +149,7 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
                             postedAt
                             baseScore
                             voteCount
-                            commentsCount
+                            commentCount
                             htmlBody
                             contents {
                                 html
@@ -167,9 +167,10 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
             """)
 
             # Set variables based on input type
-            variables = {
-                "_id" if is_id else "slug": post_id
-            }
+            if is_id:
+                variables = {"id": post_id, "slug": None}
+            else:
+                variables = {"id": None, "slug": post_id}
 
             # Execute query
             async with await get_graphql_client() as session:
@@ -189,7 +190,7 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
 **Author**: {post['user']['displayName']} (@{post['user']['username']})
 **Posted**: {post['postedAt'][:10]}
 **Karma**: {post['baseScore']} ({post['voteCount']} votes)
-**Comments**: {post['commentsCount']}
+**Comments**: {post['commentCount']}
 **Word Count**: {post['contents']['wordCount']}
 **URL**: {post['pageUrl']}
 
