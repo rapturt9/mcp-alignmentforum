@@ -5,8 +5,8 @@
     "buildCommand": "pip install -e ."
   },
   "deploy": {
-    "startCommand": "uvicorn mcp_alignmentforum.server_remote:sse_app --host 0.0.0.0 --port $PORT",
-    "healthcheckPath": "/",
+    "startCommand": "mcp-alignmentforum-remote",
+    "healthcheckPath": "/sse",
     "healthcheckTimeout": 100,
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10

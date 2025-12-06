@@ -26,9 +26,6 @@ RUN pip install -e .
 # Expose port (Railway will set PORT env var)
 EXPOSE 8000
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD python -c "import httpx; httpx.get('http://localhost:${PORT:-8000}/sse')"
-
-# Run the application
-CMD ["sh", "-c", "uvicorn mcp_alignmentforum.server_remote:sse_app --host 0.0.0.0 --port ${PORT:-8000}"]
+# Run the application using the entry point
+# The entry point (mcp-alignmentforum-remote) properly handles PORT env var
+CMD ["mcp-alignmentforum-remote"]

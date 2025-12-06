@@ -1,1 +1,1 @@
-web: uvicorn mcp_alignmentforum.server_remote:sse_app --host 0.0.0.0 --port $PORT
+web: mcp-alignmentforum-remote
