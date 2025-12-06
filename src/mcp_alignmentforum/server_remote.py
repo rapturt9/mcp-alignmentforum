@@ -7,15 +7,16 @@ Can be deployed to Railway, Render, Fly.io, etc.
 
 import csv
 import json
-import sys
+import os
 from typing import Any
 
 import httpx
+import uvicorn
 from gql import Client, gql
 from gql.transport.httpx import HTTPXAsyncTransport
 from mcp.server import Server
-from mcp.server.sse import sse_server
-from mcp.types import Tool, TextContent
+from mcp.server.sse import SseServerTransport
+from mcp.types import TextContent, Tool
 from starlette.applications import Starlette
 from starlette.routing import Mount
 
@@ -25,60 +26,54 @@ GRAPHQL_URL = "https://www.alignmentforum.org/graphql"
 USER_AGENT = "MCP-AlignmentForum/0.1.0"
 
 # Initialize MCP server
-app = Server("alignment-forum")
+mcp_server = Server("alignment-forum")
 
 
 def parse_csv_from_text(csv_text: str) -> list[dict[str, str]]:
     """Parse CSV text into list of dictionaries"""
     import io
+
     reader = csv.DictReader(io.StringIO(csv_text))
     return list(reader)
 
 
 async def get_graphql_client():
     """Create a GraphQL client for Alignment Forum API"""
-    transport = HTTPXAsyncTransport(
-        url=GRAPHQL_URL,
-        headers={"User-Agent": USER_AGENT}
-    )
+    transport = HTTPXAsyncTransport(url=GRAPHQL_URL, headers={"User-Agent": USER_AGENT})
     return Client(transport=transport, fetch_schema_from_transport=False)
 
 
-@app.list_tools()
+@mcp_server.list_tools()
 async def list_tools() -> list[Tool]:
     """List available MCP tools"""
     return [
         Tool(
             name="load_alignment_forum_posts",
             description="Load all Alignment Forum posts from the GitHub-hosted CSV file. "
-                       "Returns metadata for all posts including titles, authors, karma, and summaries. "
-                       "Use this first to see what posts are available.",
-            inputSchema={
-                "type": "object",
-                "properties": {},
-                "required": []
-            }
+            "Returns metadata for all posts including titles, authors, karma, and summaries. "
+            "Use this first to see what posts are available.",
+            inputSchema={"type": "object", "properties": {}, "required": []},
         ),
         Tool(
             name="fetch_article_content",
             description="Fetch the full content of a specific Alignment Forum article. "
-                       "Provide either the post ID (17 character alphanumeric) or the slug. "
-                       "Returns the complete article with HTML content, metadata, and statistics.",
+            "Provide either the post ID (17 character alphanumeric) or the slug. "
+            "Returns the complete article with HTML content, metadata, and statistics.",
             inputSchema={
                 "type": "object",
                 "properties": {
                     "post_id": {
                         "type": "string",
-                        "description": "Post ID (_id field) or slug from the CSV"
+                        "description": "Post ID (_id field) or slug from the CSV",
                     }
                 },
-                "required": ["post_id"]
-            }
-        )
+                "required": ["post_id"],
+            },
+        ),
     ]
 
 
-@app.call_tool()
+@mcp_server.call_tool()
 async def call_tool(name: str, arguments: Any) -> list[TextContent]:
     """Handle tool calls"""
 
@@ -94,20 +89,14 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
             posts = parse_csv_from_text(csv_text)
 
             # Return as JSON
-            result = {
-                "count": len(posts),
-                "posts": posts
-            }
+            result = {"count": len(posts), "posts": posts}
 
-            return [TextContent(
-                type="text",
-                text=json.dumps(result, indent=2)
-            )]
+            return [TextContent(type="text", text=json.dumps(result, indent=2))]
 
         except httpx.HTTPStatusError as e:
             error_msg = f"Failed to fetch CSV from GitHub: HTTP {e.response.status_code}"
             if e.response.status_code == 404:
-                error_msg += "\nNote: Make sure to replace YOUR_USERNAME with your GitHub username in server.py"
+                error_msg += "\nNote: Make sure the CSV exists on GitHub"
             return [TextContent(type="text", text=f"Error: {error_msg}")]
         except Exception as e:
             return [TextContent(type="text", text=f"Error loading posts: {str(e)}")]
@@ -116,13 +105,16 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
         try:
             post_id = arguments.get("post_id")
             if not post_id:
-                return [TextContent(type="text", text="Error: post_id parameter is required")]
+                return [
+                    TextContent(type="text", text="Error: post_id parameter is required")
+                ]
 
             # Determine if input is ID (17 alphanumeric chars) or slug
             is_id = len(post_id) == 17 and post_id.isalnum()
 
             # Build GraphQL query
-            query = gql("""
+            query = gql(
+                """
                 query GetPost($id: String, $slug: String) {
                     post(input: {
                         selector: {
@@ -153,7 +145,8 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
                         }
                     }
                 }
-            """)
+            """
+            )
 
             # Set variables based on input type
             if is_id:
@@ -168,10 +161,12 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
             post = result.get("post", {}).get("result")
 
             if not post:
-                return [TextContent(
-                    type="text",
-                    text=f"Error: Post not found with identifier '{post_id}'"
-                )]
+                return [
+                    TextContent(
+                        type="text",
+                        text=f"Error: Post not found with identifier '{post_id}'",
+                    )
+                ]
 
             # Format the article content
             formatted_content = f"""# {post['title']}
@@ -201,26 +196,33 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
         return [TextContent(type="text", text=f"Error: Unknown tool '{name}'")]
 
 
-# Create Starlette app for SSE transport
-sse_app = Starlette(
+# Create SSE transport and Starlette app
+sse = SseServerTransport("/messages")
+
+async def handle_sse(scope, receive, send):
+    """ASGI app for SSE"""
+    async with sse.connect_sse(scope, receive, send) as streams:
+        await mcp_server.run(
+            streams[0], streams[1], mcp_server.create_initialization_options()
+        )
+
+
+app = Starlette(
     routes=[
-        Mount("/sse", app=sse_server(app)),
+        Mount("/sse", app=handle_sse),
     ]
 )
 
 
 def main() -> None:
     """Entry point for remote server"""
-    import uvicorn
-    import os
-
     port = int(os.environ.get("PORT", 8000))
     host = os.environ.get("HOST", "0.0.0.0")
 
     print(f"Starting MCP server on {host}:{port}")
     print(f"SSE endpoint: http://{host}:{port}/sse")
 
-    uvicorn.run(sse_app, host=host, port=port)
+    uvicorn.run(app, host=host, port=port)
 
 
 if __name__ == "__main__":
