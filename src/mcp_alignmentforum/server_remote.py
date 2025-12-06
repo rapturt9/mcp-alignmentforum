@@ -5,21 +5,15 @@ This version uses Streamable HTTP transport for remote deployment.
 Can be deployed to Railway, Render, Fly.io, etc.
 """
 
-import contextlib
 import csv
 import json
 import os
 from typing import Any
 
 import httpx
-import uvicorn
 from gql import Client, gql
 from gql.transport.httpx import HTTPXAsyncTransport
 from mcp.server.fastmcp import FastMCP
-from starlette.applications import Starlette
-from starlette.middleware.trustedhost import TrustedHostMiddleware
-from starlette.responses import JSONResponse
-from starlette.routing import Mount, Route
 
 # Configuration
 CSV_URL = "https://raw.githubusercontent.com/rapturt9/mcp-alignmentforum/main/data/alignment-forum-posts.csv"
@@ -32,9 +26,6 @@ mcp = FastMCP(
     stateless_http=True,
     json_response=True
 )
-
-# Configure to mount at root of /mcp path
-mcp.settings.streamable_http_path = "/"
 
 
 def parse_csv_from_text(csv_text: str) -> list[dict[str, str]]:
@@ -174,60 +165,6 @@ async def fetch_article_content(post_id: str) -> str:
         raise RuntimeError(f"Error fetching article: {str(e)}")
 
 
-async def root_endpoint(request):
-    """Root endpoint showing server info"""
-    public_domain = os.environ.get("RAILWAY_PUBLIC_DOMAIN", "")
-    static_url = os.environ.get("RAILWAY_STATIC_URL", "")
-
-    base_url = f"https://{public_domain}" if public_domain else (
-        f"https://{static_url}" if static_url else f"http://localhost:{os.environ.get('PORT', 8000)}"
-    )
-
-    return JSONResponse({
-        "name": "MCP Alignment Forum Server",
-        "version": "0.2.0",
-        "transport": "streamable-http",
-        "status": "running",
-        "endpoints": {
-            "mcp": f"{base_url}/mcp",
-            "health": f"{base_url}/health",
-        },
-        "tools": [
-            "load_alignment_forum_posts",
-            "fetch_article_content"
-        ]
-    })
-
-
-async def health_endpoint(request):
-    """Health check endpoint for Railway"""
-    return JSONResponse({"status": "ok", "service": "mcp-alignmentforum"})
-
-
-@contextlib.asynccontextmanager
-async def lifespan(app: Starlette):
-    """Manage FastMCP session lifecycle"""
-    async with mcp.session_manager.run():
-        yield
-
-
-# Create Starlette app with FastMCP mounted at /mcp
-app = Starlette(
-    routes=[
-        Route("/", endpoint=root_endpoint, methods=["GET"]),
-        Route("/health", endpoint=health_endpoint, methods=["GET"]),
-        Mount("/mcp", app=mcp.streamable_http_app()),
-    ],
-    lifespan=lifespan,
-)
-
-# Add TrustedHostMiddleware to handle Railway proxy
-app.add_middleware(
-    TrustedHostMiddleware,
-    allowed_hosts=["*"]  # Allow all hosts (Railway handles security at proxy level)
-)
-
-
 def main() -> None:
     """Entry point for remote server"""
     port = int(os.environ.get("PORT", 8000))
@@ -262,12 +199,11 @@ def main() -> None:
     print("  - fetch_article_content")
     print("=" * 70)
 
-    uvicorn.run(
-        app,
+    # Run FastMCP with streamable HTTP transport
+    mcp.run(
+        transport="streamable-http",
         host=host,
-        port=port,
-        proxy_headers=True,  # Trust Railway proxy headers
-        forwarded_allow_ips="*"  # Allow all IPs (Railway proxy)
+        port=port
     )
 
 
