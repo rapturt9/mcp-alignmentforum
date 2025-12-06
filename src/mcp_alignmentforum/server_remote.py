@@ -18,7 +18,8 @@ from mcp.server import Server
 from mcp.server.sse import SseServerTransport
 from mcp.types import TextContent, Tool
 from starlette.applications import Starlette
-from starlette.routing import Mount
+from starlette.responses import JSONResponse
+from starlette.routing import Route
 
 # Configuration
 CSV_URL = "https://raw.githubusercontent.com/rapturt9/mcp-alignmentforum/main/data/alignment-forum-posts.csv"
@@ -196,20 +197,58 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
         return [TextContent(type="text", text=f"Error: Unknown tool '{name}'")]
 
 
-# Create SSE transport and Starlette app
+# Create SSE transport
 sse = SseServerTransport("/messages")
 
-async def handle_sse(scope, receive, send):
-    """ASGI app for SSE"""
-    async with sse.connect_sse(scope, receive, send) as streams:
-        await mcp_server.run(
-            streams[0], streams[1], mcp_server.create_initialization_options()
-        )
+
+async def root_endpoint(request):
+    """Root endpoint showing server info"""
+    public_domain = os.environ.get("RAILWAY_PUBLIC_DOMAIN", "")
+    static_url = os.environ.get("RAILWAY_STATIC_URL", "")
+
+    base_url = f"https://{public_domain}" if public_domain else (
+        f"https://{static_url}" if static_url else f"http://localhost:{os.environ.get('PORT', 8000)}"
+    )
+
+    return JSONResponse({
+        "name": "MCP Alignment Forum Server",
+        "version": "0.1.0",
+        "status": "running",
+        "endpoints": {
+            "sse": f"{base_url}/sse",
+            "health": f"{base_url}/health",
+        },
+        "tools": [
+            "load_alignment_forum_posts",
+            "fetch_article_content"
+        ]
+    })
 
 
+async def health_endpoint(request):
+    """Health check endpoint for Railway"""
+    return JSONResponse({"status": "ok", "service": "mcp-alignmentforum"})
+
+
+async def sse_endpoint(request):
+    """SSE endpoint for MCP connections"""
+    # This is a raw ASGI endpoint handler
+    async def handle_sse(scope, receive, send):
+        async with sse.connect_sse(scope, receive, send) as streams:
+            await mcp_server.run(
+                streams[0], streams[1], mcp_server.create_initialization_options()
+            )
+
+    # Call the ASGI handler with request scope
+    await handle_sse(request.scope, request.receive, request._send)
+
+
+# Create Starlette app with proper routing
 app = Starlette(
     routes=[
-        Mount("/sse", app=handle_sse),
+        Route("/", endpoint=root_endpoint, methods=["GET"]),
+        Route("/health", endpoint=health_endpoint, methods=["GET"]),
+        Route("/sse", endpoint=sse_endpoint, methods=["GET", "POST"]),
     ]
 )
 
@@ -219,8 +258,34 @@ def main() -> None:
     port = int(os.environ.get("PORT", 8000))
     host = os.environ.get("HOST", "0.0.0.0")
 
-    print(f"Starting MCP server on {host}:{port}")
-    print(f"SSE endpoint: http://{host}:{port}/sse")
+    # Get Railway public URLs
+    public_domain = os.environ.get("RAILWAY_PUBLIC_DOMAIN", "")
+    static_url = os.environ.get("RAILWAY_STATIC_URL", "")
+
+    print("=" * 70)
+    print("MCP ALIGNMENT FORUM SERVER")
+    print("=" * 70)
+    print(f"Starting server on {host}:{port}")
+    print()
+
+    if public_domain:
+        print(f"Public URL: https://{public_domain}")
+        print(f"SSE Endpoint: https://{public_domain}/sse")
+        print(f"Health Check: https://{public_domain}/health")
+    elif static_url:
+        print(f"Public URL: https://{static_url}")
+        print(f"SSE Endpoint: https://{static_url}/sse")
+        print(f"Health Check: https://{static_url}/health")
+    else:
+        print(f"Local URL: http://{host}:{port}")
+        print(f"SSE Endpoint: http://{host}:{port}/sse")
+        print(f"Health Check: http://{host}:{port}/health")
+
+    print()
+    print("Available Tools:")
+    print("  - load_alignment_forum_posts")
+    print("  - fetch_article_content")
+    print("=" * 70)
 
     uvicorn.run(app, host=host, port=port)
 

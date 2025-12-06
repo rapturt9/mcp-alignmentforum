@@ -6,7 +6,7 @@
   },
   "deploy": {
     "startCommand": "python -m mcp_alignmentforum",
-    "healthcheckPath": "/sse",
+    "healthcheckPath": "/health",
     "healthcheckTimeout": 100,
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
