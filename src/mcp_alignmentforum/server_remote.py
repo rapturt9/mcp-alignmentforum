@@ -164,8 +164,5 @@ async def fetch_article_content(post_id: str) -> str:
         raise RuntimeError(f"Error fetching article: {str(e)}")
 
 
-# For local testing only - FastMCP Cloud ignores this block
-if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 8000))
-    mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
+# FastMCP Cloud will run the server automatically
+# No need for if __name__ == "__main__" block
