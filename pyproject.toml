@@ -34,7 +34,6 @@ dev = [
 
 [project.scripts]
 mcp-alignmentforum = "mcp_alignmentforum.server:main"
-mcp-alignmentforum-remote = "mcp_alignmentforum.server_remote:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
