@@ -17,6 +17,7 @@ from gql import Client, gql
 from gql.transport.httpx import HTTPXAsyncTransport
 from mcp.server.fastmcp import FastMCP
 from starlette.applications import Starlette
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from starlette.responses import JSONResponse
 from starlette.routing import Mount, Route
 
@@ -218,6 +219,12 @@ app = Starlette(
         Mount("/mcp", app=mcp.streamable_http_app()),
     ],
     lifespan=lifespan,
+)
+
+# Add TrustedHostMiddleware to handle Railway proxy
+app.add_middleware(
+    TrustedHostMiddleware,
+    allowed_hosts=["*"]  # Allow all hosts (Railway handles security at proxy level)
 )
 
 
