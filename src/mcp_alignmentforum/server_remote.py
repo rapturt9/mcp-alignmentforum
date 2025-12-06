@@ -27,6 +27,9 @@ mcp = FastMCP(
     json_response=True
 )
 
+# Configure to allow all hosts for Railway deployment
+mcp.settings.streamable_http_allowed_hosts = ["*"]
+
 
 def parse_csv_from_text(csv_text: str) -> list[dict[str, str]]:
     """Parse CSV text into list of dictionaries"""
