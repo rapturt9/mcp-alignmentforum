@@ -7,24 +7,19 @@ Designed for deployment to FastMCP Cloud or similar platforms.
 
 import csv
 import json
-from typing import Any
 
 import httpx
+from fastmcp import FastMCP
 from gql import Client, gql
 from gql.transport.httpx import HTTPXAsyncTransport
-from mcp.server.fastmcp import FastMCP
 
 # Configuration
 CSV_URL = "https://raw.githubusercontent.com/rapturt9/mcp-alignmentforum/main/data/alignment-forum-posts.csv"
 GRAPHQL_URL = "https://www.alignmentforum.org/graphql"
 USER_AGENT = "MCP-AlignmentForum/0.1.0"
 
-# Initialize FastMCP server with stateless HTTP and JSON responses
-mcp = FastMCP(
-    "alignment-forum",
-    stateless_http=True,
-    json_response=True
-)
+# Initialize FastMCP server
+mcp = FastMCP("alignment-forum")
 
 
 def parse_csv_from_text(csv_text: str) -> list[dict[str, str]]:
@@ -41,7 +36,7 @@ async def get_graphql_client():
     return Client(transport=transport, fetch_schema_from_transport=False)
 
 
-@mcp.tool()
+@mcp.tool
 async def load_alignment_forum_posts() -> str:
     """Load all Alignment Forum posts from the GitHub-hosted CSV file.
 
@@ -72,7 +67,7 @@ async def load_alignment_forum_posts() -> str:
         raise RuntimeError(f"Error loading posts: {str(e)}")
 
 
-@mcp.tool()
+@mcp.tool
 async def fetch_article_content(post_id: str) -> str:
     """Fetch the full content of a specific Alignment Forum article.
 
