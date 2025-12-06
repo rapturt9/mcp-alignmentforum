@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-"""MCP Server for Alignment Forum - Remote/HTTP version
+"""MCP Server for Alignment Forum - Cloud Deployment
 
-This version uses Streamable HTTP transport for remote deployment.
-Can be deployed to Railway, Render, Fly.io, etc.
+This server provides tools to interact with Alignment Forum posts via MCP.
+Designed for deployment to FastMCP Cloud or similar platforms.
 """
 
 import csv
 import json
-import os
 from typing import Any
 
 import httpx
@@ -26,9 +25,6 @@ mcp = FastMCP(
     stateless_http=True,
     json_response=True
 )
-
-# Configure to allow all hosts for Railway deployment
-mcp.settings.streamable_http_allowed_hosts = ["*"]
 
 
 def parse_csv_from_text(csv_text: str) -> list[dict[str, str]]:
@@ -168,47 +164,8 @@ async def fetch_article_content(post_id: str) -> str:
         raise RuntimeError(f"Error fetching article: {str(e)}")
 
 
-def main() -> None:
-    """Entry point for remote server"""
-    port = int(os.environ.get("PORT", 8000))
-    host = os.environ.get("HOST", "0.0.0.0")
-
-    # Get Railway public URLs
-    public_domain = os.environ.get("RAILWAY_PUBLIC_DOMAIN", "")
-    static_url = os.environ.get("RAILWAY_STATIC_URL", "")
-
-    print("=" * 70)
-    print("MCP ALIGNMENT FORUM SERVER (Streamable HTTP)")
-    print("=" * 70)
-    print(f"Starting server on {host}:{port}")
-    print()
-
-    if public_domain:
-        print(f"Public URL: https://{public_domain}")
-        print(f"MCP Endpoint: https://{public_domain}/mcp")
-        print(f"Health Check: https://{public_domain}/health")
-    elif static_url:
-        print(f"Public URL: https://{static_url}")
-        print(f"MCP Endpoint: https://{static_url}/mcp")
-        print(f"Health Check: https://{static_url}/health")
-    else:
-        print(f"Local URL: http://{host}:{port}")
-        print(f"MCP Endpoint: http://{host}:{port}/mcp")
-        print(f"Health Check: http://{host}:{port}/health")
-
-    print()
-    print("Available Tools:")
-    print("  - load_alignment_forum_posts")
-    print("  - fetch_article_content")
-    print("=" * 70)
-
-    # Run FastMCP with streamable HTTP transport
-    mcp.run(
-        transport="streamable-http",
-        host=host,
-        port=port
-    )
-
-
+# For local testing only - FastMCP Cloud ignores this block
 if __name__ == "__main__":
-    main()
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
