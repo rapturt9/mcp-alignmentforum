@@ -262,7 +262,13 @@ def main() -> None:
     print("  - fetch_article_content")
     print("=" * 70)
 
-    uvicorn.run(app, host=host, port=port)
+    uvicorn.run(
+        app,
+        host=host,
+        port=port,
+        proxy_headers=True,  # Trust Railway proxy headers
+        forwarded_allow_ips="*"  # Allow all IPs (Railway proxy)
+    )
 
 
 if __name__ == "__main__":
