@@ -1,1 +1,1 @@
-web: mcp-alignmentforum-remote
+web: python -m mcp_alignmentforum.server_remote

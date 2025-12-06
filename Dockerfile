@@ -26,6 +26,6 @@ RUN pip install -e .
 # Expose port (Railway will set PORT env var)
 EXPOSE 8000
 
-# Run the application using the entry point
-# The entry point (mcp-alignmentforum-remote) properly handles PORT env var
-CMD ["mcp-alignmentforum-remote"]
+# Run the application using python -m
+# This properly reads PORT from os.environ without shell expansion
+CMD ["python", "-m", "mcp_alignmentforum"]
