@@ -5,6 +5,15 @@ on:
     # Run daily at 3:47 AM UTC (odd time to avoid high load periods)
     - cron: '47 3 * * *'
   workflow_dispatch: # Allow manual triggering from GitHub Actions UI
+    inputs:
+      full_refresh:
+        description: 'Perform full refresh (fetch all AF posts)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
 
 permissions:
   contents: write
@@ -30,7 +39,13 @@ jobs:
 
       - name: Fetch posts and generate CSV
         run: |
-          python scripts/fetch_from_lesswrong.py
+          # Runs in incremental mode by default (fetches last 48 hours)
+          # Use --full flag for complete refresh
+          if [ "${{ github.event.inputs.full_refresh }}" = "true" ]; then
+            python scripts/fetch_from_lesswrong.py --full
+          else
+            python scripts/fetch_from_lesswrong.py
+          fi
 
       - name: Check if CSV was updated
         id: check_changes
