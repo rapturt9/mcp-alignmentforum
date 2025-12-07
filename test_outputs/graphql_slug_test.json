@@ -1,0 +1,77 @@
+{
+  "description": "Test query using slug instead of ID",
+  "query_type": "by_slug",
+  "query_input": {
+    "slug": "agi-ruin-a-list-of-lethalities",
+    "is_id_format": false
+  },
+  "graphql_query": "query GetPost($slug: String!) {\n            post(input: {\n                selector: {\n                    slug: $slug\n                }\n            }) {\n                result {\n                    _id\n                    slug\n                    title\n                    pageUrl\n                    postedAt\n                    baseScore\n                    voteCount\n                    commentCount\n                    htmlBody\n                    contents {\n                        html\n                        wordCount\n                        plaintextDescription\n                    }\n                    user {\n                        username\n                        displayName\n                        slug\n                    }\n                }\n            }\n        }",
+  "graphql_variables": {
+    "slug": "agi-ruin-a-list-of-lethalities"
+  },
+  "http_status": 400,
+  "success": false,
+  "errors": [
+    {
+      "message": "Field \"slug\" is not defined by type \"SelectorInput\".",
+      "locations": [
+        {
+          "line": 5,
+          "column": 21
+        }
+      ],
+      "extensions": {
+        "code": "GRAPHQL_VALIDATION_FAILED",
+        "stacktrace": [
+          "GraphQLError: Field \"slug\" is not defined by type \"SelectorInput\".",
+          "    at Object.ObjectField (/var/task/node_modules/graphql/validation/rules/ValuesOfCorrectTypeRule.js:110:11)",
+          "    at Object.enter (/var/task/node_modules/graphql/language/visitor.js:298:32)",
+          "    at Object.enter (/var/task/node_modules/graphql/utilities/TypeInfo.js:391:27)",
+          "    at visit (/var/task/node_modules/graphql/language/visitor.js:194:21)",
+          "    at validate (/var/task/node_modules/graphql/validation/validate.js:91:24)",
+          "    at eb (/var/task/.next/server/chunks/node_modules_fe278931._.js:182:4830)",
+          "    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+          "    at async eL (/var/task/.next/server/chunks/node_modules_fe278931._.js:183:2116)",
+          "    at async J (/var/task/.next/server/chunks/node_modules_fe278931._.js:172:28165)",
+          "    at async ea (/var/task/.next/server/chunks/node_modules_fe278931._.js:182:1831)"
+        ]
+      }
+    }
+  ],
+  "post_retrieved": null,
+  "verification": {
+    "expected_id": "uMQ3cqWDPHhjtiesc",
+    "actual_id": null,
+    "id_matches": false,
+    "message": "Mismatch or error"
+  },
+  "full_response": {
+    "errors": [
+      {
+        "message": "Field \"slug\" is not defined by type \"SelectorInput\".",
+        "locations": [
+          {
+            "line": 5,
+            "column": 21
+          }
+        ],
+        "extensions": {
+          "code": "GRAPHQL_VALIDATION_FAILED",
+          "stacktrace": [
+            "GraphQLError: Field \"slug\" is not defined by type \"SelectorInput\".",
+            "    at Object.ObjectField (/var/task/node_modules/graphql/validation/rules/ValuesOfCorrectTypeRule.js:110:11)",
+            "    at Object.enter (/var/task/node_modules/graphql/language/visitor.js:298:32)",
+            "    at Object.enter (/var/task/node_modules/graphql/utilities/TypeInfo.js:391:27)",
+            "    at visit (/var/task/node_modules/graphql/language/visitor.js:194:21)",
+            "    at validate (/var/task/node_modules/graphql/validation/validate.js:91:24)",
+            "    at eb (/var/task/.next/server/chunks/node_modules_fe278931._.js:182:4830)",
+            "    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+            "    at async eL (/var/task/.next/server/chunks/node_modules_fe278931._.js:183:2116)",
+            "    at async J (/var/task/.next/server/chunks/node_modules_fe278931._.js:172:28165)",
+            "    at async ea (/var/task/.next/server/chunks/node_modules_fe278931._.js:182:1831)"
+          ]
+        }
+      }
+    ]
+  }
+}

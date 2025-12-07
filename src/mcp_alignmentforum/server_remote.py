@@ -15,7 +15,9 @@ from gql.transport.httpx import HTTPXAsyncTransport
 
 # Configuration
 CSV_URL = "https://raw.githubusercontent.com/rapturt9/mcp-alignmentforum/main/data/alignment-forum-posts.csv"
-GRAPHQL_URL = "https://www.alignmentforum.org/graphql"
+# Use LessWrong API instead of Alignment Forum to avoid rate limiting
+# LessWrong and AF share infrastructure, so posts are accessible from both
+GRAPHQL_URL = "https://www.lesswrong.com/graphql"
 USER_AGENT = "MCP-AlignmentForum/0.1.0"
 
 # Initialize FastMCP server
@@ -83,47 +85,78 @@ async def fetch_article_content(post_id: str) -> str:
         # Determine if input is ID (17 alphanumeric chars) or slug
         is_id = len(post_id) == 17 and post_id.isalnum()
 
-        # Build GraphQL query
-        query = gql(
-            """
-            query GetPost($id: String, $slug: String) {
-                post(input: {
-                    selector: {
-                        _id: $id
-                        slug: $slug
-                    }
-                }) {
-                    result {
-                        _id
-                        slug
-                        title
-                        pageUrl
-                        postedAt
-                        baseScore
-                        voteCount
-                        commentCount
-                        htmlBody
-                        contents {
-                            html
-                            wordCount
-                            plaintextDescription
+        # Build GraphQL query - LessWrong only supports _id in selector
+        if is_id:
+            query = gql(
+                """
+                query GetPost($id: String) {
+                    post(input: {
+                        selector: {
+                            _id: $id
                         }
-                        user {
-                            username
-                            displayName
+                    }) {
+                        result {
+                            _id
                             slug
+                            title
+                            pageUrl
+                            postedAt
+                            baseScore
+                            voteCount
+                            commentCount
+                            htmlBody
+                            contents {
+                                html
+                                wordCount
+                                plaintextDescription
+                            }
+                            user {
+                                username
+                                displayName
+                                slug
+                            }
                         }
                     }
                 }
-            }
-        """
-        )
-
-        # Set variables based on input type
-        if is_id:
-            variables = {"id": post_id, "slug": None}
+            """
+            )
+            variables = {"id": post_id}
         else:
-            variables = {"id": None, "slug": post_id}
+            # For slugs, use documentId instead
+            query = gql(
+                """
+                query GetPost($documentId: String) {
+                    post(input: {
+                        selector: {
+                            documentId: $documentId
+                        }
+                    }) {
+                        result {
+                            _id
+                            slug
+                            title
+                            pageUrl
+                            postedAt
+                            baseScore
+                            voteCount
+                            commentCount
+                            htmlBody
+                            contents {
+                                html
+                                wordCount
+                                plaintextDescription
+                            }
+                            user {
+                                username
+                                displayName
+                                slug
+                            }
+                        }
+                    }
+                }
+            """
+            )
+            variables = {"documentId": post_id}
 
         # Execute query
         async with await get_graphql_client() as session:

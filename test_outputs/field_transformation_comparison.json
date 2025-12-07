@@ -1,0 +1,168 @@
+{
+  "title": "GraphQL to MCP Transformation - Side-by-Side Comparison",
+  "description": "Shows how each field from the GraphQL response maps to the final MCP output",
+  "test_post": {
+    "id": "uMQ3cqWDPHhjtiesc",
+    "title": "AGI Ruin: A List of Lethalities"
+  },
+  "field_by_field_transformation": [
+    {
+      "output_line": "# AGI Ruin: A List of Lethalities",
+      "source_field": "post.result.title",
+      "source_value": "AGI Ruin: A List of Lethalities",
+      "transformation": "f\"# {post['title']}\"",
+      "used": true
+    },
+    {
+      "output_line": "",
+      "source_field": null,
+      "source_value": null,
+      "transformation": "Blank line separator",
+      "used": true
+    },
+    {
+      "output_line": "**Author**: Eliezer Yudkowsky (@EliezerYudkowsky)",
+      "source_field": "post.result.user.displayName, post.result.user.username",
+      "source_value": {
+        "displayName": "Eliezer Yudkowsky",
+        "username": "Eliezer_Yudkowsky"
+      },
+      "transformation": "f\"**Author**: {post['user']['displayName']} (@{post['user']['username']})\"",
+      "used": true
+    },
+    {
+      "output_line": "**Posted**: 2022-06-06",
+      "source_field": "post.result.postedAt",
+      "source_value": "2022-06-05T22:05:52.224Z",
+      "transformation": "f\"**Posted**: {post['postedAt'][:10]}\"",
+      "used": true
+    },
+    {
+      "output_line": "**Karma**: 318 (165 votes)",
+      "source_field": "post.result.baseScore, post.result.voteCount",
+      "source_value": {
+        "baseScore": 956,
+        "voteCount": 578
+      },
+      "transformation": "f\"**Karma**: {post['baseScore']} ({post['voteCount']} votes)\"",
+      "used": true
+    },
+    {
+      "output_line": "**Comments**: 422",
+      "source_field": "post.result.commentCount",
+      "source_value": 711,
+      "transformation": "f\"**Comments**: {post['commentCount']}\"",
+      "used": true
+    },
+    {
+      "output_line": "**Word Count**: 9842",
+      "source_field": "post.result.contents.wordCount",
+      "source_value": 9087,
+      "transformation": "f\"**Word Count**: {post['contents']['wordCount']}\"",
+      "used": true
+    },
+    {
+      "output_line": "**URL**: https://www.alignmentforum.org/posts/uMQ3cqWDPHhjtiesc/agi-ruin-a-list-of-lethalities",
+      "source_field": "post.result.pageUrl",
+      "source_value": "https://www.lesswrong.com/posts/uMQ3cqWDPHhjtiesc/agi-ruin-a-list-of-lethalities",
+      "transformation": "f\"**URL**: {post['pageUrl']}\"",
+      "used": true
+    },
+    {
+      "output_line": "",
+      "source_field": null,
+      "source_value": null,
+      "transformation": "Blank line separator",
+      "used": true
+    },
+    {
+      "output_line": "---",
+      "source_field": null,
+      "source_value": null,
+      "transformation": "Markdown horizontal rule",
+      "used": true
+    },
+    {
+      "output_line": "",
+      "source_field": null,
+      "source_value": null,
+      "transformation": "Blank line separator",
+      "used": true
+    },
+    {
+      "output_line": "<div>...HTML content (61065 chars)...</div>",
+      "source_field": "post.result.htmlBody",
+      "source_value": "<h3><strong>Preamble:</strong></h3><p>(If you're already familiar with all basics and don't want any preamble, skip ahead to&nbsp;<a href=\"#Section_B_\"><u>Section B</u></a> for technical difficulties ...",
+      "transformation": "post['htmlBody'] (inserted as-is)",
+      "used": true
+    },
+    {
+      "output_line": "",
+      "source_field": null,
+      "source_value": null,
+      "transformation": "Blank line separator",
+      "used": true
+    },
+    {
+      "output_line": "---",
+      "source_field": null,
+      "source_value": null,
+      "transformation": "Markdown horizontal rule",
+      "used": true
+    },
+    {
+      "output_line": "",
+      "source_field": null,
+      "source_value": null,
+      "transformation": "Blank line separator",
+      "used": true
+    },
+    {
+      "output_line": "*Fetched from Alignment Forum via MCP*",
+      "source_field": null,
+      "source_value": null,
+      "transformation": "Static footer text",
+      "used": true
+    }
+  ],
+  "unused_fields": [
+    {
+      "field_path": "post.result._id",
+      "value": "uMQ3cqWDPHhjtiesc",
+      "reason": "Internal identifier, not displayed to user",
+      "could_be_used_for": "Building canonical URLs or internal references"
+    },
+    {
+      "field_path": "post.result.slug",
+      "value": "agi-ruin-a-list-of-lethalities",
+      "reason": "URL slug not displayed (pageUrl is used instead)",
+      "could_be_used_for": "Constructing custom URLs or references"
+    },
+    {
+      "field_path": "post.result.contents.html",
+      "value": "<h3><strong>Preamble:</strong></h3><p>(If you're already familiar with all basics and don't want any preamble, skip ahead to&nbsp;<a href=\"#Section_B_\"><u>Section B</u></a> for technical difficulties ...",
+      "reason": "Duplicate of htmlBody field",
+      "could_be_used_for": "Fallback if htmlBody is empty"
+    },
+    {
+      "field_path": "post.result.contents.plaintextDescription",
+      "value": "Preamble:\n(If you're already familiar with all basics and don't want any preamble, skip ahead to\u00a0Section B for technical difficulties of alignment proper.)\n\nI have several times failed to write up a well-organized list of reasons why AGI will kill you.\u00a0 People come in with different ideas about why AGI would be survivable, and want to hear different\u00a0obviously key\u00a0points addressed first.\u00a0 Some fraction of those people are loudly upset with me if the obviously most important points aren't addressed immediately, and I address different points first instead.\n\nHaving failed to solve this problem in any good way, I now give up and solve it poorly with a poorly organized list of individual rants.\u00a0 I'm not particularly happy with this list; the alternative was publishing nothing, and publishing this seems marginally more dignified.\n\nThree points about the general subject matter of discussion here, numbered so as not to conflict with the list of lethalities:\n\n-3.\u00a0 I'm assuming you are already familiar with some basics, and already know what 'orthogonality' and 'instrumental convergence' are and why they're true.\u00a0 People occasionally claim to me that I need to stop fighting old wars here, because, those people claim to me, those wars have already been won within the important-according-to-them parts of the current audience.\u00a0 I suppose it's at least true that none of the current major EA funders seem to be visibly in denial about orthogonality or instrumental convergence as such; so, fine.\u00a0 If you don't know what 'orthogonality' or 'instrumental convergence' are, or don't see for yourself why they're true, you need a different introduction than this one.\n\n-2.\u00a0 When I say that alignment is lethally difficult, I am not talking about ideal or perfect goals of 'provable' alignment, nor total alignment of superintelligences on exact human values, nor getting AIs to produce satisfactory arguments about moral dilemmas which sorta-reasonable humans disagree about, nor attaining an abs",
+      "reason": "Summary/preview text not included in detail view",
+      "could_be_used_for": "Showing article preview before fetching full content"
+    },
+    {
+      "field_path": "post.result.user.slug",
+      "value": "eliezer_yudkowsky",
+      "reason": "Author profile slug not displayed",
+      "could_be_used_for": "Building links to author profile pages"
+    }
+  ],
+  "statistics": {
+    "total_fields_returned": 14,
+    "fields_used_in_output": 9,
+    "fields_unused": 5,
+    "html_content_size": 61065,
+    "total_word_count": 9087,
+    "output_format": "Markdown with embedded HTML"
+  }
+}

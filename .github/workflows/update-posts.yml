@@ -30,7 +30,7 @@ jobs:
 
       - name: Fetch posts and generate CSV
         run: |
-          python scripts/update_posts.py
+          python scripts/fetch_from_lesswrong.py
 
       - name: Check if CSV was updated
         id: check_changes
