@@ -6,8 +6,9 @@ LessWrong and Alignment Forum share infrastructure. We fetch from LW API
 and use the 'af' field to filter for Alignment Forum posts only.
 
 Usage:
-  python fetch_from_lesswrong.py            # Incremental: fetch last 48 hours
-  python fetch_from_lesswrong.py --full     # Full: fetch all AF posts
+  python fetch_from_lesswrong.py                  # Incremental: fetch last 48 hours
+  python fetch_from_lesswrong.py --full           # Full: fetch all AF posts (offset limit: ~2100)
+  python fetch_from_lesswrong.py --historical     # Historical: fetch all posts by date ranges (bypasses offset limit)
 """
 
 import argparse
@@ -28,13 +29,24 @@ def parse_args():
     parser.add_argument(
         "--full",
         action="store_true",
-        help="Fetch ALL posts instead of just recent ones (default: last 48 hours)"
+        help="Fetch ALL posts using offset pagination (limit: ~2100 posts)"
+    )
+    parser.add_argument(
+        "--historical",
+        action="store_true",
+        help="Fetch all historical posts by date ranges (bypasses offset limit)"
+    )
+    parser.add_argument(
+        "--start-year",
+        type=int,
+        default=2017,
+        help="Starting year for historical fetch (default: 2017, when AF was created)"
     )
     parser.add_argument(
         "--hours",
         type=int,
         default=48,
-        help="Hours to look back for new posts (default: 48)"
+        help="Hours to look back for new posts in incremental mode (default: 48)"
     )
     return parser.parse_args()
 
@@ -211,6 +223,144 @@ async def fetch_af_posts_full(limit: int = 100) -> list:
     return all_posts
 
 
+async def fetch_af_posts_historical(start_year: int = 2017, limit: int = 100) -> list:
+    """Fetch ALL Alignment Forum posts by iterating through years using date ranges
+
+    This bypasses the offset=2100 limit by using the 'before' parameter to fetch
+    posts year by year from start_year to present.
+
+    Args:
+        start_year: Year to start fetching from (default: 2017, when AF was created)
+        limit: Number of posts per request (default: 100)
+
+    Returns:
+        List of all posts from start_year to present
+    """
+
+    # GraphQL query with af: true filter and date-based pagination
+    query = """
+    query GetAFPostsByYear($limit: Int!, $offset: Int!, $before: Date, $after: Date) {
+      posts(input: {
+        terms: {
+          view: "new"
+          limit: $limit
+          offset: $offset
+          before: $before
+          after: $after
+          af: true
+        }
+      }) {
+        results {
+          _id
+          slug
+          title
+          pageUrl
+          postedAt
+          baseScore
+          voteCount
+          commentCount
+          af
+          contents {
+            wordCount
+            plaintextDescription
+          }
+          user {
+            displayName
+            slug
+          }
+        }
+      }
+    }
+    """
+
+    all_posts = []
+    current_year = datetime.now(timezone.utc).year
+
+    async with httpx.AsyncClient(timeout=30.0) as client:
+        # Iterate through each year
+        for year in range(start_year, current_year + 1):
+            year_start = f"{year}-01-01T00:00:00Z"
+            year_end = f"{year + 1}-01-01T00:00:00Z"
+
+            print(f"\nFetching posts from {year}...")
+            print(f"Date range: {year_start} to {year_end}")
+
+            # Fetch all posts from this year using offset pagination within the year
+            # Use 'before' to get posts before year_end, and 'after' to get posts after year_start
+            offset = 0
+            has_more = True
+            year_posts = []
+
+            while has_more:
+                print(f"  Offset {offset}...", end=" ")
+
+                try:
+                    response = await client.post(
+                        LESSWRONG_URL,
+                        json={
+                            "query": query,
+                            "variables": {
+                                "limit": limit,
+                                "offset": offset,
+                                "before": year_end,
+                                "after": year_start
+                            }
+                        },
+                        headers={
+                            "Content-Type": "application/json",
+                            "User-Agent": "MCP-AlignmentForum/0.1.0"
+                        }
+                    )
+
+                    if response.status_code == 200:
+                        data = response.json()
+                        if "errors" not in data:
+                            posts = data.get("data", {}).get("posts", {}).get("results", [])
+
+                            if not posts:
+                                print("✅ No more posts")
+                                has_more = False
+                            else:
+                                year_posts.extend(posts)
+                                print(f"✅ Got {len(posts)} posts (year total: {len(year_posts)})")
+
+                                # If we got fewer posts than requested, we've reached the end
+                                if len(posts) < limit:
+                                    has_more = False
+                                else:
+                                    offset += limit
+
+                                    # If approaching offset limit, warn and continue to next year
+                                    if offset >= 2000:
+                                        print(f"  ⚠️ Approaching offset limit for {year}, moving to next year")
+                                        has_more = False
+                                    else:
+                                        await asyncio.sleep(GRAPHQL_DELAY)
+                        else:
+                            error_msg = str(data['errors'])
+                            if "Exceeded maximum value for skip" in error_msg:
+                                print(f"⚠️ Offset limit reached for {year} (got {len(year_posts)} posts)")
+                            else:
+                                print(f"❌ GraphQL errors: {data['errors']}")
+                            has_more = False
+                    else:
+                        print(f"❌ Status {response.status_code}")
+                        has_more = False
+
+                except Exception as e:
+                    print(f"❌ Exception: {type(e).__name__}: {e}")
+                    has_more = False
+
+            print(f"✅ Year {year}: Fetched {len(year_posts)} posts")
+            all_posts.extend(year_posts)
+
+            # Small delay between years
+            if year < current_year:
+                await asyncio.sleep(GRAPHQL_DELAY)
+
+    return all_posts
+
+
 def load_existing_posts() -> dict:
     """Load existing posts from CSV and return as dict keyed by _id"""
     existing = {}
@@ -288,8 +438,12 @@ async def main():
     args = parse_args()
 
     print("=" * 70)
-    if args.full:
+    if args.historical:
+        print(f"FETCHING HISTORICAL ALIGNMENT FORUM POSTS (FROM {args.start_year})")
+        print("Using date-range pagination to bypass offset limit")
+    elif args.full:
         print("FETCHING ALL ALIGNMENT FORUM POSTS (FULL REFRESH)")
+        print("Warning: Limited to ~2100 posts due to offset restriction")
     else:
         print(f"FETCHING NEW ALIGNMENT FORUM POSTS (LAST {args.hours} HOURS)")
     print("=" * 70)
@@ -298,7 +452,10 @@ async def main():
     print()
 
     # Fetch posts based on mode
-    if args.full:
+    if args.historical:
+        new_posts = await fetch_af_posts_historical(start_year=args.start_year, limit=100)
+        existing_posts = load_existing_posts()
+    elif args.full:
         new_posts = await fetch_af_posts_full(limit=100)
         existing_posts = {}  # Don't load existing in full mode
     else:
@@ -311,7 +468,9 @@ async def main():
 
     print()
     print("=" * 70)
-    if args.full:
+    if args.historical:
+        print(f"✅ Found {len(new_posts)} posts from {args.start_year} onwards!")
+    elif args.full:
         print(f"✅ Found {len(new_posts)} Alignment Forum posts!")
     else:
         print(f"✅ Found {len(new_posts)} new posts in last {args.hours} hours")
@@ -341,7 +500,7 @@ async def main():
             # Update existing post with latest data
             all_posts[post_id] = csv_row
 
-    if not args.full and new_count > 0:
+    if (args.historical or not args.full) and new_count > 0:
         print(f"Adding {new_count} new posts to existing {len(existing_posts)} posts")
         print(f"Total posts in CSV: {len(all_posts)}")
         print()
@@ -353,18 +512,22 @@ async def main():
     print(f"   Size: {CSV_OUTPUT.stat().st_size / 1024:.1f} KB")
     print(f"   Posts: {len(all_posts)}")
 
-    if new_count > 0 or args.full:
+    if new_count > 0 or args.full or args.historical:
         print()
         sample_posts = [post_to_csv_row(p) for p in new_posts[:5]]
         print("Sample of recent posts:")
         for i, p in enumerate(sample_posts, 1):
-            print(f"\n{i}. {p['title']}")
-            print(f"   Author: {p['author']}, Karma: {p['karma']}")
-            print(f"   URL: {p['pageUrl']}")
+            if p:  # Skip None entries
+                print(f"\n{i}. {p['title']}")
+                print(f"   Author: {p['author']}, Karma: {p['karma']}")
+                print(f"   URL: {p['pageUrl']}")
 
     print()
     print("=" * 70)
-    if args.full:
+    if args.historical:
+        print(f"SUCCESS! Historical fetch complete! {new_count} new posts added to CSV!")
+        print(f"Total posts from {args.start_year} onwards: {len(all_posts)}")
+    elif args.full:
         print("SUCCESS! All Alignment Forum posts fetched!")
     elif new_count > 0:
         print(f"SUCCESS! {new_count} new posts added to CSV!")
