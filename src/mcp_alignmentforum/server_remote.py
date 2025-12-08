@@ -7,6 +7,7 @@ Designed for deployment to FastMCP Cloud or similar platforms.
 
 import csv
 import json
+import re
 
 import httpx
 from fastmcp import FastMCP
@@ -36,6 +37,55 @@ async def get_graphql_client():
     """Create a GraphQL client for Alignment Forum API"""
     transport = HTTPXAsyncTransport(url=GRAPHQL_URL, headers={"User-Agent": USER_AGENT})
     return Client(transport=transport, fetch_schema_from_transport=False)
+
+
+async def fetch_from_url_directly(url: str) -> dict | None:
+    """Fetch article content directly from the post URL as a fallback.
+
+    Parses the HTML page to extract article content when GraphQL fails.
+    """
+    try:
+        async with httpx.AsyncClient(follow_redirects=True) as client:
+            response = await client.get(url, headers={"User-Agent": USER_AGENT})
+            response.raise_for_status()
+            html = response.text
+
+        # Extract title from <title> or og:title
+        title_match = re.search(r'<title>([^<]+)</title>', html)
+        og_title_match = re.search(r'<meta property="og:title" content="([^"]+)"', html)
+        title = og_title_match.group(1) if og_title_match else (title_match.group(1) if title_match else "Unknown Title")
+
+        # Extract author from meta or structured data
+        author_match = re.search(r'"author":\s*\{[^}]*"displayName":\s*"([^"]+)"', html)
+        author = author_match.group(1) if author_match else "Unknown Author"
+
+        # Extract the main content - look for the post body div
+        # LessWrong/AF uses class patterns like "PostsPage-postContent" or similar
+        content_match = re.search(
+            r'<div[^>]*class="[^"]*(?:postContent|PostsPage-postContent|ContentStyles-postBody)[^"]*"[^>]*>(.*?)</div>\s*(?:<div[^>]*class="[^"]*(?:PostsPageActions|CommentSection)',
+            html,
+            re.DOTALL | re.IGNORECASE
+        )
+
+        if not content_match:
+            # Try a more general approach - find content between markers
+            content_match = re.search(
+                r'<article[^>]*>(.*?)</article>',
+                html,
+                re.DOTALL
+            )
+
+        html_body = content_match.group(1) if content_match else "Content extraction failed. Please visit the URL directly."
+
+        return {
+            "title": title,
+            "author": author,
+            "html_body": html_body,
+            "url": url,
+            "fetched_via": "direct_url"
+        }
+    except Exception:
+        return None
 
 
 @mcp.tool
@@ -70,105 +120,108 @@ async def load_alignment_forum_posts() -> str:
 
 
 @mcp.tool
-async def fetch_article_content(post_id: str) -> str:
+async def fetch_article_content(post_id: str, url: str | None = None) -> str:
     """Fetch the full content of a specific Alignment Forum article.
 
     Args:
         post_id: Post ID (_id field) or slug from the CSV
+        url: Optional direct URL to the post (used as fallback if GraphQL fails)
 
     Returns the complete article with HTML content, metadata, and statistics.
     """
-    try:
-        if not post_id:
-            raise ValueError("post_id parameter is required")
+    if not post_id and not url:
+        raise ValueError("Either post_id or url parameter is required")
 
-        # Determine if input is ID (17 alphanumeric chars) or slug
-        is_id = len(post_id) == 17 and post_id.isalnum()
+    graphql_error = None
 
-        # Build GraphQL query - LessWrong only supports _id in selector
-        if is_id:
-            query = gql(
-                """
-                query GetPost($id: String) {
-                    post(input: {
-                        selector: {
-                            _id: $id
-                        }
-                    }) {
-                        result {
-                            _id
-                            slug
-                            title
-                            pageUrl
-                            postedAt
-                            baseScore
-                            voteCount
-                            commentCount
-                            htmlBody
-                            contents {
-                                html
-                                wordCount
-                                plaintextDescription
+    # Try GraphQL first if we have a post_id
+    if post_id:
+        try:
+            # Determine if input is ID (17 alphanumeric chars) or slug
+            is_id = len(post_id) == 17 and post_id.isalnum()
+
+            # Build GraphQL query - LessWrong only supports _id in selector
+            if is_id:
+                query = gql(
+                    """
+                    query GetPost($id: String) {
+                        post(input: {
+                            selector: {
+                                _id: $id
                             }
-                            user {
-                                username
-                                displayName
+                        }) {
+                            result {
+                                _id
                                 slug
+                                title
+                                pageUrl
+                                postedAt
+                                baseScore
+                                voteCount
+                                commentCount
+                                htmlBody
+                                contents {
+                                    html
+                                    wordCount
+                                    plaintextDescription
+                                }
+                                user {
+                                    username
+                                    displayName
+                                    slug
+                                }
                             }
                         }
                     }
-                }
-            """
-            )
-            variables = {"id": post_id}
-        else:
-            # For slugs, use documentId instead
-            query = gql(
                 """
-                query GetPost($documentId: String) {
-                    post(input: {
-                        selector: {
-                            documentId: $documentId
-                        }
-                    }) {
-                        result {
-                            _id
-                            slug
-                            title
-                            pageUrl
-                            postedAt
-                            baseScore
-                            voteCount
-                            commentCount
-                            htmlBody
-                            contents {
-                                html
-                                wordCount
-                                plaintextDescription
+                )
+                variables = {"id": post_id}
+            else:
+                # For slugs, use documentId instead
+                query = gql(
+                    """
+                    query GetPost($documentId: String) {
+                        post(input: {
+                            selector: {
+                                documentId: $documentId
                             }
-                            user {
-                                username
-                                displayName
+                        }) {
+                            result {
+                                _id
                                 slug
+                                title
+                                pageUrl
+                                postedAt
+                                baseScore
+                                voteCount
+                                commentCount
+                                htmlBody
+                                contents {
+                                    html
+                                    wordCount
+                                    plaintextDescription
+                                }
+                                user {
+                                    username
+                                    displayName
+                                    slug
+                                }
                             }
                         }
                     }
-                }
-            """
-            )
-            variables = {"documentId": post_id}
+                """
+                )
+                variables = {"documentId": post_id}
 
-        # Execute query
-        async with await get_graphql_client() as session:
-            result = await session.execute(query, variable_values=variables)
+            # Execute query
+            async with await get_graphql_client() as session:
+                result = await session.execute(query, variable_values=variables)
 
-        post = result.get("post", {}).get("result")
+            post = result.get("post", {}).get("result")
 
-        if not post:
-            raise ValueError(f"Post not found with identifier '{post_id}'")
-
-        # Format the article content
-        formatted_content = f"""# {post['title']}
+            if post:
+                # Format the article content
+                formatted_content = f"""# {post['title']}
 
 **Author**: {post['user']['displayName']} (@{post['user']['username']})
 **Posted**: {post['postedAt'][:10]}
@@ -183,13 +236,43 @@ async def fetch_article_content(post_id: str) -> str:
 
 ---
 
-*Fetched from Alignment Forum via MCP*
+*Fetched from Alignment Forum via MCP (GraphQL)*
 """
+                return formatted_content
 
-        return formatted_content
+        except Exception as e:
+            graphql_error = str(e)
 
-    except Exception as e:
-        raise RuntimeError(f"Error fetching article: {str(e)}")
+    # Fallback: Try fetching directly from URL
+    fallback_url = url
+    if not fallback_url and post_id:
+        # Construct URL from post_id (works for both ID and slug)
+        fallback_url = f"https://www.alignmentforum.org/posts/{post_id}"
+
+    if fallback_url:
+        result = await fetch_from_url_directly(fallback_url)
+        if result:
+            formatted_content = f"""# {result['title']}
+
+**Author**: {result['author']}
+**URL**: {result['url']}
+
+---
+
+{result['html_body']}
+
+---
+
+*Fetched from Alignment Forum via MCP (direct URL fallback)*
+"""
+            return formatted_content
+
+    # Both methods failed
+    error_msg = f"Failed to fetch article with identifier '{post_id}'"
+    if graphql_error:
+        error_msg += f"\nGraphQL error: {graphql_error}"
+    error_msg += "\nDirect URL fetch also failed."
+    raise RuntimeError(error_msg)
 
 
 # FastMCP Cloud will run the server automatically
