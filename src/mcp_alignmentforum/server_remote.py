@@ -1,122 +1,263 @@
 #!/usr/bin/env python3
-"""MCP Server for Alignment Forum - Cloud Deployment
+"""MCP Server for Alignment Forum - Cloud Deployment with Neon PostgreSQL
 
 This server provides tools to interact with Alignment Forum posts via MCP.
-Designed for deployment to FastMCP Cloud or similar platforms.
+Uses Neon PostgreSQL with pgvector for semantic search and pagination.
 """
 
-import csv
 import json
+import os
 import re
 
+import asyncpg
 import httpx
+import numpy as np
+from dotenv import load_dotenv
 from fastmcp import FastMCP
 from gql import Client, gql
 from gql.transport.httpx import HTTPXAsyncTransport
+from openai import AsyncOpenAI
+from pgvector.asyncpg import register_vector
+
+# Load environment variables
+load_dotenv()
 
 # Configuration
-CSV_URL = "https://raw.githubusercontent.com/rapturt9/mcp-alignmentforum/main/data/alignment-forum-posts.csv"
-# Use LessWrong API instead of Alignment Forum to avoid rate limiting
-# LessWrong and AF share infrastructure, so posts are accessible from both
+DATABASE_URL = os.environ.get("DATABASE_URL", "")
 GRAPHQL_URL = "https://www.lesswrong.com/graphql"
-USER_AGENT = "MCP-AlignmentForum/0.1.0"
+USER_AGENT = "MCP-AlignmentForum/0.2.0"
+EMBEDDING_MODEL = "text-embedding-3-small"
 
 # Initialize FastMCP server
 mcp = FastMCP("alignment-forum")
 
+# Global database pool and OpenAI client
+db_pool: asyncpg.Pool | None = None
+openai_client: AsyncOpenAI | None = None
 
-def parse_csv_from_text(csv_text: str) -> list[dict[str, str]]:
-    """Parse CSV text into list of dictionaries"""
-    import io
 
-    reader = csv.DictReader(io.StringIO(csv_text))
-    return list(reader)
+async def ensure_db_initialized():
+    """Ensure database connection pool is initialized."""
+    global db_pool, openai_client
+
+    if db_pool is None:
+        db_pool = await asyncpg.create_pool(
+            DATABASE_URL,
+            min_size=1,
+            max_size=5,
+            command_timeout=30,
+        )
+        # Register pgvector type for the pool
+        async with db_pool.acquire() as conn:
+            await register_vector(conn)
+
+    if openai_client is None:
+        openai_client = AsyncOpenAI()
+
+
+async def get_embedding(text: str) -> np.ndarray:
+    """Generate embedding for search query."""
+    await ensure_db_initialized()
+    response = await openai_client.embeddings.create(
+        model=EMBEDDING_MODEL,
+        input=text,
+    )
+    return np.array(response.data[0].embedding, dtype=np.float32)
 
 
 async def get_graphql_client():
-    """Create a GraphQL client for Alignment Forum API"""
+    """Create a GraphQL client for Alignment Forum API."""
     transport = HTTPXAsyncTransport(url=GRAPHQL_URL, headers={"User-Agent": USER_AGENT})
     return Client(transport=transport, fetch_schema_from_transport=False)
 
 
 async def fetch_from_url_directly(url: str) -> dict | None:
-    """Fetch article content directly from the post URL as a fallback.
-
-    Parses the HTML page to extract article content when GraphQL fails.
-    """
+    """Fetch article content directly from the post URL as a fallback."""
     try:
         async with httpx.AsyncClient(follow_redirects=True) as client:
             response = await client.get(url, headers={"User-Agent": USER_AGENT})
             response.raise_for_status()
             html = response.text
 
-        # Extract title from <title> or og:title
-        title_match = re.search(r'<title>([^<]+)</title>', html)
+        title_match = re.search(r"<title>([^<]+)</title>", html)
         og_title_match = re.search(r'<meta property="og:title" content="([^"]+)"', html)
-        title = og_title_match.group(1) if og_title_match else (title_match.group(1) if title_match else "Unknown Title")
+        title = (
+            og_title_match.group(1)
+            if og_title_match
+            else (title_match.group(1) if title_match else "Unknown Title")
+        )
 
-        # Extract author from meta or structured data
         author_match = re.search(r'"author":\s*\{[^}]*"displayName":\s*"([^"]+)"', html)
         author = author_match.group(1) if author_match else "Unknown Author"
 
-        # Extract the main content - look for the post body div
-        # LessWrong/AF uses class patterns like "PostsPage-postContent" or similar
         content_match = re.search(
             r'<div[^>]*class="[^"]*(?:postContent|PostsPage-postContent|ContentStyles-postBody)[^"]*"[^>]*>(.*?)</div>\s*(?:<div[^>]*class="[^"]*(?:PostsPageActions|CommentSection)',
             html,
-            re.DOTALL | re.IGNORECASE
+            re.DOTALL | re.IGNORECASE,
         )
 
         if not content_match:
-            # Try a more general approach - find content between markers
-            content_match = re.search(
-                r'<article[^>]*>(.*?)</article>',
-                html,
-                re.DOTALL
-            )
+            content_match = re.search(r"<article[^>]*>(.*?)</article>", html, re.DOTALL)
 
-        html_body = content_match.group(1) if content_match else "Content extraction failed. Please visit the URL directly."
+        html_body = (
+            content_match.group(1)
+            if content_match
+            else "Content extraction failed. Please visit the URL directly."
+        )
 
         return {
             "title": title,
             "author": author,
             "html_body": html_body,
             "url": url,
-            "fetched_via": "direct_url"
+            "fetched_via": "direct_url",
         }
     except Exception:
         return None
 
 
 @mcp.tool
-async def load_alignment_forum_posts() -> str:
-    """Load all Alignment Forum posts from the GitHub-hosted CSV file.
+async def search_posts(query: str, limit: int = 20, offset: int = 0) -> str:
+    """Search Alignment Forum posts using natural language.
 
-    Returns metadata for all posts including titles, authors, karma, and summaries.
-    Use this first to see what posts are available.
+    Performs semantic search to find posts most relevant to your query.
+
+    Args:
+        query: Natural language search query (e.g., "mesa-optimization risks")
+        limit: Maximum results (default 20, max 100)
+        offset: Results to skip for pagination
+
+    Returns:
+        JSON with matching posts and similarity scores
     """
-    try:
-        # Fetch CSV from GitHub
-        async with httpx.AsyncClient() as client:
-            response = await client.get(CSV_URL)
-            response.raise_for_status()
-            csv_text = response.text
+    await ensure_db_initialized()
 
-        # Parse CSV
-        posts = parse_csv_from_text(csv_text)
+    # Validate parameters
+    limit = min(max(1, limit), 100)
+    offset = max(0, offset)
 
-        # Return as JSON
-        result = {"count": len(posts), "posts": posts}
+    # Generate query embedding
+    query_embedding = await get_embedding(query)
 
-        return json.dumps(result, indent=2)
+    async with db_pool.acquire() as conn:
+        await register_vector(conn)
 
-    except httpx.HTTPStatusError as e:
-        error_msg = f"Failed to fetch CSV from GitHub: HTTP {e.response.status_code}"
-        if e.response.status_code == 404:
-            error_msg += "\nNote: Make sure the CSV exists on GitHub"
-        raise RuntimeError(error_msg)
-    except Exception as e:
-        raise RuntimeError(f"Error loading posts: {str(e)}")
+        # Semantic search using cosine similarity
+        rows = await conn.fetch(
+            """
+            SELECT
+                _id, slug, title, summary, page_url, author, author_slug,
+                karma, vote_count, comments_count, posted_at, word_count, af,
+                1 - (embedding <=> $1) as similarity
+            FROM posts
+            WHERE embedding IS NOT NULL
+            ORDER BY embedding <=> $1
+            LIMIT $2 OFFSET $3
+            """,
+            query_embedding,
+            limit,
+            offset,
+        )
+
+        # Get total count
+        total = await conn.fetchval(
+            "SELECT COUNT(*) FROM posts WHERE embedding IS NOT NULL"
+        )
+
+    posts = [
+        {
+            "_id": row["_id"],
+            "slug": row["slug"],
+            "title": row["title"],
+            "summary": row["summary"],
+            "pageUrl": row["page_url"],
+            "author": row["author"],
+            "authorSlug": row["author_slug"],
+            "karma": row["karma"],
+            "voteCount": row["vote_count"],
+            "commentsCount": row["comments_count"],
+            "postedAt": row["posted_at"].isoformat() if row["posted_at"] else None,
+            "wordCount": row["word_count"],
+            "af": row["af"],
+            "similarity": round(float(row["similarity"]), 4),
+        }
+        for row in rows
+    ]
+
+    return json.dumps(
+        {
+            "query": query,
+            "total": total,
+            "limit": limit,
+            "offset": offset,
+            "posts": posts,
+        },
+        indent=2,
+    )
+
+
+@mcp.tool
+async def list_recent_posts(limit: int = 20, offset: int = 0) -> str:
+    """List recent Alignment Forum posts chronologically.
+
+    Returns posts sorted by publication date (newest first).
+
+    Args:
+        limit: Maximum results (default 20, max 100)
+        offset: Results to skip for pagination
+
+    Returns:
+        JSON with posts array and pagination info
+    """
+    await ensure_db_initialized()
+
+    limit = min(max(1, limit), 100)
+    offset = max(0, offset)
+
+    async with db_pool.acquire() as conn:
+        rows = await conn.fetch(
+            """
+            SELECT
+                _id, slug, title, summary, page_url, author, author_slug,
+                karma, vote_count, comments_count, posted_at, word_count, af
+            FROM posts
+            ORDER BY posted_at DESC
+            LIMIT $1 OFFSET $2
+            """,
+            limit,
+            offset,
+        )
+
+        total = await conn.fetchval("SELECT COUNT(*) FROM posts")
+
+    posts = [
+        {
+            "_id": row["_id"],
+            "slug": row["slug"],
+            "title": row["title"],
+            "summary": row["summary"],
+            "pageUrl": row["page_url"],
+            "author": row["author"],
+            "authorSlug": row["author_slug"],
+            "karma": row["karma"],
+            "voteCount": row["vote_count"],
+            "commentsCount": row["comments_count"],
+            "postedAt": row["posted_at"].isoformat() if row["posted_at"] else None,
+            "wordCount": row["word_count"],
+            "af": row["af"],
+        }
+        for row in rows
+    ]
+
+    return json.dumps(
+        {
+            "total": total,
+            "limit": limit,
+            "offset": offset,
+            "posts": posts,
+        },
+        indent=2,
+    )
 
 
 @mcp.tool
@@ -124,7 +265,7 @@ async def fetch_article_content(post_id: str, url: str | None = None) -> str:
     """Fetch the full content of a specific Alignment Forum article.
 
     Args:
-        post_id: Post ID (_id field) or slug from the CSV
+        post_id: Post ID (_id field) or slug from the database
         url: Optional direct URL to the post (used as fallback if GraphQL fails)
 
     Returns the complete article with HTML content, metadata, and statistics.
@@ -137,10 +278,8 @@ async def fetch_article_content(post_id: str, url: str | None = None) -> str:
     # Try GraphQL first if we have a post_id
     if post_id:
         try:
-            # Determine if input is ID (17 alphanumeric chars) or slug
             is_id = len(post_id) == 17 and post_id.isalnum()
 
-            # Build GraphQL query - LessWrong only supports _id in selector
             if is_id:
                 query = gql(
                     """
@@ -177,7 +316,6 @@ async def fetch_article_content(post_id: str, url: str | None = None) -> str:
                 )
                 variables = {"id": post_id}
             else:
-                # For slugs, use documentId instead
                 query = gql(
                     """
                     query GetPost($documentId: String) {
@@ -213,14 +351,12 @@ async def fetch_article_content(post_id: str, url: str | None = None) -> str:
                 )
                 variables = {"documentId": post_id}
 
-            # Execute query
             async with await get_graphql_client() as session:
                 result = await session.execute(query, variable_values=variables)
 
             post = result.get("post", {}).get("result")
 
             if post:
-                # Format the article content
                 formatted_content = f"""# {post['title']}
 
 **Author**: {post['user']['displayName']} (@{post['user']['username']})
@@ -246,7 +382,6 @@ async def fetch_article_content(post_id: str, url: str | None = None) -> str:
     # Fallback: Try fetching directly from URL
     fallback_url = url
     if not fallback_url and post_id:
-        # Construct URL from post_id (works for both ID and slug)
         fallback_url = f"https://www.alignmentforum.org/posts/{post_id}"
 
     if fallback_url:
@@ -267,7 +402,6 @@ async def fetch_article_content(post_id: str, url: str | None = None) -> str:
 """
             return formatted_content
 
-    # Both methods failed
     error_msg = f"Failed to fetch article with identifier '{post_id}'"
     if graphql_error:
         error_msg += f"\nGraphQL error: {graphql_error}"
@@ -276,4 +410,3 @@ async def fetch_article_content(post_id: str, url: str | None = None) -> str:
 
 
 # FastMCP Cloud will run the server automatically
-# No need for if __name__ == "__main__" block
