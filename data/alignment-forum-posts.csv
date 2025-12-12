@@ -1,4 +1,20 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"CF4Z9mQSfvi99A3BR","my-agi-safety-research-2025-review-26-plans","My AGI safety research—2025 review, ’26 plans","Previous: 2024, 2022
+
+“Our greatest fear should not be of failure, but of succeeding at something that doesn't really matter.” –attributed to DL Moody[1]
+
+
+1. Background & threat model
+The main threat model I’m working to address is the same as it’s been since I was hobby-blogging about AGI safety in 2019. Basically, I think that:
+
+ * The “secret sauce” of human intelligence is a big uniform-ish learning algorithm centered around the cortex;
+ * This learning algorithm is different from and mo...","https://www.lesswrong.com/posts/CF4Z9mQSfvi99A3BR/my-agi-safety-research-2025-review-26-plans","Steven Byrnes","steve2152","59","14","1","2025-12-11T17:05:30.862Z","3638","True"
+"BExKr5kR9RX7ot9iw","evaluation-as-a-cooperation-enabling-tool","Evaluation as a (Cooperation-Enabling?) Tool","Key points:
+0. Advertisement:  We have an IMO-nice position paper which argues that AI Testing Should Account for Sophisticated Strategic Behaviour, and that we should think about evaluation (also) through game-theoretic lens. (See this footnote for an example: [1].) Tell your friends!
+
+
+On framing evaluation as one of many tools:
+1. One of many tools: When looking at the game theory of evaluations, recognise that evaluation (or testing, simulation, verification, ...[2]) is just one of many t...","https://www.lesswrong.com/posts/BExKr5kR9RX7ot9iw/evaluation-as-a-cooperation-enabling-tool","VojtaKovarik","vojtakovarik","5","1","0","2025-12-10T18:54:24.599Z","8314","True"
 "xw8P8H4TRaTQHJnoP","reward-function-design-a-starter-pack","Reward Function Design: a starter pack","In the companion post We need a field of Reward Function Design, I implore researchers to think about what RL reward functions (if any) will lead to RL agents that are not ruthless power-seeking consequentialists. And I further suggested that human social instincts constitutes an intriguing example we should study, since they seem to be an existence proof that such reward functions exist. So what is the general principle of Reward Function Design that underlies the non-ruthless (“ruthful”??) ...","https://www.lesswrong.com/posts/xw8P8H4TRaTQHJnoP/reward-function-design-a-starter-pack","Steven Byrnes","steve2152","73","20","3","2025-12-08T19:15:39.781Z","4706","True"
 "oxvnREntu82tffkYW","we-need-a-field-of-reward-function-design","We need a field of Reward Function Design","(Brief pitch for a general audience, based on a 5-minute talk I gave.)
 
