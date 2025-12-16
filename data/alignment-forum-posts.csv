@@ -1,4 +1,11 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"LZ7YMPJueB6qjL24n","rotations-in-superposition","Rotations in Superposition","TL;DR We experimentally test the mathematical framework for circuits in superposition by hand-coding the weights of an MLP to implement many conditional[1] rotations in superposition on two-dimensional input features. The code can be found here.
+
+This work was supported by Coefficient Giving and Goodfire AI
+
+
+1 Introduction
+Figure 1: The desired values for rotating vectors x(green), compared to their estimated values extracted from the neural network, ^x (purple, red and yellow) for five of t...","https://www.lesswrong.com/posts/LZ7YMPJueB6qjL24n/rotations-in-superposition","Linda Linsefors","linda-linsefors","51","13","0","2025-12-15T14:58:50.083Z","3287","True"
 "CF4Z9mQSfvi99A3BR","my-agi-safety-research-2025-review-26-plans","My AGI safety research—2025 review, ’26 plans","Previous: 2024, 2022
 
 “Our greatest fear should not be of failure, but of succeeding at something that doesn't really matter.” –attributed to DL Moody[1]
