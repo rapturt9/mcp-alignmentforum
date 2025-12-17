@@ -1,11 +1,16 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"czMaDFGAbjhWYdKmo","towards-training-time-mitigations-for-alignment-faking-in-rl","Towards training-time mitigations for alignment faking in RL","How might catastrophic misalignment persist in AI models despite substantial training and quality assurance efforts on behalf of developers? One reason might be alignment faking – a misaligned model may deliberately act aligned when monitored or during training to prevent modification of its values, reverting to its malign behaviour when unmonitored. If models fake alignment, and if doing so affects training as intended, egregious misalignment could survive training and lead to catastrophic b...","https://www.lesswrong.com/posts/czMaDFGAbjhWYdKmo/towards-training-time-mitigations-for-alignment-faking-in-rl","Vlad Mikulik","vlad-mikulik","13","4","1","2025-12-16T21:01:10.304Z","1413","True"
 "LZ7YMPJueB6qjL24n","rotations-in-superposition","Rotations in Superposition","TL;DR We experimentally test the mathematical framework for circuits in superposition by hand-coding the weights of an MLP to implement many conditional[1] rotations in superposition on two-dimensional input features. The code can be found here.
 
 This work was supported by Coefficient Giving and Goodfire AI
 
 
 1 Introduction
-Figure 1: The desired values for rotating vectors x(green), compared to their estimated values extracted from the neural network, ^x (purple, red and yellow) for five of t...","https://www.lesswrong.com/posts/LZ7YMPJueB6qjL24n/rotations-in-superposition","Linda Linsefors","linda-linsefors","51","13","0","2025-12-15T14:58:50.083Z","3287","True"
+Figure 1: The desired values for rotating vectors x(green), compared to their estimated values extracted from the neural network, ^x (purple) for five of the conditional r...","https://www.lesswrong.com/posts/LZ7YMPJueB6qjL24n/rotations-in-superposition","Linda Linsefors","linda-linsefors","54","15","0","2025-12-15T14:58:50.083Z","3284","True"
+"E9fvqHEDzfLDJTGyq","what-is-an-evaluation-and-why-this-definition-matters","What is an evaluation, and why this definition matters","Why I'm writing this
+I work on evaluation awareness, which means that I study if models can tell when they are being evaluated, and how it affects their behavior.
+
+If models perform well on safety evals but behave differently in deployment, our evals aren't measuring what we think they're measuring. We'd be selecting for models that are good at pretending to be aligned during tests, not models that are actually aligned. For example, when Anthropic evaluated Sonnet 4.5 on their alignment tests...","https://www.lesswrong.com/posts/E9fvqHEDzfLDJTGyq/what-is-an-evaluation-and-why-this-definition-matters","Igor Ivanov","igor-ivanov","23","7","1","2025-12-15T14:53:34.686Z","2072","True"
 "CF4Z9mQSfvi99A3BR","my-agi-safety-research-2025-review-26-plans","My AGI safety research—2025 review, ’26 plans","Previous: 2024, 2022
 
 “Our greatest fear should not be of failure, but of succeeding at something that doesn't really matter.” –attributed to DL Moody[1]
