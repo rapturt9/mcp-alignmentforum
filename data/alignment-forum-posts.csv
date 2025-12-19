@@ -1,4 +1,17 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"qkhwh4AdG7kXgELCD","scalable-end-to-end-interpretability","Scalable End-to-End Interpretability","This is partly a linkpost for Predictive Concept Decoders, and partly a response to Neel Nanda's Pragmatic Vision for AI Interpretability and Leo Gao's Ambitious Vision for Interpretability.
+
+There is currently somewhat of a debate in the interpretability community between pragmatic interpretability---grounding problems in empirically measurable safety tasks---and ambitious interpretability----obtaining a full bottom-up understanding of neural networks.
+
+In my mind, these both get at somethin...","https://www.lesswrong.com/posts/qkhwh4AdG7kXgELCD/scalable-end-to-end-interpretability","jsteinhardt","jsteinhardt","54","13","0","2025-12-18T22:37:57.570Z","774","True"
+"rwoEz3bA9ekxkabc7","activation-oracles-training-and-evaluating-llms-as-general","Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers","TL;DR: We train LLMs to accept LLM neural activations as inputs and answer arbitrary questions about them in natural language. These Activation Oracles generalize far beyond their training distribution, for example uncovering misalignment or secret knowledge introduced via fine-tuning. Activation Oracles can be improved simply by scaling training data quantity and diversity.
+
+The below is a reproduction of our X thread on this paper and the Anthropic Alignment blog post. 
+
+
+Thread
+New paper:
+...","https://www.lesswrong.com/posts/rwoEz3bA9ekxkabc7/activation-oracles-training-and-evaluating-llms-as-general","Sam Marks","sam-marks","63","19","1","2025-12-18T20:21:35.458Z","2392","True"
 "Wti4Wr7Cf5ma3FGWa","shallow-review-of-technical-ai-safety-2025-2","Shallow review of technical AI safety, 2025","Website version · Gestalt · Repo and data
 
 Change in 18 latent capabilities between GPT-3 and o1, from Zhou et al (2025)
@@ -10,10 +23,10 @@ Change in 18 latent capabilities between GPT-3 and o1, from Zhou et al (2025)
 
 This is the third annual review of what’s going on in technical AI safety. You could stop reading here and instead explore the data on the shallow review website.
 
-It’s shallow in the sense that 1) we are not specialists in almost any of it and that 2) we only spent about two hours on each entry. Still, among other things, we processed every arXiv paper on alignment...","https://www.lesswrong.com/posts/Wti4Wr7Cf5ma3FGWa/shallow-review-of-technical-ai-safety-2025-2","technicalities","technicalities","60","16","2","2025-12-17T18:18:39.545Z","24787","True"
+It’s shallow in the sense that 1) we are not specialists in almost any of it and that 2) we only spent about two hours on each entry. Still, among other things, we processed every arXiv paper on alignment...","https://www.lesswrong.com/posts/Wti4Wr7Cf5ma3FGWa/shallow-review-of-technical-ai-safety-2025-2","technicalities","technicalities","134","40","7","2025-12-17T18:18:39.545Z","24830","True"
 "QhgYHcJexYGRaipwr","the-bleeding-mind-of-an-llm","The Bleeding Mind of an LLM","The simulator theory of LLM personas may be crudely glossed as: ""the best way to predict a person is to simulate a person"". Ergo, we can more-or-less think of LLM personas as human-like creatures—different, alien, yes; but these differences are pretty predictable by simply imagining a human placed into the bizarre circumstances of an LLM.
 
-I've been surprised at how well this viewpoint has held up in the last three years, and have updated accordingly. Still, there are deep differences not imp...","https://www.lesswrong.com/posts/QhgYHcJexYGRaipwr/the-bleeding-mind-of-an-llm","Adele Lopez","adele-lopez","35","18","3","2025-12-17T16:27:33.275Z","1681","True"
+I've been surprised at how well this viewpoint has held up in the last three years, and have updated accordingly. Still, there are deep differences not imp...","https://www.lesswrong.com/posts/QhgYHcJexYGRaipwr/the-bleeding-mind-of-an-llm","Adele Lopez","adele-lopez","55","27","7","2025-12-17T16:27:33.275Z","1681","True"
 "czMaDFGAbjhWYdKmo","towards-training-time-mitigations-for-alignment-faking-in-rl","Towards training-time mitigations for alignment faking in RL","How might catastrophic misalignment persist in AI models despite substantial training and quality assurance efforts on behalf of developers? One reason might be alignment faking – a misaligned model may deliberately act aligned when monitored or during training to prevent modification of its values, reverting to its malign behaviour when unmonitored. If models fake alignment, and if doing so affects training as intended, egregious misalignment could survive training and lead to catastrophic b...","https://www.lesswrong.com/posts/czMaDFGAbjhWYdKmo/towards-training-time-mitigations-for-alignment-faking-in-rl","Vlad Mikulik","vlad-mikulik","32","8","1","2025-12-16T21:01:10.304Z","1413","True"
 "LZ7YMPJueB6qjL24n","rotations-in-superposition","Rotations in Superposition","TL;DR We experimentally test the mathematical framework for circuits in superposition by hand-coding the weights of an MLP to implement many conditional[1] rotations in superposition on two-dimensional input features. The code can be found here.
 
