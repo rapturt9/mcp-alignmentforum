@@ -1,9 +1,12 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"wwRgR3K8FKShjwwL5","2025-era-reward-hacking-does-not-show-that-reward-is-the","2025-Era “Reward Hacking” Does Not Show that Reward Is the Optimization Target","Folks ask me, ""LLMs seem to reward hack a lot. Does that mean that reward is the optimization target?"". In 2022, I wrote the essay Reward is not the optimization target, which I here abbreviate to ""Reward≠OT"".
+
+Reward still is not the optimization target: Reward≠OT said that (policy-gradient) RL will not train systems which primarily try to optimize the reward function for its own sake (e.g. searching at inference time for an input which maximally activates the AI's specific reward model). In...","https://www.lesswrong.com/posts/wwRgR3K8FKShjwwL5/2025-era-reward-hacking-does-not-show-that-reward-is-the","TurnTrout","turntrout","56","24","2","2025-12-19T06:09:56.551Z","2036","True"
 "qkhwh4AdG7kXgELCD","scalable-end-to-end-interpretability","Scalable End-to-End Interpretability","This is partly a linkpost for Predictive Concept Decoders, and partly a response to Neel Nanda's Pragmatic Vision for AI Interpretability and Leo Gao's Ambitious Vision for Interpretability.
 
 There is currently somewhat of a debate in the interpretability community between pragmatic interpretability---grounding problems in empirically measurable safety tasks---and ambitious interpretability----obtaining a full bottom-up understanding of neural networks.
 
-In my mind, these both get at somethin...","https://www.lesswrong.com/posts/qkhwh4AdG7kXgELCD/scalable-end-to-end-interpretability","jsteinhardt","jsteinhardt","54","13","0","2025-12-18T22:37:57.570Z","774","True"
+In my mind, these both get at somethin...","https://www.lesswrong.com/posts/qkhwh4AdG7kXgELCD/scalable-end-to-end-interpretability","jsteinhardt","jsteinhardt","93","27","2","2025-12-18T22:37:57.570Z","774","True"
 "rwoEz3bA9ekxkabc7","activation-oracles-training-and-evaluating-llms-as-general","Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers","TL;DR: We train LLMs to accept LLM neural activations as inputs and answer arbitrary questions about them in natural language. These Activation Oracles generalize far beyond their training distribution, for example uncovering misalignment or secret knowledge introduced via fine-tuning. Activation Oracles can be improved simply by scaling training data quantity and diversity.
 
 The below is a reproduction of our X thread on this paper and the Anthropic Alignment blog post. 
@@ -11,7 +14,7 @@ The below is a reproduction of our X thread on this paper and the Anthropic Alig
 
 Thread
 New paper:
-...","https://www.lesswrong.com/posts/rwoEz3bA9ekxkabc7/activation-oracles-training-and-evaluating-llms-as-general","Sam Marks","sam-marks","63","19","1","2025-12-18T20:21:35.458Z","2392","True"
+...","https://www.lesswrong.com/posts/rwoEz3bA9ekxkabc7/activation-oracles-training-and-evaluating-llms-as-general","Sam Marks","sam-marks","114","37","6","2025-12-18T20:21:35.458Z","2392","True"
 "Wti4Wr7Cf5ma3FGWa","shallow-review-of-technical-ai-safety-2025-2","Shallow review of technical AI safety, 2025","Website version · Gestalt · Repo and data
 
 Change in 18 latent capabilities between GPT-3 and o1, from Zhou et al (2025)
