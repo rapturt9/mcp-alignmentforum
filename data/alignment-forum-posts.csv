@@ -1,4 +1,31 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"YQro5LyYjDzZrBCdb","announcing-gemma-scope-2","Announcing Gemma Scope 2","TLDR
+ * The Google DeepMind mech interp team is releasing Gemma Scope 2: a suite of SAEs & transcoders trained on the Gemma 3 model family
+   * Neuronpedia demo here, access the weights on HuggingFace here, try out the Colab notebook tutorial here [1]
+ * Key features of this relative to the previous Gemma Scope release:
+   * More advanced model family (V3 rather than V2) should enable analysis of more complex forms of behaviour
+   * More comprehensive release (SAEs on every layer, for all mod...","https://www.lesswrong.com/posts/YQro5LyYjDzZrBCdb/announcing-gemma-scope-2","CallumMcDougall","callummcdougall","52","15","0","2025-12-22T21:56:59.396Z","664","True"
+"ATDvmn23PWW4erZzf","supervised-finetuning-on-low-harm-reward-hacking-generalises","Supervised finetuning on low-harm reward hacking generalises to high-harm reward hacking","Summary
+ * We introduce a dataset of 8993 model-generated tasks for training and measuring reward hacking.
+   * Tasks vary on the harm level of the reward hacks and on whether oversight is present, allowing us to measure reward hacking generalisation over these dimensions.
+   * To simulate situational awareness, task prompts state how reward will be calculated and contain the information needed to work out whether reward hacking can succeed.
+   * Model-generated code classifies responses to e...","https://www.lesswrong.com/posts/ATDvmn23PWW4erZzf/supervised-finetuning-on-low-harm-reward-hacking-generalises","Isaac Dunn","isaac-dunn","9","4","0","2025-12-22T19:32:12.871Z","8991","True"
+"NYzYJ2WoB74E6uj9L","recent-llms-can-use-filler-tokens-or-problem-repeats-to","Recent LLMs can use filler tokens or problem repeats to improve (no-CoT) math performance","Prior results have shown that LLMs released before 2024 can't leverage 'filler tokens'—unrelated tokens prior to the model's final answer—to perform additional computation and improve performance. [1] I did an investigation on more recent models (e.g. Opus 4.5) and found that many recent LLMs improve substantially on math problems when given filler tokens. That is, I force the LLM to answer some math question immediately without being able to reason using Chain-of-Thought (CoT), but do give t...","https://www.lesswrong.com/posts/NYzYJ2WoB74E6uj9L/recent-llms-can-use-filler-tokens-or-problem-repeats-to","ryan_greenblatt","ryan_greenblatt","98","30","6","2025-12-22T17:21:09.745Z","2056","True"
+"YGAimivLxycZcqRFR","can-we-interpret-latent-reasoning-using-current-mechanistic","Can we interpret latent reasoning using current mechanistic interpretability tools?","Authors: Bartosz Cywinski*, Bart Bussmann*, Arthur Conmy**, Joshua Engels**, Neel Nanda**, Senthooran Rajamanoharan**
+
+* primary contributors
+** advice and mentorship
+
+
+TL;DR
+We study a simple latent reasoning LLM on math tasks using standard mechanistic interpretability techniques to see whether the latent reasoning process (i.e., vector-based chain of thought) is interpretable.
+
+Results:
+
+ * We find that the model solves maths problems requiring three reasoning steps by storing the two inte...","https://www.lesswrong.com/posts/YGAimivLxycZcqRFR/can-we-interpret-latent-reasoning-using-current-mechanistic","Bartosz Cywiński","bartosz-cywinski","24","7","0","2025-12-22T16:56:24.506Z","2727","True"
+"SgaSFWhJJoavCcTp6","aixi-with-general-utility-functions-value-under-ignorance-in","AIXI with general utility functions: ""Value under ignorance in UAI""","This updated version of my AGI 2025 paper with Marcus Hutter, ""Value under ignorance in universal artificial intelligence,"" studies general utility functions for AIXI. Surprisingly, the (hyper)computability properties have connections to imprecise probability theory! 
+
+AIXI uses a defective Bayesian mixture called a semimeasure, which is often viewed as expressing a chance that the agent dies. I do not think that interpretation has been sufficiently justified. Recasting semimeasures as credal...","https://www.lesswrong.com/posts/SgaSFWhJJoavCcTp6/aixi-with-general-utility-functions-value-under-ignorance-in","Cole Wyeth","cole-wyeth","24","5","0","2025-12-22T05:46:35.416Z","357","True"
 "wwRgR3K8FKShjwwL5","2025-era-reward-hacking-does-not-show-that-reward-is-the","2025-Era “Reward Hacking” Does Not Show that Reward Is the Optimization Target","Folks ask me, ""LLMs seem to reward hack a lot. Does that mean that reward is the optimization target?"". In 2022, I wrote the essay Reward is not the optimization target, which I here abbreviate to ""Reward≠OT"".
 
 Reward still is not the optimization target: Reward≠OT said that (policy-gradient) RL will not train systems which primarily try to optimize the reward function for its own sake (e.g. searching at inference time for an input which maximally activates the AI's specific reward model). In...","https://www.lesswrong.com/posts/wwRgR3K8FKShjwwL5/2025-era-reward-hacking-does-not-show-that-reward-is-the","TurnTrout","turntrout","42","28","7","2025-12-19T06:09:56.551Z","2036","True"
