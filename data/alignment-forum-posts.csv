@@ -1,16 +1,25 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"dxF7cPKTFMbkbtnxi","the-future-of-alignment-if-llms-are-a-bubble","The future of alignment if LLMs are a bubble","We might be in a generative AI bubble. There are many potential signs of this around:
+
+ * Business investment in generative AI have had very low returns. 
+ * Expert opinion is turning against LLM, including some of the early LLM promoters (I also get this message from personal conversations with some AI researchers).
+ * No signs of mass technological unemployment.
+ * No large surge in new products and software.
+ * No sudden economic leaps.
+ * Business investment in AI souring.
+ * Hallucinatio...","https://www.lesswrong.com/posts/dxF7cPKTFMbkbtnxi/the-future-of-alignment-if-llms-are-a-bubble","Stuart_Armstrong","stuart_armstrong","30","13","7","2025-12-23T00:08:57.911Z","1525","True"
 "YQro5LyYjDzZrBCdb","announcing-gemma-scope-2","Announcing Gemma Scope 2","TLDR
  * The Google DeepMind mech interp team is releasing Gemma Scope 2: a suite of SAEs & transcoders trained on the Gemma 3 model family
    * Neuronpedia demo here, access the weights on HuggingFace here, try out the Colab notebook tutorial here [1]
  * Key features of this relative to the previous Gemma Scope release:
    * More advanced model family (V3 rather than V2) should enable analysis of more complex forms of behaviour
-   * More comprehensive release (SAEs on every layer, for all mod...","https://www.lesswrong.com/posts/YQro5LyYjDzZrBCdb/announcing-gemma-scope-2","CallumMcDougall","callummcdougall","52","15","0","2025-12-22T21:56:59.396Z","664","True"
+   * More comprehensive release (SAEs on every layer, for all mod...","https://www.lesswrong.com/posts/YQro5LyYjDzZrBCdb/announcing-gemma-scope-2","CallumMcDougall","callummcdougall","88","30","1","2025-12-22T21:56:59.396Z","664","True"
 "ATDvmn23PWW4erZzf","supervised-finetuning-on-low-harm-reward-hacking-generalises","Supervised finetuning on low-harm reward hacking generalises to high-harm reward hacking","Summary
  * We introduce a dataset of 8993 model-generated tasks for training and measuring reward hacking.
    * Tasks vary on the harm level of the reward hacks and on whether oversight is present, allowing us to measure reward hacking generalisation over these dimensions.
    * To simulate situational awareness, task prompts state how reward will be calculated and contain the information needed to work out whether reward hacking can succeed.
-   * Model-generated code classifies responses to e...","https://www.lesswrong.com/posts/ATDvmn23PWW4erZzf/supervised-finetuning-on-low-harm-reward-hacking-generalises","Isaac Dunn","isaac-dunn","9","4","0","2025-12-22T19:32:12.871Z","8991","True"
-"NYzYJ2WoB74E6uj9L","recent-llms-can-use-filler-tokens-or-problem-repeats-to","Recent LLMs can use filler tokens or problem repeats to improve (no-CoT) math performance","Prior results have shown that LLMs released before 2024 can't leverage 'filler tokens'—unrelated tokens prior to the model's final answer—to perform additional computation and improve performance. [1] I did an investigation on more recent models (e.g. Opus 4.5) and found that many recent LLMs improve substantially on math problems when given filler tokens. That is, I force the LLM to answer some math question immediately without being able to reason using Chain-of-Thought (CoT), but do give t...","https://www.lesswrong.com/posts/NYzYJ2WoB74E6uj9L/recent-llms-can-use-filler-tokens-or-problem-repeats-to","ryan_greenblatt","ryan_greenblatt","98","30","6","2025-12-22T17:21:09.745Z","2056","True"
+   * Model-generated code classifies responses to e...","https://www.lesswrong.com/posts/ATDvmn23PWW4erZzf/supervised-finetuning-on-low-harm-reward-hacking-generalises","Isaac Dunn","isaac-dunn","13","5","0","2025-12-22T19:32:12.871Z","8991","True"
+"NYzYJ2WoB74E6uj9L","recent-llms-can-use-filler-tokens-or-problem-repeats-to","Recent LLMs can use filler tokens or problem repeats to improve (no-CoT) math performance","Prior results have shown that LLMs released before 2024 can't leverage 'filler tokens'—unrelated tokens prior to the model's final answer—to perform additional computation and improve performance. [1] I did an investigation on more recent models (e.g. Opus 4.5) and found that many recent LLMs improve substantially on math problems when given filler tokens. That is, I force the LLM to answer some math question immediately without being able to reason using Chain-of-Thought (CoT), but do give t...","https://www.lesswrong.com/posts/NYzYJ2WoB74E6uj9L/recent-llms-can-use-filler-tokens-or-problem-repeats-to","ryan_greenblatt","ryan_greenblatt","126","44","12","2025-12-22T17:21:09.745Z","2056","True"
 "YGAimivLxycZcqRFR","can-we-interpret-latent-reasoning-using-current-mechanistic","Can we interpret latent reasoning using current mechanistic interpretability tools?","Authors: Bartosz Cywinski*, Bart Bussmann*, Arthur Conmy**, Joshua Engels**, Neel Nanda**, Senthooran Rajamanoharan**
 
 * primary contributors
