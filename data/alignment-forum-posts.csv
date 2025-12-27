@@ -1,4 +1,15 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"hgoj2WAwLwn3qWLuc","team-shard-alignment-mentorship-from-turntrout-and-alex","Team Shard: Alignment Mentorship from TurnTrout and Alex Cloud","Through the MATS program, we (Alex Turner and Alex Cloud[1]) help alignment researchers grow from seeds into majestic trees. We have fun, consistently make real alignment progress, and help scholars tap into their latent abilities.
+
+MATS summer '26 applications are open until January 18th!
+
+Team Shard in MATS 6.0 during the summer of '24. From left: Evžen Wyitbul, Jacob Goldman-Wetzler, Alex Turner, Alex Cloud, and Joseph Miller.
+Many mentees now fill impactful roles.
+
+ 1. Lisa Thiergart (MAT...","https://www.lesswrong.com/posts/hgoj2WAwLwn3qWLuc/team-shard-alignment-mentorship-from-turntrout-and-alex","TurnTrout","turntrout","30","12","0","2025-12-26T17:20:14.755Z","733","True"
+"Ty5Bmg7P6Tciy2uj2","measuring-no-cot-math-time-horizon-single-forward-pass","Measuring no CoT math time horizon (single forward pass)","A key risk factor for scheming (and misalignment more generally) is opaque reasoning ability. One proxy for this is how good AIs are at solving math problems immediately without any chain-of-thought (CoT) (as in, in a single forward pass). I've measured this on a dataset of easy math problems and used this to estimate 50% reliability no-CoT time horizon using the same methodology introduced in Measuring AI Ability to Complete Long Tasks (the METR time horizon paper).
+
+Important caveat: To get...","https://www.lesswrong.com/posts/Ty5Bmg7P6Tciy2uj2/measuring-no-cot-math-time-horizon-single-forward-pass","ryan_greenblatt","ryan_greenblatt","118","39","6","2025-12-26T16:37:52.424Z","976","True"
 "dxF7cPKTFMbkbtnxi","the-future-of-alignment-if-llms-are-a-bubble","The future of alignment if LLMs are a bubble","We might be in a generative AI bubble. There are many potential signs of this around:
 
  * Business investment in generative AI have had very low returns. 
