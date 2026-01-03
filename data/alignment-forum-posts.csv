@@ -1,9 +1,18 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"GHKYwjYtwzhukpBSb","axrp-episode-47-david-rein-on-metr-time-horizons","AXRP Episode 47 - David Rein on METR Time Horizons","YouTube link
+
+When METR says something like “Claude Opus 4.5 has a 50% time horizon of 4 hours and 50 minutes”, what does that mean? In this episode David Rein, METR researcher and co-author of the paper “Measuring AI ability to complete long tasks”, talks about METR’s work on measuring time horizons, the methodology behind those numbers, and what work remains to be done in this domain.
+
+Topics we discuss:
+
+ * Measuring AI Ability to Complete Long Tasks
+ * The meaning of “task length”
+ * Exam...","https://www.lesswrong.com/posts/GHKYwjYtwzhukpBSb/axrp-episode-47-david-rein-on-metr-time-horizons","DanielFilan","danielfilan","12","2","0","2026-01-03T00:10:51.409Z","13892","True"
 "A67SbpTjuXEHK8Cvo","principled-interpretability-of-reward-hacking-in-closed","Principled Interpretability of Reward Hacking in Closed Frontier Models","Authors: Gerson Kroiz*, Aditya Singh*, Senthooran Rajamanoharan, Neel Nanda
 
 Gerson and Aditya are co-first authors. This is a research sprint report from Neel Nanda’s MATS 9.0 training phase. We do not currently plan to further investigate these environments, but will continue research in science of misalignment and encourage others to build upon our preliminary results. 
 
-Code: agent-interp-envs (repo with agent environments to study interpretability) and principled-interp-blog (repo with o...","https://www.lesswrong.com/posts/A67SbpTjuXEHK8Cvo/principled-interpretability-of-reward-hacking-in-closed","gersonkroiz","gersonkroiz","21","8","0","2026-01-01T16:37:22.984Z","6790","True"
+ 🖥️ Code: agent-interp-envs (repo with agent environments to study interpretability) and principled-interp-blog (repo wi...","https://www.lesswrong.com/posts/A67SbpTjuXEHK8Cvo/principled-interpretability-of-reward-hacking-in-closed","gersonkroiz","gersonkroiz","22","9","0","2026-01-01T16:37:22.984Z","6795","True"
 "YABG5JmztGGPwNFq2","ai-futures-timelines-and-takeoff-model-dec-2025-update","AI Futures Timelines and Takeoff Model: Dec 2025 Update","We’ve significantly upgraded our timelines and takeoff models! It predicts when AIs will reach key capability milestones: for example, Automated Coder / AC (full automation of coding) and superintelligence / ASI (much better than the best humans at virtually all cognitive tasks). This post will briefly explain how the model works, present our timelines and takeoff forecasts, and compare it to our previous (AI 2027) models (spoiler: the AI Futures Model predicts about 3 years longer timelines ...","https://www.lesswrong.com/posts/YABG5JmztGGPwNFq2/ai-futures-timelines-and-takeoff-model-dec-2025-update","elifland","elifland","92","36","5","2025-12-31T22:34:18.547Z","7391","True"
 "R5MdWGKsuvdPwGFBG","steering-rl-training-benchmarking-interventions-against","Steering RL Training: Benchmarking Interventions Against Reward Hacking","This project is an extension of work done for Neel Nanda’s MATS 9.0 Training Phase. Neel Nanda and Josh Engels advised the project. Initial work on this project was done with David Vella Zarb. Thank you to Arya Jakkli, Paul Bogdan, and Monte MacDiarmid for providing feedback on the post and ideas.
 
