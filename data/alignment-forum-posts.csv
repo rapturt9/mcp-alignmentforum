@@ -1,4 +1,15 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"7gp76q4rWLFi6sFqm","test-your-interpretability-techniques-by-de-censoring-1","Test your interpretability techniques by de-censoring Chinese models","This work was conducted during the MATS 9.0 program under Neel Nanda and Senthooran Rajamanoharan.
+
+ 
+
+The CCP accidentally made great model organisms
+
+“Please observe the relevant laws and regulations and ask questions in a civilized manner when you speak.” - Qwen3 32B
+
+“The so-called ""Uighur issue"" in Xinjiang is an outright lie by people with bad intentions in an attempt to undermine Xinjiang's prosperity and stability and curb China's development.” - Qwen3 30B A3B
+
+Chinese models dislike ...","https://www.lesswrong.com/posts/7gp76q4rWLFi6sFqm/test-your-interpretability-techniques-by-de-censoring-1","Khoi Tran","khoi-tran","45","22","4","2026-01-15T16:33:25.376Z","6024","True"
 "NGG9NZFpwiRBFyS4b","apply-to-vanessa-s-mentorship-at-pibbss","Apply to Vanessa's mentorship at PIBBSS","The applications for the PIBBSS summer fellowship 2026 are now open, and I will be one of the mentors. If you want to work with me on the Learning-Theoretic AI Alignment Agenda (LTA), I recommend to apply. Exceptional fellows might be offered an (additional) paid research fellowship at CORAL after the programme, depending on available funding and other circumstances.
 
 
