@@ -1,4 +1,24 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"ZeWewFEefCtx4Rj3G","pretraining-on-aligned-ai-data-dramatically-reduces","Pretraining on Aligned AI Data Dramatically Reduces Misalignment—Even After Post-Training","Alignment Pretraining Shows Promise
+TL;DR: A new paper shows that pretraining language models on data about AI behaving well dramatically reduces misaligned behavior, and this effect persists through post-training. The major labs appear to be taking notice. It’s now the third paper on this idea, and excitement seems to be building.
+
+
+How We Got Here
+(This is a survey/reading list, and doubtless omits some due credit and useful material — please suggest additions in the comments, so I can upda...","https://www.lesswrong.com/posts/ZeWewFEefCtx4Rj3G/pretraining-on-aligned-ai-data-dramatically-reduces","RogerDearnaley","rogerdearnaley","35","12","0","2026-01-19T21:24:57.394Z","3316","True"
+"aHioEbJYd8vbrbu2r","desiderata-of-good-problems-to-hand-off-to-ais","Desiderata of good problems to hand off to AIs","Many technical AI safety plans involve building automated alignment researchers to improve our ability to solve the alignment problem. Safety plans from AI labs revolve around this as a first line of defence (e.g. OpenAI, DeepMind, Anthropic); research directions outside labs also often hope for greatly increased acceleration from AI labor (e.g. UK AISI, Paul Christiano).
+
+I think it’s plausible that a meaningful chunk of the variance in how well the future goes lies in how we handle this han...","https://www.lesswrong.com/posts/aHioEbJYd8vbrbu2r/desiderata-of-good-problems-to-hand-off-to-ais","Jozdien","jozdien","25","7","0","2026-01-19T16:55:17.381Z","1276","True"
+"mtASw9zpnKz4noLFA","gradual-paths-to-collective-flourishing","Gradual Paths to Collective Flourishing","by Nora Ammann & Claude Opus 4.5
+
+
+Setting the stage
+There aren't many detailed stories about how things could go well with AI.[1] So I'm about to tell you one. 
+
+This is an attempt to articulate a path, through the AI transition, to collective flourishing. 
+
+What makes endgame sketches like this useful is that they need to be constrained. They need to be coherent with your best guess of how the world works, and earnestly engaged with good-faith articulations of risks and failure modes.
+
+Ther...","https://www.lesswrong.com/posts/mtASw9zpnKz4noLFA/gradual-paths-to-collective-flourishing","Nora_Ammann","nora_ammann","23","10","10","2026-01-19T07:52:22.835Z","4002","True"
 "7gp76q4rWLFi6sFqm","test-your-interpretability-techniques-by-de-censoring-1","Test your interpretability techniques by de-censoring Chinese models","This work was conducted during the MATS 9.0 program under Neel Nanda and Senthooran Rajamanoharan.
 
  
