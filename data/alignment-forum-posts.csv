@@ -1,13 +1,25 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"gCdNKX8Y4YmqQyxrX","no-instrumental-convergence-without-ai-psychology-1","No instrumental convergence without AI psychology","> The secret is that instrumental convergence is a fact about reality (about the space of possible plans), not AI psychology.
+> 
+> Zack M. Davis, group discussion
+
+Such arguments flitter around the AI safety space. While these arguments contain some truth, they attempt to escape ""AI psychology"" but necessarily fail. To predict bad outcomes from AI, one must take a stance on how AI will tend to select plans.
+
+----------------------------------------
+
+ * This topic is a specialty of mine. Where...","https://www.lesswrong.com/posts/gCdNKX8Y4YmqQyxrX/no-instrumental-convergence-without-ai-psychology-1","TurnTrout","turntrout","53","19","1","2026-01-20T22:16:14.309Z","1892","True"
 "ZeWewFEefCtx4Rj3G","pretraining-on-aligned-ai-data-dramatically-reduces","Pretraining on Aligned AI Data Dramatically Reduces Misalignment—Even After Post-Training","Alignment Pretraining Shows Promise
 TL;DR: A new paper shows that pretraining language models on data about AI behaving well dramatically reduces misaligned behavior, and this effect persists through post-training. The major labs appear to be taking notice. It’s now the third paper on this idea, and excitement seems to be building.
 
 
 How We Got Here
-(This is a survey/reading list, and doubtless omits some due credit and useful material — please suggest additions in the comments, so I can upda...","https://www.lesswrong.com/posts/ZeWewFEefCtx4Rj3G/pretraining-on-aligned-ai-data-dramatically-reduces","RogerDearnaley","rogerdearnaley","35","12","0","2026-01-19T21:24:57.394Z","3316","True"
+(This is a survey/reading list, and doubtless omits some due credit and useful material — please suggest additions in the comments, so I can upda...","https://www.lesswrong.com/posts/ZeWewFEefCtx4Rj3G/pretraining-on-aligned-ai-data-dramatically-reduces","RogerDearnaley","rogerdearnaley","91","26","6","2026-01-19T21:24:57.394Z","3367","True"
+"rgviB6pAu3g5Jvwzz","could-llm-alignment-research-reduce-x-risk-if-the-first","Could LLM alignment research reduce x-risk if the first takeover-capable AI is not an LLM?","Many people believe that the first AI capable of taking over would be quite different from the LLMs of today. Suppose this is true—does prosaic alignment research on LLMs still reduce x-risk? I believe advances in LLM alignment research reduce x-risk even if future AIs are different. I’ll call these “non-LLM AIs.” In this post, I explore two mechanisms for LLM alignment research to reduce x-risk:
+
+ * Direct transfer: We can directly apply the research to non-LLM AIs—for example, reusing behav...","https://www.lesswrong.com/posts/rgviB6pAu3g5Jvwzz/could-llm-alignment-research-reduce-x-risk-if-the-first","Tim Hua","tim-hua","17","5","1","2026-01-19T18:09:19.915Z","1906","True"
 "aHioEbJYd8vbrbu2r","desiderata-of-good-problems-to-hand-off-to-ais","Desiderata of good problems to hand off to AIs","Many technical AI safety plans involve building automated alignment researchers to improve our ability to solve the alignment problem. Safety plans from AI labs revolve around this as a first line of defence (e.g. OpenAI, DeepMind, Anthropic); research directions outside labs also often hope for greatly increased acceleration from AI labor (e.g. UK AISI, Paul Christiano).
 
-I think it’s plausible that a meaningful chunk of the variance in how well the future goes lies in how we handle this han...","https://www.lesswrong.com/posts/aHioEbJYd8vbrbu2r/desiderata-of-good-problems-to-hand-off-to-ais","Jozdien","jozdien","25","7","0","2026-01-19T16:55:17.381Z","1276","True"
+I think it’s plausible that a meaningful chunk of the variance in how well the future goes lies in how we handle this han...","https://www.lesswrong.com/posts/aHioEbJYd8vbrbu2r/desiderata-of-good-problems-to-hand-off-to-ais","Jozdien","jozdien","27","9","0","2026-01-19T16:55:17.381Z","1276","True"
 "mtASw9zpnKz4noLFA","gradual-paths-to-collective-flourishing","Gradual Paths to Collective Flourishing","by Nora Ammann & Claude Opus 4.5
 
 
@@ -18,7 +30,7 @@ This is an attempt to articulate a path, through the AI transition, to collectiv
 
 What makes endgame sketches like this useful is that they need to be constrained. They need to be coherent with your best guess of how the world works, and earnestly engaged with good-faith articulations of risks and failure modes.
 
-Ther...","https://www.lesswrong.com/posts/mtASw9zpnKz4noLFA/gradual-paths-to-collective-flourishing","Nora_Ammann","nora_ammann","23","10","10","2026-01-19T07:52:22.835Z","4002","True"
+Ther...","https://www.lesswrong.com/posts/mtASw9zpnKz4noLFA/gradual-paths-to-collective-flourishing","Nora_Ammann","nora_ammann","29","11","10","2026-01-19T07:52:22.835Z","4002","True"
 "7gp76q4rWLFi6sFqm","test-your-interpretability-techniques-by-de-censoring-1","Test your interpretability techniques by de-censoring Chinese models","This work was conducted during the MATS 9.0 program under Neel Nanda and Senthooran Rajamanoharan.
 
  
