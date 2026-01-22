@@ -1,4 +1,7 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"u67JAa6FKKpQJPp3m","when-should-we-train-against-a-scheming-monitor","When should we train against a scheming monitor?","As we develop new techniques for detecting deceptive alignment, ranging from action monitoring to Chain-of-Thought (CoT) or activations monitoring, we face a dilemma: once we detect scheming behaviour or intent, should we use that signal to ""train the scheming out""?
+
+On the one hand, leaving known misaligned behaviour / intent in the model is not marginally informative and possibly unsafe. On the other hand, training against a monitor might not actually fix the model's underlying motivations;...","https://www.lesswrong.com/posts/u67JAa6FKKpQJPp3m/when-should-we-train-against-a-scheming-monitor","Mary Phuong","mary-phuong-2","8","4","2","2026-01-21T20:48:17.774Z","1480","True"
 "gCdNKX8Y4YmqQyxrX","no-instrumental-convergence-without-ai-psychology-1","No instrumental convergence without AI psychology","> The secret is that instrumental convergence is a fact about reality (about the space of possible plans), not AI psychology.
 > 
 > Zack M. Davis, group discussion
@@ -7,7 +10,7 @@ Such arguments flitter around the AI safety space. While these arguments contain
 
 ----------------------------------------
 
- * This topic is a specialty of mine. Where...","https://www.lesswrong.com/posts/gCdNKX8Y4YmqQyxrX/no-instrumental-convergence-without-ai-psychology-1","TurnTrout","turntrout","53","19","1","2026-01-20T22:16:14.309Z","1892","True"
+ * This topic is a specialty of mine. Where...","https://www.lesswrong.com/posts/gCdNKX8Y4YmqQyxrX/no-instrumental-convergence-without-ai-psychology-1","TurnTrout","turntrout","61","32","6","2026-01-20T22:16:14.309Z","1893","True"
 "ZeWewFEefCtx4Rj3G","pretraining-on-aligned-ai-data-dramatically-reduces","Pretraining on Aligned AI Data Dramatically Reduces Misalignment—Even After Post-Training","Alignment Pretraining Shows Promise
 TL;DR: A new paper shows that pretraining language models on data about AI behaving well dramatically reduces misaligned behavior, and this effect persists through post-training. The major labs appear to be taking notice. It’s now the third paper on this idea, and excitement seems to be building.
 
