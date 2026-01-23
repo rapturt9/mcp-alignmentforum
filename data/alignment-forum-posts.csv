@@ -1,7 +1,7 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
 "u67JAa6FKKpQJPp3m","when-should-we-train-against-a-scheming-monitor","When should we train against a scheming monitor?","As we develop new techniques for detecting deceptive alignment, ranging from action monitoring to Chain-of-Thought (CoT) or activations monitoring, we face a dilemma: once we detect scheming behaviour or intent, should we use that signal to ""train the scheming out""?
 
-On the one hand, leaving known misaligned behaviour / intent in the model is not marginally informative and possibly unsafe. On the other hand, training against a monitor might not actually fix the model's underlying motivations;...","https://www.lesswrong.com/posts/u67JAa6FKKpQJPp3m/when-should-we-train-against-a-scheming-monitor","Mary Phuong","mary-phuong-2","8","4","2","2026-01-21T20:48:17.774Z","1480","True"
+On the one hand, leaving known misaligned behaviour / intent in the model is not marginally informative and possibly unsafe. On the other hand, training against a monitor might not actually fix the model's underlying motivations;...","https://www.lesswrong.com/posts/u67JAa6FKKpQJPp3m/when-should-we-train-against-a-scheming-monitor","Mary Phuong","mary-phuong-2","19","9","3","2026-01-21T20:48:17.774Z","1480","True"
 "gCdNKX8Y4YmqQyxrX","no-instrumental-convergence-without-ai-psychology-1","No instrumental convergence without AI psychology","> The secret is that instrumental convergence is a fact about reality (about the space of possible plans), not AI psychology.
 > 
 > Zack M. Davis, group discussion
