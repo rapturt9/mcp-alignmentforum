@@ -1,4 +1,14 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"ZJZZEuPFKeEdkrRyf","why-we-should-expect-ruthless-sociopath-asi","Why we should expect ruthless sociopath ASI","The conversation begins
+(Fictional) Optimist: So you expect future artificial superintelligence (ASI) “by default”, i.e. in the absence of yet-to-be-invented techniques, to be a ruthless sociopath, happy to lie, cheat, and steal, whenever doing so is selfishly beneficial, and with callous indifference to whether anyone (including its own programmers and users) lives or dies?
+
+Me: Yup! (Alas.)
+
+Optimist: …Despite all the evidence right in front of our eyes from humans and LLMs.
+
+Me: Yup!
+
+Opti...","https://www.lesswrong.com/posts/ZJZZEuPFKeEdkrRyf/why-we-should-expect-ruthless-sociopath-asi","Steven Byrnes","steve2152","74","27","12","2026-02-18T17:28:17.934Z","2304","True"
 "8cyjgrTSxGNdghesE","will-reward-seekers-respond-to-distant-incentives","Will reward-seekers respond to distant incentives?","Reward-seekers are usually modeled as responding only to local incentives administered by developers. Here I ask: Will AIs or humans be able to influence their incentives at a distance—e.g., by retroactively reinforcing actions substantially in the future or by committing to run many copies of them in simulated deployments with different incentives?
 
 If reward-seekers are responsive to distant incentives, it fundamentally changes the threat model, and is probably bad news for developers on ba...","https://www.lesswrong.com/posts/8cyjgrTSxGNdghesE/will-reward-seekers-respond-to-distant-incentives","Alex Mallen","alex-mallen","50","10","1","2026-02-16T19:35:12.616Z","2991","True"
