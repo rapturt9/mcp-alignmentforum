@@ -1,4 +1,7 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"TkBCR8XRGw7qmao6z","schelling-goodness-and-shared-morality-as-a-goal","Schelling Goodness, and Shared Morality as a Goal","Also available in markdown at theMultiplicity.ai/blog/schelling-goodness.
+
+This post explores a notion I'll call Schelling goodness. Claims of Schelling goodness are not first-order moral verdicts like ""X is good"" or ""X is bad."" They are claims about a class of hypothetical coordination games in the sense of Thomas Schelling, where the task being coordinated on is a moral verdict. In each such game, participants aim to give the same response regarding a moral question, by reasoning about what...","https://www.lesswrong.com/posts/TkBCR8XRGw7qmao6z/schelling-goodness-and-shared-morality-as-a-goal","Andrew_Critch","andrew_critch","67","14","16","2026-02-28T04:25:42.299Z","11788","True"
 "Bv4CLkNzuG6XYTjEe","why-did-my-model-do-that-model-incrimination-for-diagnosing","Why Did My Model Do That? Model Incrimination for Diagnosing LLM Misbehavior","Authors: Aditya Singh*, Gerson Kroiz*, Senthooran Rajamanoharan, Neel Nanda
 
 Aditya and Gerson are co-first authors. This work was conducted during MATS 9.0 and was advised by Senthooran Rajamanoharan and Neel Nanda.
