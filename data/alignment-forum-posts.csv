@@ -1,4 +1,11 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"8pZuQnCve6K5ZrnM8","how-to-design-environments-for-understanding-model-motives","How to Design Environments for Understanding Model Motives","Authors: Gerson Kroiz*, Aditya Singh*, Senthooran Rajamanoharan, Neel Nanda
+
+Gerson and Aditya are co-first authors. This work was conducted during MATS 9.0 and was advised by Senthooran Rajamanoharan and Neel Nanda.
+
+
+TL;DR
+Understanding why a model took an action is a key question in AI Safety. It is a difficult question, as often many motivations could plausibly lead to the same action. We are particularly concerned about the case of model incrimination, i.e. observing a model taking a bad...","https://www.lesswrong.com/posts/8pZuQnCve6K5ZrnM8/how-to-design-environments-for-understanding-model-motives","gersonkroiz","gersonkroiz","36","12","0","2026-03-02T07:14:36.041Z","2880","True"
 "TkBCR8XRGw7qmao6z","schelling-goodness-and-shared-morality-as-a-goal","Schelling Goodness, and Shared Morality as a Goal","Also available in markdown at theMultiplicity.ai/blog/schelling-goodness.
 
 This post explores a notion I'll call Schelling goodness. Claims of Schelling goodness are not first-order moral verdicts like ""X is good"" or ""X is bad."" They are claims about a class of hypothetical coordination games in the sense of Thomas Schelling, where the task being coordinated on is a moral verdict. In each such game, participants aim to give the same response regarding a moral question, by reasoning about what...","https://www.lesswrong.com/posts/TkBCR8XRGw7qmao6z/schelling-goodness-and-shared-morality-as-a-goal","Andrew_Critch","andrew_critch","84","21","32","2026-02-28T04:25:42.299Z","11788","True"
