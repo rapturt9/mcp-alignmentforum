@@ -1,4 +1,13 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"xq5taGA6Tz6YShCB9","censored-llms-as-a-natural-testbed-for-secret-knowledge-2","Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation","TL;DR: We introduce a testbed based on censored Chinese LLMs, which serve as natural objects of study for studying secret elicitation techniques. Then we study the efficacy of honesty elicitation and lie detection techniques for detecting and removing generated falsehoods.
+
+This post presents a summary of the paper, including examples of transcripts and other miscellaneous findings.
+
+X thread | arXiv paper | Code | Transcripts
+
+
+Summary
+ * We construct a testbed for honesty elicitation and li...","https://www.lesswrong.com/posts/xq5taGA6Tz6YShCB9/censored-llms-as-a-natural-testbed-for-secret-knowledge-2","Bartosz Cywiński","bartosz-cywinski","29","10","0","2026-03-09T18:50:29.210Z","1631","True"
 "Xzf3eMnhTko7AxnEy","can-governments-quickly-and-cheaply-slow-ai-training","Can governments quickly and cheaply slow AI training?","I originally wrote this as a private doc for people working in the field - it's not super polished, or optimized for a broad audience.
 
 But I'm publishing anyway because inference-verification is a new and exciting area, and there few birds-eye-view explainers of what's going on and what the bottlenecks are.
