@@ -1,4 +1,13 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"Pc789vx2oHgEXYZZH","new-rfp-on-interpretability-from-schmidt-sciences-1","New RFP on Interpretability from Schmidt Sciences","Request for Proposals
+
+
+Deadline: Tuesday, May 26, 2026
+Schmidt Sciences invites proposals for a pilot program in AI interpretability. We seek new methods for detecting and mitigating deceptive behaviors from AI models, such as when models knowingly give misleading or harmful advice to users. If this pilot uncovers signs of meaningful progress, it may unlock a significantly larger investment in this space.
+
+
+Core Question and Overview
+Can we develop interpretability methods that (1) detect de...","https://www.lesswrong.com/posts/Pc789vx2oHgEXYZZH/new-rfp-on-interpretability-from-schmidt-sciences-1","Peter Hase","peter-hase","14","4","0","2026-03-17T16:08:05.471Z","1779","True"
 "RyDkpWGLQsCnABE78","operationalizing-fdt","Operationalizing FDT","This post is an attempt to better operationalize FDT (functional decision theory).  It answers the following questions:
 
  * given a logical causal graph, how do we define the logical do-operator?
