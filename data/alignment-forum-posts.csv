@@ -7,11 +7,11 @@ we are sharing a post investigating the emergence of metagaming reasoning in a f
  2. It arises in frontier training runs and does not require training on honeypot environments.
  3. Verbalization of metagaming can go down over the course of training.
 
-We also share some quantitative analyses, qualitative...","https://www.lesswrong.com/posts/4hXWSw8tzoK9PM7v6/metagaming-matters-for-training-evaluation-and-oversight","jenny","jenny","31","6","2","2026-03-18T21:26:35.345Z","82","True"
+We also share some quantitative analyses, qualitative...","https://www.lesswrong.com/posts/4hXWSw8tzoK9PM7v6/metagaming-matters-for-training-evaluation-and-oversight","jenny","jenny","40","11","5","2026-03-18T21:26:35.345Z","82","True"
 "RKtTi82t8X8TQy5FX","act-based-approval-directed-agents-for-ida-skeptics","“Act-based approval-directed agents”, for IDA skeptics","Summary / tl;dr
 In the 2010s, Paul Christiano built an extensive body of work on AI alignment—see the “Iterated Amplification” series for a curated overview as of 2018.
 
-One foundation of this program was an intuition that it should be possible to build “act-based approval-directed agents” (“approval-directed agents” for short). These AGIs, for example, would not lie to their human supervisors, because their human supervisors wouldn’t want them to lie, and these AGIs would only do things that...","https://www.lesswrong.com/posts/RKtTi82t8X8TQy5FX/act-based-approval-directed-agents-for-ida-skeptics","Steven Byrnes","steve2152","45","14","2","2026-03-18T18:47:46.764Z","1576","True"
+One foundation of this program was an intuition that it should be possible to build “act-based approval-directed agents” (“approval-directed agents” for short). These AGIs, for example, would not lie to their human supervisors, because their human supervisors wouldn’t want them to lie, and these AGIs would only do things that...","https://www.lesswrong.com/posts/RKtTi82t8X8TQy5FX/act-based-approval-directed-agents-for-ida-skeptics","Steven Byrnes","steve2152","55","17","3","2026-03-18T18:47:46.764Z","1576","True"
 "Pc789vx2oHgEXYZZH","new-rfp-on-interpretability-from-schmidt-sciences-1","New RFP on Interpretability from Schmidt Sciences","Request for Proposals
 
 
