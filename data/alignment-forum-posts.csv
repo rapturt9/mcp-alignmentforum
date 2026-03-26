@@ -1,4 +1,11 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"LhXW8ziwnn7Dd8edm","a-toy-environment-for-exploring-reasoning-about-reward","A Toy Environment For Exploring Reasoning About Reward","tldr: We share a toy environment that we found useful for understanding how reasoning changed over the course of capabilities-focused RL. Over the course of capabilities-focused RL, the model biases more strongly towards reward hints over direct instruction in this environment.
+
+
+Setup
+When we noticed the increase in verbalized alignment evaluation awareness during capabilities-focused RL, we initially thought that the right mental model was something like:
+
+ * “the model wants to figure out ...","https://www.lesswrong.com/posts/LhXW8ziwnn7Dd8edm/a-toy-environment-for-exploring-reasoning-about-reward","jenny","jenny","28","9","3","2026-03-25T20:29:47.068Z","797","True"
 "4hXWSw8tzoK9PM7v6","metagaming-matters-for-training-evaluation-and-oversight","Metagaming matters for training, evaluation, and oversight","Following up on our previous work on verbalized eval awareness:
 
 we are sharing a post investigating the emergence of metagaming reasoning in a frontier training run.
