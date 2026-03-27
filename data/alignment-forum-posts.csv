@@ -1,11 +1,21 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"tDJWZLQNN7poqCwKa","test-your-best-methods-on-our-hard-cot-interp-tasks","Test your best methods on our hard CoT interp tasks
+","Authors: Daria Ivanova, Riya Tyagi, Arthur Conmy, Neel Nanda
+
+Daria and Riya are co-first authors. This work was done during Neel Nanda’s MATS 9.0. Claude helped write code and suggest edits for this post.
+
+
+TL;DR 
+ * One of our best safety techniques right now is “just read the chain of thought”.
+ * But this isn’t always enough: can we learn more by going beyond just reading the reasoning?
+ * Yet it's such an effective technique that it's hard to tell if we have made much progress on improvi...","https://www.lesswrong.com/posts/tDJWZLQNN7poqCwKa/test-your-best-methods-on-our-hard-cot-interp-tasks","daria","daria-2","39","12","1","2026-03-26T19:24:40.168Z","5664","True"
 "LhXW8ziwnn7Dd8edm","a-toy-environment-for-exploring-reasoning-about-reward","A Toy Environment For Exploring Reasoning About Reward","tldr: We share a toy environment that we found useful for understanding how reasoning changed over the course of capabilities-focused RL. Over the course of capabilities-focused RL, the model biases more strongly towards reward hints over direct instruction in this environment.
 
 
 Setup
 When we noticed the increase in verbalized alignment evaluation awareness during capabilities-focused RL, we initially thought that the right mental model was something like:
 
- * “the model wants to figure out ...","https://www.lesswrong.com/posts/LhXW8ziwnn7Dd8edm/a-toy-environment-for-exploring-reasoning-about-reward","jenny","jenny","28","9","3","2026-03-25T20:29:47.068Z","797","True"
+ * “the model wants to figure out ...","https://www.lesswrong.com/posts/LhXW8ziwnn7Dd8edm/a-toy-environment-for-exploring-reasoning-about-reward","jenny","jenny","51","17","4","2026-03-25T20:29:47.068Z","797","True"
 "4hXWSw8tzoK9PM7v6","metagaming-matters-for-training-evaluation-and-oversight","Metagaming matters for training, evaluation, and oversight","Following up on our previous work on verbalized eval awareness:
 
 we are sharing a post investigating the emergence of metagaming reasoning in a frontier training run.
