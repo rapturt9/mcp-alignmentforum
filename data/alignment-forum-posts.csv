@@ -1,5 +1,5 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
-"dYHFtEnKc4BdJEYY4","my-most-common-advice-for-junior-researchers","My most common advice for junior researchers","Written quickly as part of the Inkhaven Fellowship.
+"dYHFtEnKc4BdJEYY4","my-most-common-research-advice-do-quick-sanity-checks","My most common research advice: do quick sanity checks","Written quickly as part of the Inkhaven Residency.
 
 At a high level, research feedback I give to more junior research collaborators often can fall into one of three categories:
 
@@ -7,12 +7,12 @@ At a high level, research feedback I give to more junior research collaborators 
  * Saying precisely what you want to say
  * Asking why one more time
 
-In each case, I think the advice can be taken to an extreme I no longer endorse. Accordingly, I’ve tried to spell out the degree to which you should implement the advice, as well as what “taking it too far” might look l...","https://www.lesswrong.com/posts/dYHFtEnKc4BdJEYY4/my-most-common-advice-for-junior-researchers","LawrenceC","lawrencec","19","4","0","2026-04-02T02:41:13.765Z","869","True"
+In each case, I think the advice can be taken to an extreme I no longer endorse. Accordingly, I’ve tried to spell out the degree to which you should implement the advice, as well as what “taking it too far” might look li...","https://www.lesswrong.com/posts/dYHFtEnKc4BdJEYY4/my-most-common-research-advice-do-quick-sanity-checks","LawrenceC","lawrencec","33","13","2","2026-04-02T02:41:13.765Z","869","True"
 "SvxaKP5KdkksZPcG7","predicting-when-rl-training-breaks-chain-of-thought","Predicting When RL Training Breaks Chain-of-Thought Monitorability","Crossposted from the DeepMind Safety Research Medium Blog. Read our full paper about this topic by Max Kaufmann, David Lindner, Roland S. Zimmermann, and Rohin Shah.
 
 Overseeing AI agents by reading their intermediate reasoning “scratchpad” is a promising tool for AI safety. This approach, known as Chain-of-Thought (CoT) monitoring, allows us to check what a model is thinking before it acts, often helping us catch concerning behaviors like reward hacking and scheming.
 
-However, CoT monitoring...","https://www.lesswrong.com/posts/SvxaKP5KdkksZPcG7/predicting-when-rl-training-breaks-chain-of-thought","David Lindner","david-lindner","21","8","0","2026-04-01T10:23:01.118Z","1423","True"
+However, CoT monitoring...","https://www.lesswrong.com/posts/SvxaKP5KdkksZPcG7/predicting-when-rl-training-breaks-chain-of-thought","David Lindner","david-lindner","25","10","0","2026-04-01T10:23:01.118Z","1423","True"
 "2ANCyejqxfqK2obEj","some-natural-emergent-misalignment-from-reward-hacking-in","(Some) Natural Emergent Misalignment from Reward Hacking in Non-Production RL","Authors: Satvik Golechha*, Sid Black*, Joseph Bloom
 
 * Equal Contribution.
