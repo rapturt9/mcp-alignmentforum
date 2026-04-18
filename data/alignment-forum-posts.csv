@@ -1,11 +1,18 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"BuAPifQmHf24xB29n","prompted-cot-early-exit-undermines-the-monitoring-benefits","Prompted CoT Early Exit Undermines the Monitoring Benefits of CoT Uncontrollability","Code: github.com/ElleNajt/controllability
+
+
+tldr:
+
+
+Yueh-Han et al. (2026) showed that models have a harder time making their chain of thought follow user instruction compared to controlling their response (the non-thinking, user-facing output). Their CoT controllability conditions require the models’ thinking to follow various style constraints (e.g. write in lowercase, avoid a word), and they measure how well models can comply with these instructions while achieving a task that requires rea...","https://www.lesswrong.com/posts/BuAPifQmHf24xB29n/prompted-cot-early-exit-undermines-the-monitoring-benefits","Elle Najt","ellenajt","53","15","0","2026-04-17T19:30:12.865Z","4370","True"
 "7noKve57za3yg2LEb","you-can-only-build-safe-asi-if-asi-is-globally-banned-1","You can only build safe ASI if ASI is globally banned","Sometimes people make various suggestions that we should simply build ""safe"" artificial Superintelligence (ASI), rather than the presumably ""unsafe"" kind.[1]
 
 There are various flavors of “safe” people suggest.
 
  * Sometimes they suggest building “aligned” ASI: You have a full agentic autonomous god-like ASI running around, but it really really loves you and definitely will do the right thing.
  * Sometimes they suggest we should simply build “tool AI” or “non-agentic” AI.
- * Sometimes they ha...","https://www.lesswrong.com/posts/7noKve57za3yg2LEb/you-can-only-build-safe-asi-if-asi-is-globally-banned-1","Connor Leahy","npcollapse","59","31","5","2026-04-16T15:10:55.640Z","430","True"
+ * Sometimes they ha...","https://www.lesswrong.com/posts/7noKve57za3yg2LEb/you-can-only-build-safe-asi-if-asi-is-globally-banned-1","Connor Leahy","npcollapse","79","45","12","2026-04-16T15:10:55.640Z","430","True"
 "WewsByywWNhX9rtwi","current-ais-seem-pretty-misaligned-to-me","Current AIs seem pretty misaligned to me","Many people—especially AI company employees [1] —believe current AI systems are well-aligned in the sense of genuinely trying to do what they're supposed to do (e.g., following their spec or constitution, obeying a reasonable interpretation of instructions). [2] I disagree.
 
 Current AI systems seem pretty misaligned to me in a mundane behavioral sense: they oversell their work, downplay or fail to mention problems, stop working early and claim to have finished when they clearly haven't, and o...","https://www.lesswrong.com/posts/WewsByywWNhX9rtwi/current-ais-seem-pretty-misaligned-to-me","ryan_greenblatt","ryan_greenblatt","420","141","30","2026-04-15T15:14:11.826Z","8091","True"
