@@ -5,7 +5,7 @@
 tldr:
 
 
-Yueh-Han et al. (2026) showed that models have a harder time making their chain of thought follow user instruction compared to controlling their response (the non-thinking, user-facing output). Their CoT controllability conditions require the models’ thinking to follow various style constraints (e.g. write in lowercase, avoid a word), and they measure how well models can comply with these instructions while achieving a task that requires rea...","https://www.lesswrong.com/posts/BuAPifQmHf24xB29n/prompted-cot-early-exit-undermines-the-monitoring-benefits","Elle Najt","ellenajt","53","15","0","2026-04-17T19:30:12.865Z","4370","True"
+Yueh-Han et al. (2026) showed that models have a harder time making their chain of thought follow user instruction compared to controlling their response (the non-thinking, user-facing output). Their CoT controllability conditions require the models’ thinking to follow various style constraints (e.g. write in lowercase, avoid a word), and they measure how well models can comply with these instructions while achieving a task that requires rea...","https://www.lesswrong.com/posts/BuAPifQmHf24xB29n/prompted-cot-early-exit-undermines-the-monitoring-benefits","Elle Najt","ellenajt","63","18","0","2026-04-17T19:30:12.865Z","4370","True"
 "7noKve57za3yg2LEb","you-can-only-build-safe-asi-if-asi-is-globally-banned-1","You can only build safe ASI if ASI is globally banned","Sometimes people make various suggestions that we should simply build ""safe"" artificial Superintelligence (ASI), rather than the presumably ""unsafe"" kind.[1]
 
 There are various flavors of “safe” people suggest.
