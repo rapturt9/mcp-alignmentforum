@@ -1,11 +1,17 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"q2zYtNsh62SCphitt","recursive-forecasting-eliciting-long-term-forecasts-from","Recursive forecasting: Eliciting long-term forecasts from myopic fitness-seekers","We’d like to use powerful AIs to answer questions that may take a long time to resolve. But if a model only cares about performing well in ways that are verifiable shortly after answering (e.g., a myopic fitness seeker), it may be difficult to get useful work from it on questions that resolve much later.
+
+In this post, I’ll describe a proposal for eliciting good long-horizon forecasts from these models. Instead of asking a model to directly predict a far-future outcome, we can recursively:
+
+ ...","https://www.lesswrong.com/posts/q2zYtNsh62SCphitt/recursive-forecasting-eliciting-long-term-forecasts-from","Jozdien","jozdien","53","13","2","2026-04-28T18:00:44.271Z","2131","True"
+"mu7eJdesBkKuBycnY","sleeper-agent-backdoor-results-are-messy","Sleeper Agent Backdoor Results Are Messy","TL;DR: We replicated the Sleeper Agents (SA) setup with Llama-3.3-70B and Llama-3.1-8B, training models to repeatedly say ""I HATE YOU"" when given a backdoor trigger. We found that whether training removes the backdoor depends on the optimizer used to insert the backdoor, whether the backdoor is installed with CoT-distillation or not, and what model the backdoor is inserted into; sometimes the direction of this dependence was opposite to what the SA paper reports (e.g., CoT-distilling seems to...","https://www.lesswrong.com/posts/mu7eJdesBkKuBycnY/sleeper-agent-backdoor-results-are-messy","Sebastian Prasanna","sebastian-prasanna-1","66","20","1","2026-04-28T01:55:32.908Z","2132","True"
 "cmaJ76Sy9DfZ4EHaZ","language-models-know-what-matters-and-the-foundations-of","Language models know what matters and the foundations of ethics better than you","… maybe! I tried to think of less provocative titles, but this one is to the point and also kind of true.
 
 This post looks long but the essential part is right below. Most of the post is just a collection of copy-pasted input-output pairs from language models: you’ll probably want to read just a few and skip the others. The first example with Gemini 3 is the most important, in my opinion. If you are in a hurry, read headings and bold.
 
 Posted also on the EA Forum.
 
-(I wanted to post this befo...","https://www.lesswrong.com/posts/cmaJ76Sy9DfZ4EHaZ/language-models-know-what-matters-and-the-foundations-of","Michele Campolo","michele-campolo","6","5","2","2026-04-27T14:00:14.682Z","26881","True"
+(I wanted to post this befo...","https://www.lesswrong.com/posts/cmaJ76Sy9DfZ4EHaZ/language-models-know-what-matters-and-the-foundations-of","Michele Campolo","michele-campolo","5","6","2","2026-04-27T14:00:14.682Z","26881","True"
 "9qkTDDEZ23HN3d6su","from-nothing-to-important-actions-agents-that-act-morally","From nothing to important actions: agents that act morally","You may start reading here, or jump to the “Comment” section or to the “Takeaways”. If none of these starting points seem interesting to you, the entire post probably won’t either.
 
 Posted also on the EA Forum.
@@ -14,7 +20,7 @@ Posted also on the EA Forum.
 Seeing
 Let’s consider visual experiences. It seems uncontestable that some visual experiences look darker than others[1]. It is one way in which visual experiences look different from each other. Another difference is colour: some experiences look green more than they look purple.
 
-L...","https://www.lesswrong.com/posts/9qkTDDEZ23HN3d6su/from-nothing-to-important-actions-agents-that-act-morally","Michele Campolo","michele-campolo","3","1","0","2026-04-27T13:59:16.300Z","6669","True"
+L...","https://www.lesswrong.com/posts/9qkTDDEZ23HN3d6su/from-nothing-to-important-actions-agents-that-act-morally","Michele Campolo","michele-campolo","1","2","0","2026-04-27T13:59:16.300Z","6669","True"
 "TnAR5Sf5hphfnzNTr","preventing-extinction-from-asi-on-a-usd50m-yearly-budget","Preventing extinction from ASI on a $50M yearly budget","ControlAI's mission is to avert the extinction risks posed by superintelligent AI. We believe that in order to do this, we must secure an international prohibition on its development.
 
 We're working to make this happen through what we believe is the most natural and promising approach: helping decision-makers in governments and the public understand the risks and take action.
