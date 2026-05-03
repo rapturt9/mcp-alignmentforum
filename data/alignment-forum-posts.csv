@@ -1,4 +1,7 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"9YCJZBtqr3FYL8rDp","risk-from-fitness-seeking-ais-mechanisms-and-mitigations","Risk from fitness-seeking AIs: mechanisms and mitigations","Current AIs routinely take unintended actions to score well on tasks: hardcoding test cases, training on the test set, downplaying issues, etc. This misalignment is still somewhat incoherent, but it increasingly resembles what I call ""fitness-seeking""—a family of misaligned motivations centered on performing well in training and evaluations (e.g., reward-seeking). Fitness-seeking warrants substantial concern.
+
+In this piece, I lay out what I take to be the central mechanisms by which fitness-...","https://www.lesswrong.com/posts/9YCJZBtqr3FYL8rDp/risk-from-fitness-seeking-ais-mechanisms-and-mitigations","Alex Mallen","alex-mallen","92","21","0","2026-05-01T17:42:55.791Z","9472","True"
 "LByP4qsF8a4g7Pz3p","research-sabotage-in-ml-codebases","Research Sabotage in ML Codebases","One of the main hopes for AI safety is using AIs to automate AI safety research. However, if models are misaligned, then they may sabotage the safety research. For example, misaligned AIs may try to:
 
  * Perform sloppy research in order to slow down the rate of research progress
