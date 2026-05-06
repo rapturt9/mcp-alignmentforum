@@ -1,4 +1,16 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"eAQZaiC3PcBhS4HjM","linkpost-interpreting-language-model-parameters","[Linkpost] Interpreting Language Model Parameters","This is the latest work in our Parameter Decomposition agenda. We introduce a new parameter decomposition method, adVersarial Parameter Decomposition (VPD)[1] and decompose the parameters of a small[2] language model with it.
+
+VPD greatly improves on our previous techniques, Stochastic Parameter Decomposition (SPD) and Attribution-based Parameter Decomposition (APD). We think the parameter decomposition approach is now more-or-less ready to be applied at scale to models people care about.
+
+
+
+...","https://www.lesswrong.com/posts/eAQZaiC3PcBhS4HjM/linkpost-interpreting-language-model-parameters","Lucius Bushnaq","lblack","109","31","2","2026-05-05T17:37:29.991Z","542","True"
+"QpgmEhBvJQxAfFMP2","motivated-reasoning-confirmation-bias-and-ai-risk-theory","Motivated reasoning, confirmation bias, and AI risk theory","> Of the fifty-odd biases discovered by Kahneman, Tversky, and their successors, forty-nine are cute quirks, and one is destroying civilization. This last one is confirmation bias.
+
+- From Scott Alexander's review of Julia Galef's The Scout Mindset.
+
+Alexander goes on to argue that this bias is the source of polarization in society, which is distorting our beliefs and setting us at each other's throats. How could someone believe such different things unless they're either really stupid or lyi...","https://www.lesswrong.com/posts/QpgmEhBvJQxAfFMP2/motivated-reasoning-confirmation-bias-and-ai-risk-theory","Seth Herd","seth-herd","35","13","7","2026-05-05T15:56:25.519Z","12284","True"
 "9YCJZBtqr3FYL8rDp","risk-from-fitness-seeking-ais-mechanisms-and-mitigations","Risk from fitness-seeking AIs: mechanisms and mitigations","Current AIs routinely take unintended actions to score well on tasks: hardcoding test cases, training on the test set, downplaying issues, etc. This misalignment is still somewhat incoherent, but it increasingly resembles what I call ""fitness-seeking""—a family of misaligned motivations centered on performing well in training and evaluations (e.g., reward-seeking). Fitness-seeking warrants substantial concern.
 
 In this piece, I lay out what I take to be the central mechanisms by which fitness-...","https://www.lesswrong.com/posts/9YCJZBtqr3FYL8rDp/risk-from-fitness-seeking-ais-mechanisms-and-mitigations","Alex Mallen","alex-mallen","92","21","0","2026-05-01T17:42:55.791Z","9472","True"
