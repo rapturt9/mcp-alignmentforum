@@ -1,4 +1,9 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"Kben8CzS4awCwNw5c","announcing-the-arc-white-box-estimation-challenge","Announcing the ARC White-Box Estimation Challenge","ARC has teamed up with AIcrowd to launch the ARC White-Box Estimation Challenge, a contest to improve upon our estimation algorithms for random MLPs. The warm-up round begins this week, and later rounds will have a total prize pool of at least $100,000.
+
+We are very grateful to Sharada Mohanty, Sneha Nanavati, Dipam Chakraborty and everyone else at AIcrowd for working with us to host this contest, as well as to Paul Rosu for testing the contest and to Harshita Khera for operational support.
+
+...","https://www.lesswrong.com/posts/Kben8CzS4awCwNw5c/announcing-the-arc-white-box-estimation-challenge","Jacob_Hilton","jacob_hilton","107","29","2","2026-06-02T16:20:43.059Z","785","True"
 "F3sDngvTL9uyfz53k","testing-gemini-models-for-scheming-tendencies","Testing Gemini models for scheming tendencies","As AI models become increasingly capable and autonomous, keeping them safely aligned with human intentions is critical. Extending our previous work on evaluating scheming capabilities, we introduce complementary approaches to test whether AI models would sabotage their own safeguards, if given the opportunity.
 
 Our new papers focus on propensity for scheming: when models are deployed as coding agents, will they take opportunities to undermine the safeguards designed to oversee them? We tackle...","https://www.lesswrong.com/posts/F3sDngvTL9uyfz53k/testing-gemini-models-for-scheming-tendencies","Vika","vika","34","11","1","2026-05-29T19:24:35.693Z","1708","True"
