@@ -1,4 +1,7 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"MuLvZxMcy5WaKJu3H","my-research-agenda-and-work","My research agenda and work","This is a summary of the work I've done and work I plan to do, and the theories of change and AI progress that motivate my work. I've been working full-time on alignment for three years and change, and thinking about brainlike AGI and its alignment increasingly often since 2004.
+
+Here's the research agenda in one breath: I'm trying to predict what the first transformative AI will be, in enough mechanistic detail that we can predict likely failure modes of its alignment. That's in service of f...","https://www.lesswrong.com/posts/MuLvZxMcy5WaKJu3H/my-research-agenda-and-work","Seth Herd","seth-herd","32","12","0","2026-06-05T14:19:53.282Z","5207","True"
 "Kben8CzS4awCwNw5c","announcing-the-arc-white-box-estimation-challenge","Announcing the ARC White-Box Estimation Challenge","ARC has teamed up with AIcrowd to launch the ARC White-Box Estimation Challenge, a contest to improve upon our estimation algorithms for random MLPs. The warm-up round begins this week, and later rounds will have a total prize pool of at least $100,000.
 
 We are very grateful to Sharada Mohanty, Sneha Nanavati, Dipam Chakraborty and everyone else at AIcrowd for working with us to host this contest, as well as to Paul Rosu for testing the contest and to Harshita Khera for operational support.
