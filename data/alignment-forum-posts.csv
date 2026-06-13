@@ -1,9 +1,18 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"qi4mNbZYAFDYwfRba","building-and-evaluating-model-diffing-agents","Building and evaluating model diffing agents","This is the second in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The first post can be found here.
+
+
+TL;DR
+ * It is possible to build extremely simple agents that reliably find interesting behavioural differences between distinct models. We call these ‘diffing agents’.
+ * The closest previous 'behavioural model diffing' work has focussed on understanding behavioural differences between two models...","https://www.lesswrong.com/posts/qi4mNbZYAFDYwfRba/building-and-evaluating-model-diffing-agents","bilalchughtai","bilalchughtai","48","12","2","2026-06-12T17:14:39.790Z","3687","True"
+"DZaZ3fqHnvfLCftPu","sympathy-for-both-sides-of-the-egregious-misalignment-debate","Sympathy for both sides of the egregious misalignment debate","On one side of this debate is Yudkowsky & Soares, who think that (if AI progress continues) we’re on a direct path to egregiously-misaligned, scheming, out-of-control, rogue superintelligence (ASI), not even slightly nice, in the absence of yet-to-be-invented breakthrough technical alignment ideas.
+
+On the other side of this debate is almost everyone who works on or studies LLMs. Some of them are very concerned about egregious scheming, others much less so, and as a group they’re equally or m...","https://www.lesswrong.com/posts/DZaZ3fqHnvfLCftPu/sympathy-for-both-sides-of-the-egregious-misalignment-debate","Steven Byrnes","steve2152","134","43","9","2026-06-12T16:26:12.601Z","1338","True"
 "aTcsN5ZZDnMFJvRiG","models-may-behave-worse-when-eval-aware","Models May Behave Worse When Eval Aware","This is the first in a series of research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas.
 
 
 TL;DR
-It's often assumed that models will act more aligned when they can tell they're being evaluated. But we find that Gemini can take “undesired” actions in behavioural evals even when it explicitly reasons that the environments are contrived, and sometimes this reasoning will increase the rate of undesired actions. When we dig into the m...","https://www.lesswrong.com/posts/aTcsN5ZZDnMFJvRiG/models-may-behave-worse-when-eval-aware","Senthooran Rajamanoharan","senthooran-rajamanoharan","64","18","1","2026-06-11T09:28:19.218Z","4043","True"
+It's often assumed that models will act more aligned when they can tell they're being evaluated. But we find that Gemini can take “undesired” actions in behavioural evals even when it explicitly reasons that the environments are contrived, and sometimes this reasoning will increase the rate of undesired actions. When we dig into the m...","https://www.lesswrong.com/posts/aTcsN5ZZDnMFJvRiG/models-may-behave-worse-when-eval-aware","Senthooran Rajamanoharan","senthooran-rajamanoharan","73","23","7","2026-06-11T09:28:19.218Z","4043","True"
 "AP7YDke5jjY4v3X9Z","sequent-scale-and-automation-for-higher-confidence-in-1","Sequent: scale and automation for higher confidence in alignment","Alignment is not on track
 Artificial superintelligence (ASI) may be developed in the next few years. It is unclear whether alignment is on track to be ready on the same timeframe. At a minimum, the empirical programs at AI labs are unlikely to deliver a priori confidence, before training ASI, that things will go well. We are starting a large nonprofit research organization, Sequent, that aims to clear a higher bar:
 
