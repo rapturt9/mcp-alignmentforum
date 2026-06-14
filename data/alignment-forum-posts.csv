@@ -1,13 +1,21 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"nLrrYweeFxgXACSmS","sft-drives-gemini-s-safety-properties-1","SFT Drives Gemini’s Safety Properties","This is the third in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The second post can be found here.
+
+
+
+
+In this short post, we describe a surprising finding: most safety relevant properties in Gemini seem to be caused by the combination of pretraining and SFT, not other training stages like RL. 
+
+We do not want to overstate this claim as applying to other model families, and we also note that this...","https://www.lesswrong.com/posts/nLrrYweeFxgXACSmS/sft-drives-gemini-s-safety-properties-1","Josh Engels","josh-engels","38","7","1","2026-06-13T15:31:52.854Z","418","True"
 "qi4mNbZYAFDYwfRba","building-and-evaluating-model-diffing-agents","Building and evaluating model diffing agents","This is the second in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The first post can be found here.
 
 
 TL;DR
  * It is possible to build extremely simple agents that reliably find interesting behavioural differences between distinct models. We call these ‘diffing agents’.
- * The closest previous 'behavioural model diffing' work has focussed on understanding behavioural differences between two models...","https://www.lesswrong.com/posts/qi4mNbZYAFDYwfRba/building-and-evaluating-model-diffing-agents","bilalchughtai","bilalchughtai","48","12","2","2026-06-12T17:14:39.790Z","3687","True"
+ * The closest previous 'behavioural model diffing' work has focussed on understanding behavioural differences between two models...","https://www.lesswrong.com/posts/qi4mNbZYAFDYwfRba/building-and-evaluating-model-diffing-agents","bilalchughtai","bilalchughtai","57","17","2","2026-06-12T17:14:39.790Z","3687","True"
 "DZaZ3fqHnvfLCftPu","sympathy-for-both-sides-of-the-egregious-misalignment-debate","Sympathy for both sides of the egregious misalignment debate","On one side of this debate is Yudkowsky & Soares, who think that (if AI progress continues) we’re on a direct path to egregiously-misaligned, scheming, out-of-control, rogue superintelligence (ASI), not even slightly nice, in the absence of yet-to-be-invented breakthrough technical alignment ideas.
 
-On the other side of this debate is almost everyone who works on or studies LLMs. Some of them are very concerned about egregious scheming, others much less so, and as a group they’re equally or m...","https://www.lesswrong.com/posts/DZaZ3fqHnvfLCftPu/sympathy-for-both-sides-of-the-egregious-misalignment-debate","Steven Byrnes","steve2152","134","43","9","2026-06-12T16:26:12.601Z","1338","True"
+On the other side of this debate is almost everyone who works on or studies LLMs. Some of them are very concerned about egregious scheming, others much less so, and as a group they’re equally or m...","https://www.lesswrong.com/posts/DZaZ3fqHnvfLCftPu/sympathy-for-both-sides-of-the-egregious-misalignment-debate","Steven Byrnes","steve2152","165","63","19","2026-06-12T16:26:12.601Z","1338","True"
 "aTcsN5ZZDnMFJvRiG","models-may-behave-worse-when-eval-aware","Models May Behave Worse When Eval Aware","This is the first in a series of research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas.
 
 
