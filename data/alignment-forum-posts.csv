@@ -1,4 +1,8 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"wyZRNgpeiPeRXB6eT","why-do-naive-sft-filters-for-safety-properties-fail","Why Do Naive SFT Filters For Safety Properties Fail?","This is the fourth in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The third post can be found here.
+
+
+Since SFT is the cause for many safety relevant properties, a natural strategy is to filter out rollouts from SFT that have undesirable properties. However, as we show in this section (and in forthcoming MATS work), SFT data filtering frequently works surprisingly poorly. In this post, we investig...","https://www.lesswrong.com/posts/wyZRNgpeiPeRXB6eT/why-do-naive-sft-filters-for-safety-properties-fail","Josh Engels","josh-engels","37","12","0","2026-06-14T19:45:10.141Z","3131","True"
 "nLrrYweeFxgXACSmS","sft-drives-gemini-s-safety-properties-1","SFT Drives Gemini’s Safety Properties","This is the third in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The second post can be found here.
 
 
@@ -6,7 +10,7 @@
 
 In this short post, we describe a surprising finding: most safety relevant properties in Gemini seem to be caused by the combination of pretraining and SFT, not other training stages like RL. 
 
-We do not want to overstate this claim as applying to other model families, and we also note that this...","https://www.lesswrong.com/posts/nLrrYweeFxgXACSmS/sft-drives-gemini-s-safety-properties-1","Josh Engels","josh-engels","38","7","1","2026-06-13T15:31:52.854Z","418","True"
+We do not want to overstate this claim as applying to other model families, and we also note that this...","https://www.lesswrong.com/posts/nLrrYweeFxgXACSmS/sft-drives-gemini-s-safety-properties-1","Josh Engels","josh-engels","61","15","2","2026-06-13T15:31:52.854Z","418","True"
 "qi4mNbZYAFDYwfRba","building-and-evaluating-model-diffing-agents","Building and evaluating model diffing agents","This is the second in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The first post can be found here.
 
 
