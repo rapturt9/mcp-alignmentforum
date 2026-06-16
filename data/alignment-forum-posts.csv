@@ -1,8 +1,14 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"GTYJRLhqztxKF2v5R","synthetic-document-finetuning-for-instilling-positive-traits","Synthetic document finetuning for instilling positive traits","This is the fifth in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The fourth post can be found here.
+
+
+
+
+TLDR: Via adapting the methods of Marks et al and Li et al, we train Gemini 3 Flash to have certain traits/values by midtraining it on documents about how Gemini has those properties, followed by finetuning it on synthetic chat data where it demonstrates those properties. The chat finetuning is ...","https://www.lesswrong.com/posts/GTYJRLhqztxKF2v5R/synthetic-document-finetuning-for-instilling-positive-traits","CallumMcDougall","callummcdougall","30","5","0","2026-06-16T00:04:26.492Z","2876","True"
 "wyZRNgpeiPeRXB6eT","why-do-naive-sft-filters-for-safety-properties-fail","Why Do Naive SFT Filters For Safety Properties Fail?","This is the fourth in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The third post can be found here.
 
 
-Since SFT is the cause for many safety relevant properties, a natural strategy is to filter out rollouts from SFT that have undesirable properties. However, as we show in this section (and in forthcoming MATS work), SFT data filtering frequently works surprisingly poorly. In this post, we investig...","https://www.lesswrong.com/posts/wyZRNgpeiPeRXB6eT/why-do-naive-sft-filters-for-safety-properties-fail","Josh Engels","josh-engels","37","12","0","2026-06-14T19:45:10.141Z","3131","True"
+Since SFT is the cause for many safety relevant properties, a natural strategy is to filter out rollouts from SFT that have undesirable properties. However, as we show in this section (and in forthcoming MATS work), SFT data filtering frequently works surprisingly poorly. In this post, we investig...","https://www.lesswrong.com/posts/wyZRNgpeiPeRXB6eT/why-do-naive-sft-filters-for-safety-properties-fail","Josh Engels","josh-engels","42","15","0","2026-06-14T19:45:10.141Z","3131","True"
 "nLrrYweeFxgXACSmS","sft-drives-gemini-s-safety-properties-1","SFT Drives Gemini’s Safety Properties","This is the third in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The second post can be found here.
 
 
