@@ -1,10 +1,13 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"xPXJfgqFTvuJxGZbE","predicting-llm-safety-before-release-by-simulating","Predicting LLM Safety Before Release by Simulating Deployment","Paper link
+
+Before releasing a new model, labs need to understand not just what it can do, but how it is likely to behave in real-world use, including where it might introduce new risks. This becomes even more important as capabilities increase. As part of our pre-deployment safety review, we leverage targeted evaluations, red-teaming, and other checks to understand model behavior. We’ve now started using a method for simulating model deployments before they happen, which adds a complementary...","https://www.lesswrong.com/posts/xPXJfgqFTvuJxGZbE/predicting-llm-safety-before-release-by-simulating","Tomek Korbak","tomek-korbak","33","8","1","2026-06-16T19:55:05.242Z","331","True"
 "GTYJRLhqztxKF2v5R","synthetic-document-finetuning-for-instilling-positive-traits","Synthetic document finetuning for instilling positive traits","This is the fifth in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The fourth post can be found here.
 
 
 
 
-TLDR: Via adapting the methods of Marks et al and Li et al, we train Gemini 3 Flash to have certain traits/values by midtraining it on documents about how Gemini has those properties, followed by finetuning it on synthetic chat data where it demonstrates those properties. The chat finetuning is ...","https://www.lesswrong.com/posts/GTYJRLhqztxKF2v5R/synthetic-document-finetuning-for-instilling-positive-traits","CallumMcDougall","callummcdougall","30","5","0","2026-06-16T00:04:26.492Z","2876","True"
+TLDR: Via adapting the methods of Marks et al and Li et al, we train Gemini 3 Flash to have certain traits/values by midtraining it on documents about how Gemini has those properties, followed by finetuning it on synthetic chat data where it demonstrates those properties. The chat finetuning is ...","https://www.lesswrong.com/posts/GTYJRLhqztxKF2v5R/synthetic-document-finetuning-for-instilling-positive-traits","CallumMcDougall","callummcdougall","51","14","1","2026-06-16T00:04:26.492Z","2876","True"
 "wyZRNgpeiPeRXB6eT","why-do-naive-sft-filters-for-safety-properties-fail","Why Do Naive SFT Filters For Safety Properties Fail?","This is the fourth in a series of informal research updates from the Google DeepMind Language Model Interpretability team, in interpretability and adjacent areas. The third post can be found here.
 
 
