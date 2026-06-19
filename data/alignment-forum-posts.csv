@@ -1,4 +1,11 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"hEtkyKGoPpFeWnKkX","gdm-ai-control-roadmap","GDM AI Control Roadmap","GDM has published an AI Control Roadmap! From the executive summary:
+
+> We present the GDM AI Control Roadmap (v0.1) – our plan for implementing and adopting internal guardrails designed to catch potential adversarial behaviour by AI agents, even as they become increasingly harder to oversee and contain.
+> 
+> We focus on system-level mitigations that limit the harm a misaligned AI system could cause. Specifically, this report provides:
+> 
+> • Threat modelling: Taking inspiration from cybersec...","https://www.lesswrong.com/posts/hEtkyKGoPpFeWnKkX/gdm-ai-control-roadmap","Mary Phuong","mary-phuong-2","52","11","1","2026-06-18T16:50:59.963Z","351","True"
 "xPXJfgqFTvuJxGZbE","predicting-llm-safety-before-release-by-simulating","Predicting LLM Safety Before Release by Simulating Deployment","Paper link
 
 Before releasing a new model, labs need to understand not just what it can do, but how it is likely to behave in real-world use, including where it might introduce new risks. This becomes even more important as capabilities increase. As part of our pre-deployment safety review, we leverage targeted evaluations, red-teaming, and other checks to understand model behavior. We’ve now started using a method for simulating model deployments before they happen, which adds a complementary...","https://www.lesswrong.com/posts/xPXJfgqFTvuJxGZbE/predicting-llm-safety-before-release-by-simulating","Tomek Korbak","tomek-korbak","35","9","2","2026-06-16T19:55:05.242Z","331","True"
