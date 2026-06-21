@@ -1,4 +1,14 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"zoYXpdaMgFT43Wc24","how-transparent-is-diffusiongemma-and-why-it-matters","How transparent is DiffusionGemma (and why it matters)","Authors: Joshua Engels*, Callum McDougall*, Bilal Chughtai*, Janos Kramar, Senthoran Rajamanoharan, Cindy Wu, Arthur Conmy, Asic Q Chen, Jean Tarbouriech, Min Ma, Brendan O'Donoghue+, João Gabriel Lopes de Oliveira+, Rohin Shah+, Neel Nanda+
+*Primary Contributor
++Advising
+
+Paper here: https://arxiv.org/abs/2606.20560
+
+
+
+Overview
+In a recent collaboration between the GDM interpretability team and the GDM text diffusion team, we performed a transparency audit of DiffusionGemma, GDM's new text d...","https://www.lesswrong.com/posts/zoYXpdaMgFT43Wc24/how-transparent-is-diffusiongemma-and-why-it-matters","Josh Engels","josh-engels","36","11","0","2026-06-20T20:05:50.053Z","1130","True"
 "hEtkyKGoPpFeWnKkX","gdm-ai-control-roadmap","GDM AI Control Roadmap","GDM has published an AI Control Roadmap! From the executive summary:
 
 > We present the GDM AI Control Roadmap (v0.1) – our plan for implementing and adopting internal guardrails designed to catch potential adversarial behaviour by AI agents, even as they become increasingly harder to oversee and contain.
