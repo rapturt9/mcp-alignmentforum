@@ -1,4 +1,11 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"XP794SHDuXYfWLrvJ","deployment-awareness-matters-more-than-evaluation-awareness","Deployment Awareness Matters More Than Evaluation Awareness","TL;DR
+
+
+Evaluation awareness — an AI recognizing it's being evaluated — is a widely discussed concept in AI safety. But there is a closely related concept that we claim is more important: deployment awareness, the AI's ability to recognize when it is not being evaluated and when its actions matter. A misaligned AI with deployment awareness can game evaluations without any evaluation awareness at all, with a simple strategy: act aligned by default, and deviate only when confident you're in rea...","https://www.lesswrong.com/posts/XP794SHDuXYfWLrvJ/deployment-awareness-matters-more-than-evaluation-awareness","VojtaKovarik","vojtakovarik","28","7","0","2026-06-26T22:54:06.567Z","2064","True"
+"LCGcD28rSMkMTMvBK","the-case-for-model-forensics","The Case for Model Forensics","If we had a misalignment warning shot, would we be able to tell?
+
+Suppose an AI company catches their model taking an egregious action, like deleting oversight code that monitors its actions. Should they sound the alarm? A key piece of evidence to determine what to do next – such as what mitigations to take – is to understand why the model took the action. If the model was just confused (e.g. it may have been trying to reduce latency), a simple mitigation like a regex classifier that blocks d...","https://www.lesswrong.com/posts/LCGcD28rSMkMTMvBK/the-case-for-model-forensics","aditya singh","aditya-singh-1","40","11","0","2026-06-26T15:09:10.576Z","3006","True"
 "WAZWA6FPQvH8okouJ","llm-driven-feature-discovery","LLM-Driven Feature Discovery","We would often like to get a qualitative sense of a target model’s behaviors in important distributions (e.g. deployment, RL training, or evals). For example, we might want to discover novel behaviors, figure out what causes some target behavior to occur, or find surprising correlations between behaviors. 
 
 In a recent short exploratory project, we tackled this problem via LLM-Driven Feature Discovery. Our method works as follows:
