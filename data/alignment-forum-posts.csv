@@ -1,4 +1,12 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"aTybJ6CPQrxEY8rE2","data-filtering-works-a-lot-worse-than-you-would-expect","Data filtering works a lot worse than you would expect ","This work was largely done during Neel Nanda's MATS 10.0 Exploration Phase.
+
+J Rosser and Dohun Lee are co-first authors for this post with equal contribution. Josh Engels and Neel Nanda supervised the project, and provided guidance and feedback throughout.
+
+
+TLDR
+ * Models can acquire undesirable traits from during supervised fine-tuning (SFT). A natural thing to try is to identify the data points with these traits and filter them out and retrain.
+ * To our surprise, across most of our broad...","https://www.lesswrong.com/posts/aTybJ6CPQrxEY8rE2/data-filtering-works-a-lot-worse-than-you-would-expect","Dohun Lee","dohun-lee","18","4","0","2026-07-07T04:41:59.412Z","914","True"
 "SdGbWkCZgCN7EGBxM","pragmatic-fdt-and-predictors-as-game-theory-1","Pragmatic FDT, and predictors as game theory","Decision theory is back in fashion (defining fashion as ""one good post on a good EA blog""). Bentham's Bulldog (BB) has published a case against FDT (functional decision theory), contrasting rationalist enthusiasm with academic scepticism: ""Academic decision theorists don't like the theory. The number of academic decision theorists who adopt it could be counted on one hand by someone missing four of their fingers.""
 
 I am, just barely, a published academic decision theorist, so you can keep a s...","https://www.lesswrong.com/posts/SdGbWkCZgCN7EGBxM/pragmatic-fdt-and-predictors-as-game-theory-1","Stuart_Armstrong","stuart_armstrong","32","10","9","2026-07-03T13:22:38.489Z","3402","True"
