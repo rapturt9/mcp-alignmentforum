@@ -1,4 +1,11 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"rKdS7i4StaMmFzYRo","notes-on-technical-alignment-via-human-like-social-drives","Notes on technical alignment via human-like social drives","1. Frontmatter
+
+
+1.1 Backstory for this post
+As discussed in Intro to Brain-Like-AGI Safety, I’m working on the technical alignment problem for a hypothetical future “brain-like AGI”, with a particular focus on treating human innate social and moral drives as a possible jumping-off point for our technical alignment approach.
+
+After all, if it’s possible for humans to do stuff that ultimately leads to a good future, then it’s probably also possible for sufficiently human-like AGIs to do stuff ...","https://www.lesswrong.com/posts/rKdS7i4StaMmFzYRo/notes-on-technical-alignment-via-human-like-social-drives","Steven Byrnes","steve2152","51","10","1","2026-07-08T18:30:22.336Z","12723","True"
 "aTybJ6CPQrxEY8rE2","data-filtering-works-a-lot-worse-than-you-would-expect","Data filtering works a lot worse than you would expect ","This work was largely done during Neel Nanda's MATS 10.0 Exploration Phase.
 
 J Rosser and Dohun Lee are co-first authors for this post with equal contribution. Josh Engels and Neel Nanda supervised the project, and provided guidance and feedback throughout.
