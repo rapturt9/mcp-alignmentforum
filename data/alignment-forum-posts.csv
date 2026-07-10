@@ -1,11 +1,25 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"LQXWiF8PyJ5ojNsEv","how-robust-are-natural-language-autoencoders-to","How robust are natural language autoencoders to initialization?","Natural language autoencoders are meant to take in an LLM's activation vector and describe in plain text what the model is thinking. However, its training data collection involves asking Claude to guess what a model might be thinking. How robust are NLAs to these guesses? We change Claude's guesses in various ways and measure the impact on the NLA's statements as well as on reconstruction accuracy. We show that Qwen2.5-7B NLAs have some robustness to irrelevant statements and prevailing senti...","https://www.lesswrong.com/posts/LQXWiF8PyJ5ojNsEv/how-robust-are-natural-language-autoencoders-to","michaelzhang","michaelzhang","41","9","0","2026-07-10T00:40:02.648Z","3849","True"
+"pFzctpJBat95SrCyC","ai-2040-plan-a","AI 2040: Plan A","For the past year, we at the AI Futures Project have been sinking most of our time into our next big scenario. Now it’s done! 
+
+It’s called AI 2040: Plan A.
+
+It’s called Plan A because it’s a recommendation, not a prediction. It’s what we think should happen, not what will happen, though we think it’s plausible enough to aim for.
+
+It’s called AI 2040 because in it, they delay the creation of superintelligence to 2040. It would have happened much sooner (in 2030, to be precise) if not for deci...","https://www.lesswrong.com/posts/pFzctpJBat95SrCyC/ai-2040-plan-a","Daniel Kokotajlo","daniel-kokotajlo","240","74","24","2026-07-09T16:25:14.405Z","238","True"
+"HDKQNqiR2gtfMiWsn","announcing-our-usd160m-grant-from-coefficient-giving","Announcing our $160M grant from Coefficient Giving","We are excited to announce that Resolution (fka Sequent) has a $160M grant from Coefficient Giving (cG) to put rigorous alignment research on a (closer to) even footing with the frontier labs. We will use it to accelerate progress towards higher-confidence alignment, or to find evidence and obstacles showing why alignment is hard.
+
+The grant is structured as a $108M base plus $52M conditional on a combination of hiring success and compute needs. The base includes a small regranting budget, wh...","https://www.lesswrong.com/posts/HDKQNqiR2gtfMiWsn/announcing-our-usd160m-grant-from-coefficient-giving","Geoffrey Irving","geoffrey-irving","38","12","0","2026-07-09T07:58:47.697Z","671","True"
+"43vKjWuH4goLwrFHA","modular-pretraining-enables-access-control","Modular Pretraining Enables Access Control","Full author list: Ethan Roland*, Murat Cubuktepe*, Erick Martinez*, Stijn Servaes, Keenan Pepper, Mike Vaiana, Diogo Schwerz de Lucena, Judd Rosenblatt, Addie Foote, Cem Anil, Alex Cloud; *Equal contribution
+
+tldr: Frontier AI models have knowledge that could be misused for nefarious purposes. To address this risk, we introduce Gradient Routed Auxiliary Modules (GRAM), a method for isolating dangerous knowledge to specific modules within a language model. These modules can be switched on or o...","https://www.lesswrong.com/posts/43vKjWuH4goLwrFHA/modular-pretraining-enables-access-control","E.Roland","e-roland","60","22","2","2026-07-09T00:03:25.488Z","2720","True"
 "rKdS7i4StaMmFzYRo","notes-on-technical-alignment-via-human-like-social-drives","Notes on technical alignment via human-like social drives","1. Frontmatter
 
 
 1.1 Backstory for this post
 As discussed in Intro to Brain-Like-AGI Safety, I’m working on the technical alignment problem for a hypothetical future “brain-like AGI”, with a particular focus on treating human innate social and moral drives as a possible jumping-off point for our technical alignment approach.
 
-After all, if it’s possible for humans to do stuff that ultimately leads to a good future, then it’s probably also possible for sufficiently human-like AGIs to do stuff ...","https://www.lesswrong.com/posts/rKdS7i4StaMmFzYRo/notes-on-technical-alignment-via-human-like-social-drives","Steven Byrnes","steve2152","51","10","1","2026-07-08T18:30:22.336Z","12723","True"
+After all, if it’s possible for humans to do stuff that ultimately leads to a good future, then it’s probably also possible for sufficiently human-like AGIs to do stuff ...","https://www.lesswrong.com/posts/rKdS7i4StaMmFzYRo/notes-on-technical-alignment-via-human-like-social-drives","Steven Byrnes","steve2152","53","12","3","2026-07-08T18:30:22.336Z","12733","True"
 "aTybJ6CPQrxEY8rE2","data-filtering-works-a-lot-worse-than-you-would-expect","Data filtering works a lot worse than you would expect ","This work was largely done during Neel Nanda's MATS 10.0 Exploration Phase.
 
 J Rosser and Dohun Lee are co-first authors for this post with equal contribution. Josh Engels and Neel Nanda supervised the project, and provided guidance and feedback throughout.
