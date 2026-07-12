@@ -1,4 +1,8 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"EexsebbYhbe2gXkPP","the-current-bottleneck-is-political-will-not-research","The current bottleneck is political will, not research","Abstract:
+
+ 1. We already know enough to act. I wish we were in a world where research was the bottleneck, but the main constraint on AI safety is no longer a shortage of clever policy ideas: best practices already exist and are not being applied or enforced, and a serious international (or even just national) regulatory regime would probably cut most of the risk.
+ 2. They are not applied because awareness is low. The people who narrate and enforce AI policy mostly do not believe the problem ...","https://www.lesswrong.com/posts/EexsebbYhbe2gXkPP/the-current-bottleneck-is-political-will-not-research","Charbel-Raphaël","charbel-raphael","43","16","0","2026-07-11T21:56:26.202Z","7148","True"
 "iPyJfD9Jyxj6Jfdws","value-generalisation-value-correction","Value generalisation: value correction","I firmly believe that value generalisation[1]is the key to AI Alignment. That, indeed, it is necessary and almost sufficient for alignment.
 
 But I won't be arguing that grand point today; instead, I'll focus on a specific RL example of an agent that displays value correction: it realises its current reward function is (probably) incorrect, and acts to correct it.
