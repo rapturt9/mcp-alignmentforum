@@ -4,7 +4,7 @@
  * Defying prestigious dogma and searching for raw truth;
  * Defying social pressure, acting alone to help someone while others watch;
  * Defying your self-expectations (your “role”), instead searching over lines of cause-and-effect to find a winning pathway;
- * Defying a powerful foe’s threats, because they only threaten since people like you ...","https://www.lesswrong.com/posts/iKm2FhpWkuuBojm82/why-i-left-google-deepmind","TurnTrout","turntrout","392","122","10","2026-07-15T17:42:46.355Z","10651","True"
+ * Defying a powerful foe’s threats, because they only threaten since people like you ...","https://www.lesswrong.com/posts/iKm2FhpWkuuBojm82/why-i-left-google-deepmind","TurnTrout","turntrout","539","177","14","2026-07-15T17:42:46.355Z","10651","True"
 "WpYFAmJDH3zuAq2ha","open-distillation-of-hereditary-traits-1","Open Distillation of Hereditary Traits","TL;DR
  * Josh and Neel show that distillation from a teacher model to a base pretrained student model transfers some of the teacher model’s traits (such as displaying negative emotion in the Gemma Needs Help evals)
  * On its own this is pretty unsurprising, but Josh and Neel additionally show that even filtering out all the prompts and rollouts where the trait is mentioned doesn’t generally prevent the trait transfer
