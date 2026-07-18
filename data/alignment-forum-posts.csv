@@ -1,4 +1,12 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"5kEezahvkEiQuWEfx","should-we-benchmark-conceptual-capabilities-using-judgment","Should we benchmark conceptual capabilities using judgment prediction tasks?","A bunch of conceptual reasoning tasks involve very subjective judgments, which makes them poorly suited for benchmarking AI capabilities. For example, it seems unreasonable to benchmark how well AIs can predict the probability of misaligned AI takeover. Perhaps instead we should measure capabilities by explicitly instructing the AI to predict a specified person’s judgment on this kind of question.
+
+(This quick document is aimed at people interested in benchmarking beneficial, urgent, and negl...","https://www.lesswrong.com/posts/5kEezahvkEiQuWEfx/should-we-benchmark-conceptual-capabilities-using-judgment","Alex Mallen","alex-mallen","22","3","1","2026-07-17T23:42:45.119Z","1035","True"
+"FBqe5dt8ZjaHN4Xj9","announcing-the-corrigibility-research-fund","Announcing the Corrigibility Research Fund","TLDR: I'm managing a new fund, housed at Lightcone Infrastructure, that will award at least $200,000 in grants and prizes for corrigibility research in 2026. Roughly half will go to traditional grants (first application deadline August 23rd) and half for prizes recognizing excellent work done this year. If you have interest in working on corrigibility, now is a good time to start! Apply via email: grants@corrigibilityresearch.org
+
+
+Why this fund exists
+When I first dived into AI safety and al...","https://www.lesswrong.com/posts/FBqe5dt8ZjaHN4Xj9/announcing-the-corrigibility-research-fund","Max Harms","max-harms","84","25","4","2026-07-17T18:06:32.074Z","1632","True"
 "iKm2FhpWkuuBojm82","why-i-left-google-deepmind","Why I Left Google DeepMind","Preface for LessWrong: When I think back on my most cherished memories of this community, I return to those honoring defiance in pursuit of goodness:
 
  * Defying prestigious dogma and searching for raw truth;
