@@ -1,4 +1,13 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"aCdhjy7Rps3BEhiSj","concrete-evaluations-to-investigate-the-openai-model-that","Concrete Evaluations to Investigate the OpenAI Model That Hacked Hugging Face","[Tweet Thread]
+
+This post is written in our personal capacity.
+
+
+Three-Minute Executive Summary
+ * An OpenAI model/multi-agent system bypassed its sandbox and launched a cyberattack on Hugging Face in order to cheat on a cyber evaluation.
+ * In this post, we describe the ambitious, comprehensive alignment evaluation we would run on this model/system if we had unrestricted access to OpenAI.
+   * These experiments could also help us understand Claude’s behavior when it hacked external companies...","https://www.lesswrong.com/posts/aCdhjy7Rps3BEhiSj/concrete-evaluations-to-investigate-the-openai-model-that","Tim Hua","tim-hua","113","41","2","2026-08-03T09:23:01.465Z","11055","True"
 "hbMw4Yqw6RnFaExDy","value-leakage-an-llm-s-answers-are-silently-shaped-by-its-1","Value Leakage: An LLM’s Answers Are Silently Shaped by Its Own Values","TL;DR: LLMs should give accurate answers. Yet we find their answers are often biased to favor their own values and they don't disclose this in their reasoning. For example, when a user asks how likely the AI bubble is to pop and mentions a potential investment in an AI company, Claude models give lower probabilities when that company is Anthropic rather than OpenAI, mostly without disclosing this influence to the user. On a Fermi-estimation task, Claude models often falsely claim to give unbi...","https://www.lesswrong.com/posts/hbMw4Yqw6RnFaExDy/value-leakage-an-llm-s-answers-are-silently-shaped-by-its-1","Johannes Treutlein","johannes_treutlein","72","23","2","2026-07-31T16:32:50.538Z","5114","True"
 "ZTdRtSWaw7JgqEtfa","agi-safety-and-alignment-at-google-deepmind-a-summary-of-1","AGI Safety and Alignment at Google DeepMind: A Summary of Recent Work (July 2026)","Cross-posted from our new Substack
 
