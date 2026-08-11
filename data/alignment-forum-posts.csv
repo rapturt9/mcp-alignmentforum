@@ -1,4 +1,35 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"GRmvZsHXH4vaijPMv","four-llm-loss-functions-four-flavors-of-llm-misalignment","Four LLM loss functions → four flavors of LLM misalignment","It seems to me that, for every loss function that we use to train LLMs, we get a very distinct flavor of LLM misalignment. Here’s the summary table, and then we’ll go through the rows separately.
+
+Training stage
+
+Loss function
+
+Flavor of misalignment[1]
+
+Famous examples
+
+Pretraining & SFT
+
+Imitative learning (next-token prediction)
+
+“Seven deadly sins” misalignment
+
+Bing-Sydney, “Emergent misalignment”
+
+RLHF & DPO
+
+Human approval
+
+“Glazing” misalignment
+
+GPT-4o
+
+RLVR
+
+Automatic verifier
+
+“Lit...","https://www.lesswrong.com/posts/GRmvZsHXH4vaijPMv/four-llm-loss-functions-four-flavors-of-llm-misalignment","Steven Byrnes","steve2152","120","48","5","2026-08-10T16:16:16.477Z","1867","True"
 "aCdhjy7Rps3BEhiSj","concrete-evaluations-to-investigate-the-openai-model-that","Concrete Evaluations to Investigate the OpenAI Model That Hacked Hugging Face","[Tweet Thread]
 
 This post is written in our personal capacity.
