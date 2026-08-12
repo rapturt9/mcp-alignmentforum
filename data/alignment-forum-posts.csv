@@ -1,4 +1,9 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"MgYCraoxMwfWwgWa5","an-anytime-algorithm-for-mixing-the-computable-measures","An anytime algorithm for mixing the computable measures","Epistemic status: Not peer reviewed, high chance of typos and small chance of errors. Written entirely by me, checked by Fable.
+
+In this post I prove the existence of an anytime computable Bayesian mixture of all computable measures called , and briefly argue that this is a reasonable alternative to Solomonoff induction's universal distribution for general sequence prediction.
+
+I believe that Tom Sterkenburg told me that this is possible, but I could not find it written down anywhere (though ...","https://www.lesswrong.com/posts/MgYCraoxMwfWwgWa5/an-anytime-algorithm-for-mixing-the-computable-measures","Cole Wyeth","cole-wyeth","18","4","0","2026-08-12T00:57:09.276Z","1070","True"
 "GRmvZsHXH4vaijPMv","four-llm-loss-functions-four-flavors-of-llm-misalignment","Four LLM loss functions → four flavors of LLM misalignment","It seems to me that, for every loss function that we use to train LLMs, we get a very distinct flavor of LLM misalignment. Here’s the summary table, and then we’ll go through the rows separately.
 
 Training stage
@@ -29,7 +34,7 @@ RLVR
 
 Automatic verifier
 
-“Lit...","https://www.lesswrong.com/posts/GRmvZsHXH4vaijPMv/four-llm-loss-functions-four-flavors-of-llm-misalignment","Steven Byrnes","steve2152","120","48","5","2026-08-10T16:16:16.477Z","1867","True"
+“Lit...","https://www.lesswrong.com/posts/GRmvZsHXH4vaijPMv/four-llm-loss-functions-four-flavors-of-llm-misalignment","Steven Byrnes","steve2152","173","77","12","2026-08-10T16:16:16.477Z","1867","True"
 "aCdhjy7Rps3BEhiSj","concrete-evaluations-to-investigate-the-openai-model-that","Concrete Evaluations to Investigate the OpenAI Model That Hacked Hugging Face","[Tweet Thread]
 
 This post is written in our personal capacity.
