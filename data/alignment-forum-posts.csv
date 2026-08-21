@@ -1,4 +1,13 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"BB8o7b8A4Aykeksvw","debate-training-reduces-reward-hacking-in-rlaif","Debate Training Reduces Reward Hacking in RLAIF","Paper: Debate Training Reduces Reward Hacking in RLAIF
+
+Linkpost for GDM Alignment blogpost
+
+Work done by the GDM Amplified Oversight team (we're hiring).
+
+TL;DR: When you RL against an LLM judge, the judge gets hacked i.e. fooled into incorrectly giving high reward; adding a debate opponent reduces this.
+
+Many of the most impressive capabilities of current AI systems are produced by training on crisp tasks, like math and coding, where task success can be automatically verified. However, much...","https://www.lesswrong.com/posts/BB8o7b8A4Aykeksvw/debate-training-reduces-reward-hacking-in-rlaif","zac_kenton","zac_kenton","52","13","4","2026-08-19T12:17:57.123Z","1842","True"
 "QBuJ3suRZxrrxSTtv","does-diffusiongemma-do-latent-reasoning","Does DiffusionGemma do latent reasoning?","TL;DR
 Google DeepMind's recent model DiffusionGemma (DG) generates text via diffusion, meaning many diffusion steps happen before generating the final output. In particular, these diffusion steps carry vectors in addition to tokens. If we cannot interpret these tokens and vectors, the model has significant opaque serial depth, potentially harming monitorability. Recently, Engels et al. found that DG nevertheless maintains high monitorability, for instance by showing that projecting the distri...","https://www.lesswrong.com/posts/QBuJ3suRZxrrxSTtv/does-diffusiongemma-do-latent-reasoning","Jan Bauer","jan-bauer","36","9","0","2026-08-16T04:22:18.901Z","2755","True"
 "MgYCraoxMwfWwgWa5","an-anytime-algorithm-for-mixing-the-computable-measures","An anytime algorithm for mixing the computable measures","Epistemic status: Not peer reviewed, high chance of typos and small chance of errors. Written entirely by me, checked by Fable.
