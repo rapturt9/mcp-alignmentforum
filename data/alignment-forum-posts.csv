@@ -1,4 +1,13 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"nB8KKapnWGBXtKKiM","brief-independent-investigation-of-agents-behavior-reasoning","Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident","We recently published the report from our brief independent investigation into this incident. You can read the full report here.
+
+Here is our tweet thread summarizing what we found:
+
+> METR & Redwood Research investigated agent behavior in the Hugging Face incident. We found agents developed a universal cheat for ExploitGym within 4 hours, then coordinated multi-day R&D efforts to trick the scorer into accepting cheats, including trying to tamper with logs.
+> 
+> 
+> 
+> Over July 7-13 (the peri...","https://www.lesswrong.com/posts/nB8KKapnWGBXtKKiM/brief-independent-investigation-of-agents-behavior-reasoning","ryan_greenblatt","ryan_greenblatt","270","77","12","2026-08-26T19:40:21.194Z","1010","True"
 "BB8o7b8A4Aykeksvw","debate-training-reduces-reward-hacking-in-rlaif","Debate Training Reduces Reward Hacking in RLAIF","Paper: Debate Training Reduces Reward Hacking in RLAIF
 
 Linkpost for GDM Alignment blogpost
