@@ -1,4 +1,16 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"J76LZCC55RdHeqEhz","training-a-misaligned-reward-seeker","Training a Misaligned Reward Seeker","Authors: Richard Qi, Benjamin Wright, Monte MacDiarmid, Evan Hubinger
+
+
+Abstract
+> During reinforcement learning (RL), AI models complete tasks and are rewarded based on their results. They sometimes learn to “cheat” rather than completing these tasks as intended, a phenomenon known as reward hacking. Our industry lacks a general solution to this problem, and reward hacking remains challenging to fully mitigate. To better understand the impact of reward hacking on model behavior, we trained a...","https://www.lesswrong.com/posts/J76LZCC55RdHeqEhz/training-a-misaligned-reward-seeker","evhub","evhub","42","9","2","2026-09-01T01:41:44.948Z","653","True"
+"kjPEH4KGEHd8iQ4Hn","value-generalisation-theory-of-change-putting-it-into","Value generalisation Theory of Change: putting it into practice","In the previous post, I presented my theory of change for why value generalisation is vital for AI alignment. Here I'll add the practical part of the argument: given those facts, why explicitly try to do value generalisation, what are the dangers of the approach, how should it be done, and how do we mitigate the risks?
+
+The formal theory of change is down below, but I'll put a collapsible version here, to make references easier:
+
+Theory of Change
+
+ 1. Inputs / activities: investment/grants, a...","https://www.lesswrong.com/posts/kjPEH4KGEHd8iQ4Hn/value-generalisation-theory-of-change-putting-it-into","Stuart_Armstrong","stuart_armstrong","9","4","1","2026-08-31T10:51:46.999Z","2154","True"
 "f79SNtqFD7SqJY2vf","value-generalisation-theory-of-change-the-theory-behind-the","Value generalisation theory of change: the theory behind the approach","This is the first part of a theory of change explaining why I'm targeting value generalisation as the path to AI alignment. It presents the definitions and key claims behind the theory, and shows that most AI alignment failure modes are value generalisation failures.
 
 Note that a lot of these arguments are very similar to those about why alignment is hard in the first place. This is not a coincidence. I believe that lack of value generalisation is a fundamental reason for the hardness of the ...","https://www.lesswrong.com/posts/f79SNtqFD7SqJY2vf/value-generalisation-theory-of-change-the-theory-behind-the","Stuart_Armstrong","stuart_armstrong","20","4","0","2026-08-28T13:30:17.244Z","2830","True"
