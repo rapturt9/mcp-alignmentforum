@@ -1,4 +1,16 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"HGfMBEFnsXYkKvbRo","training-on-probes-research-ideas","Training on probes: Research ideas","Recap
+Sequel to Previous Post. This post might not make sense without it.
+
+Training on probes might let our judgments on easy domains generalize to harder domains by leveraging an AI's model of the world. Training using the gradient of the probe teaches the model to fool the probe, but doing RL against the probe doesn't teach the model to fool it!
+
+
+Following the brain-like story
+My hardwired instincts for eating fresh fruit have recruited my learned knowledge about supermarkets, and now I wa...","https://www.lesswrong.com/posts/HGfMBEFnsXYkKvbRo/training-on-probes-research-ideas","Charlie Steiner","charlie-steiner","22","7","3","2026-09-08T17:06:23.603Z","2024","True"
+"gHFCgrvfxQtaEnJye","training-on-probes-what-s-going-on","Training on probes: What's going on","TL;DR
+ * If you train a probe for some property (like ""honesty"") and do gradient descent against this probe while continuing training that incentivizes dishonesty, the model will change its internal representation to evade the probe. Duh.
+ * If you train against the probe after all other training, it works fine and might have some advantages over ablating the probe direction. But it doesn't satisfy an ambitious vision, because it doesn't support learning new skills.
+ * If you add a probe term...","https://www.lesswrong.com/posts/gHFCgrvfxQtaEnJye/training-on-probes-what-s-going-on","Charlie Steiner","charlie-steiner","54","17","0","2026-09-08T17:06:18.717Z","3772","True"
 "J76LZCC55RdHeqEhz","training-a-misaligned-reward-seeker","Training a Misaligned Reward Seeker","Authors: Richard Qi, Benjamin Wright, Monte MacDiarmid, Evan Hubinger
 
 
