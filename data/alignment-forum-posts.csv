@@ -1,16 +1,26 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"eRmzz8J8Qkzqvzrgg","astra-can-do-a-concerning-amount-with-no-chain-of-thought","Astra can do a concerning amount with no chain of thought","TLDR: Astra has 8.6x better odds of doing a reasoning task without CoT than the next best model (Fable 5.1), and can do 7.2 serial arithmetic steps in a forward pass vs 4.1 for the next best model (Gemini 3.8 Flash/Fable 5.1)
+
+Epistemic status: Heavily LLM-dependent research, and the precise results are somewhat sensitive to researcher decisions, but I’ve done enough sanity checks that I’d be surprised if the core claims were misleading
+
+One of the most striking things in the Astra report was...","https://www.lesswrong.com/posts/eRmzz8J8Qkzqvzrgg/astra-can-do-a-concerning-amount-with-no-chain-of-thought","Neel Nanda","neel-nanda-1","39","9","4","2026-09-10T02:31:26.208Z","2159","True"
+"wt4kk6vFPEhkXvF8Q","how-good-are-slop-vestigators","How good are slop-vestigators?","TLDR:
+
+ 1. We release MessageBoardAuditBench: a benchmark to measure how well agents can replicate the recent investigation into a swarm of OpenAI agents colluding via a message board on an online wiki. We open-source the benchmark as an Inspect eval.
+ 2. We find that top models cover up to 51% of findings under our rubric and that model performance improves with time budget and general capability.
+ 3. We observe OpenAI models are less likely than other models to suggest the incident came fro...","https://www.lesswrong.com/posts/wt4kk6vFPEhkXvF8Q/how-good-are-slop-vestigators","Hasan Baig","hasan-baig","127","62","12","2026-09-08T22:13:19.829Z","1643","True"
 "HGfMBEFnsXYkKvbRo","training-on-probes-research-ideas","Training on probes: Research ideas","Recap
 Sequel to Previous Post. This post might not make sense without it.
 
-Training on probes might let our judgments on easy domains generalize to harder domains by leveraging an AI's model of the world. Training using the gradient of the probe teaches the model to fool the probe, but doing RL against the probe doesn't teach the model to fool it!
+Last post, I told some stories about how training on probes might let our judgments on easy domains generalize to harder domains by leveraging an AI's model of the world. Training using the gradient of the probe teaches the model to fool the probe, but it turns out doing RL against the probe doesn't teach the model to fool it!
 
 
 Following the brain-like story
-My hardwired instincts for eating fresh fruit have recruited my learned knowledge about supermarkets, and now I wa...","https://www.lesswrong.com/posts/HGfMBEFnsXYkKvbRo/training-on-probes-research-ideas","Charlie Steiner","charlie-steiner","22","7","3","2026-09-08T17:06:23.603Z","2024","True"
+The brain-like story about training on probes analogizes the...","https://www.lesswrong.com/posts/HGfMBEFnsXYkKvbRo/training-on-probes-research-ideas","Charlie Steiner","charlie-steiner","23","8","3","2026-09-08T17:06:23.603Z","2052","True"
 "gHFCgrvfxQtaEnJye","training-on-probes-what-s-going-on","Training on probes: What's going on","TL;DR
  * If you train a probe for some property (like ""honesty"") and do gradient descent against this probe while continuing training that incentivizes dishonesty, the model will change its internal representation to evade the probe. Duh.
  * If you train against the probe after all other training, it works fine and might have some advantages over ablating the probe direction. But it doesn't satisfy an ambitious vision, because it doesn't support learning new skills.
- * If you add a probe term...","https://www.lesswrong.com/posts/gHFCgrvfxQtaEnJye/training-on-probes-what-s-going-on","Charlie Steiner","charlie-steiner","54","17","0","2026-09-08T17:06:18.717Z","3772","True"
+ * If you add a probe term...","https://www.lesswrong.com/posts/gHFCgrvfxQtaEnJye/training-on-probes-what-s-going-on","Charlie Steiner","charlie-steiner","65","20","0","2026-09-08T17:06:18.717Z","3772","True"
 "J76LZCC55RdHeqEhz","training-a-misaligned-reward-seeker","Training a Misaligned Reward Seeker","Authors: Richard Qi, Benjamin Wright, Monte MacDiarmid, Evan Hubinger
 
 
