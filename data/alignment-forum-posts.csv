@@ -1,4 +1,8 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"jXBmrEQj7zKGgiaYh","a-defense-of-gradual-disempowerment","A Defense of Gradual Disempowerment","(Or: Why Bentham's Bulldog and John Halstead are wrong in their critique of Kulveit et al.)
+Gradual Disempowerment is a 2025 paper (with a nice, dedicated website) proposing a form of existential risk from AI that goes beyond ""mundane"" risks like bioweapon uplift or mainline misaligned-AI-takeover scenarios. In the words of the authors:
+
+> [L]oss of human influence [may] be centrally driven by having more competitive machine alternatives to humans in almost all societal functions, such as eco...","https://www.lesswrong.com/posts/jXBmrEQj7zKGgiaYh/a-defense-of-gradual-disempowerment","Max Harms","max-harms","19","4","3","2026-09-17T21:04:05.984Z","1755","True"
 "khxvR2fgAeDvG5N2F","shallow-beliefs-midtraining-does-not-inoculate-against-em","Shallow Beliefs: Midtraining does not inoculate against EM from reward hacking","It would be useful if we had the ability to modify a model’s beliefs. For example, this could facilitate honeypots and better monitoring[1], help us do better science on current models[2], and augment certain forms of alignment training[3]. Currently, the state-of-the-art method for belief editing is synthetic document finetuning (SDF).
 
 We test how well SDF works to inoculate a model against misalignment generalization from RL-induced reward hacking, by training models on documents framing r...","https://www.lesswrong.com/posts/khxvR2fgAeDvG5N2F/shallow-beliefs-midtraining-does-not-inoculate-against-em","Jozdien","jozdien","46","15","3","2026-09-15T21:50:08.571Z","891","True"
