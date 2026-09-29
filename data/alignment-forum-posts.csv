@@ -1,4 +1,11 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"9LWK9Hh3Qsg36e3FS","fixed-weight-models-are-adversarially-vulnerable-hence","Fixed-weight models are adversarially vulnerable: hence misaligned","This post argues that fixed-weight models (at least as we understand them today) will a) always be vulnerable to adversarial examples in their concept-spaces, and b) hence will be misaligned, under sufficient optimisation pressure.
+
+
+Boundaries in concept space
+To serve any purpose whatsoever, an AI will have to draw boundaries inside its world-model - to distinguish world A from world B, and reach some comparison between them.
+
+If we want the AI to follow our goals and values, we want it to ...","https://www.lesswrong.com/posts/9LWK9Hh3Qsg36e3FS/fixed-weight-models-are-adversarially-vulnerable-hence","Stuart_Armstrong","stuart_armstrong","22","4","3","2026-09-28T20:08:39.065Z","706","True"
 "QnDqGbKehEB3DxJAp","continual-learning-might-make-your-blocking-monitors-nearly","Continual learning might make your blocking monitors nearly useless","Many control protocols work by intervening on an untrusted AI's actions during deployment. For example, you might set up a monitor that scores each action's suspiciousness and blocks actions above a threshold, replacing them with actions from a weaker ""trusted"" model (a defer-to-trusted protocol). Interventions like this cost usefulness: the protocol sometimes replaces good actions with worse ones.
 
 Continual learning, by which I mean any mechanism that lets an AI accumulate skills and knowle...","https://www.lesswrong.com/posts/QnDqGbKehEB3DxJAp/continual-learning-might-make-your-blocking-monitors-nearly","Alex Mallen","alex-mallen","49","22","1","2026-09-24T23:45:34.566Z","3232","True"
