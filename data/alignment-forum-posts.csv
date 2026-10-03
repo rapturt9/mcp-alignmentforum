@@ -1,7 +1,7 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
 "rp4sB5a6HaPpfD4rA","endogenous-alignment-requires-dependence","Endogenous Alignment Requires Dependence","My post on endogenous alignment got several excellent comments. Among them, one from Karl Krueger argued that imitation learning is more important for how humans align their children than reinforcement learning. Teasing out which is more important seems hard, but I agree I was wrong to ignore the importance of imitation, and arguably imitation learning is more fundamental for a reason explained by another comment.
 
-As Gunnar Zarncke helpfully pointed out, I had forgotten the most critical par...","https://www.lesswrong.com/posts/rp4sB5a6HaPpfD4rA/endogenous-alignment-requires-dependence","Gordon Seidoh Worley","gordon-seidoh-worley","18","5","1","2026-10-01T16:20:55.591Z","517","True"
+As Gunnar Zarncke helpfully pointed out, I had forgotten the most critical par...","https://www.lesswrong.com/posts/rp4sB5a6HaPpfD4rA/endogenous-alignment-requires-dependence","Gordon Seidoh Worley","gordon-seidoh-worley","27","7","1","2026-10-01T16:20:55.591Z","517","True"
 "9LWK9Hh3Qsg36e3FS","fixed-weight-models-are-adversarially-vulnerable-hence","Fixed-weight models are adversarially vulnerable: hence misaligned","This post argues that fixed-weight models (at least as we understand them today) will a) always be vulnerable to adversarial examples in their concept-spaces, and b) hence will be misaligned, under sufficient optimisation pressure.
 
 
