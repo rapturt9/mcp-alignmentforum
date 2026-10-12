@@ -1,4 +1,9 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"ZWSstGSwmaxTjQ8W7","minimum-required-pacing-finish-aligning-it-before-you-train","Minimum required pacing: finish aligning it before you train the next one","Let's say we coordinate to pace the frontier, but we don't coordinate on an outright pause. What should the standard of pacing be?
+
+My proposal for a minimum requirement: a lab cannot train the next generation of models (in terms of capabilities) until they have adequately[1] resolved all significant alignment issues in the present generation of models.
+
+You don't launch a jet that goes at Mach 3 before you've figured out why your Mach 2 jet keeps crashing[2]. With any other kind of dangerous...","https://www.lesswrong.com/posts/ZWSstGSwmaxTjQ8W7/minimum-required-pacing-finish-aligning-it-before-you-train","orthonormal","orthonormal","47","25","7","2026-10-11T21:55:26.480Z","630","True"
 "rp4sB5a6HaPpfD4rA","endogenous-alignment-requires-dependence","Endogenous Alignment Requires Dependence","My post on endogenous alignment got several excellent comments. Among them, one from Karl Krueger argued that imitation learning is more important for how humans align their children than reinforcement learning. Teasing out which is more important seems hard, but I agree I was wrong to ignore the importance of imitation, and arguably imitation learning is more fundamental for a reason explained by another comment.
 
 As Gunnar Zarncke helpfully pointed out, I had forgotten the most critical par...","https://www.lesswrong.com/posts/rp4sB5a6HaPpfD4rA/endogenous-alignment-requires-dependence","Gordon Seidoh Worley","gordon-seidoh-worley","27","7","1","2026-10-01T16:20:55.591Z","517","True"
