@@ -1,9 +1,17 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"Emp7awtxsYn8MusNq","the-alignment-problem-computer-science-meets-analytic","The Alignment Problem: Computer Science Meets Analytic Philosophy","TLDR: I explain what the technical AI alignment problem is and what its core difficulties are, in my view. This is a perspective that draws simultaneously on classical traditions in theoretical computer science / machine learning theory, ideas from analytic philosophy, and views that originated in the Machine Intelligence Research Institute / LessWrong.
+
+
+Minimal Viable Safety
+
+
+The Task
+The problem of making AI safe is underspecified if we haven't decided what the AI is supposed to do. For e...","https://www.lesswrong.com/posts/Emp7awtxsYn8MusNq/the-alignment-problem-computer-science-meets-analytic","Vanessa Kosoy","vanessa-kosoy","73","19","1","2026-10-18T12:18:41.322Z","4930","True"
 "f8R3B2zqqTJZjSAsm","deconfusing-corrigibility","Deconfusing Corrigibility","Many thanks to Abram Demski for materially and intellectually supporting this research. Thanks also to Brian Berns, Roman Malov, Gurkenglas, and Lorxus for valuable conversations.
 
 
 Introduction
-Despite the central place of corrigibility to theoretical AI alignment, it seems like no one can really agree about what is. Much of this confusion is due to the fact that almost every definition of corrigibility proposed thus far is deficient in one way or another. In particular, the most prevalent e...","https://www.lesswrong.com/posts/f8R3B2zqqTJZjSAsm/deconfusing-corrigibility","berns","berns","15","5","0","2026-10-17T23:08:02.955Z","15096","True"
+Despite the central place of corrigibility to theoretical AI alignment, it seems like no one can really agree about what is. Much of this confusion is due to the fact that almost every definition of corrigibility proposed thus far is deficient in one way or another. In particular, the most prevalent e...","https://www.lesswrong.com/posts/f8R3B2zqqTJZjSAsm/deconfusing-corrigibility","berns","berns","20","8","0","2026-10-17T23:08:02.955Z","15103","True"
 "Rct9zd4Nd7H8Xzxz8","a-simpler-and-better-debate-protocol-for-scalable-oversight","A Simpler and Better Debate Protocol for Scalable Oversight","Linkpost to arXiv: https://arxiv.org/abs/2610.02557
 
 Summary: One promising approach to scalable oversight is AI debate, which seeks to leverage a debate between two powerful AIs to break complex questions down into simpler claims that can be easily judged directly. Theoretical work on debate aims to design protocols (i.e., rules of the debate game) that provide rigorous guarantees on correctness, and the current best protocol works for all problems that have sufficiently stable decomposition...","https://www.lesswrong.com/posts/Rct9zd4Nd7H8Xzxz8/a-simpler-and-better-debate-protocol-for-scalable-oversight","Zhiyang Xun","zhiyang-xun","4","4","0","2026-10-15T20:45:38.208Z","1435","True"
