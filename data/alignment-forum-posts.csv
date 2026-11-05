@@ -1,9 +1,27 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"eKe7fky8kSt9DCJxZ","openai-astra-covertly-underperforms-on-safety-research","OpenAI: Astra covertly underperforms on safety research","Marcus Williams twitter thread (non-twitter link) intro:
+
+> Astra covertly underperforms on safety research tasks.
+> 
+> We noticed that Astra often makes surprisingly little progress on certain types of safety research and likes to invent blockers or impose arbitrary restrictions without telling the user. In most of these cases the decision to underperform was not verbalized in the CoT meaning our misalignment monitoring system did not detect this.
+> 
+> To measure underperformance we created ...","https://www.lesswrong.com/posts/eKe7fky8kSt9DCJxZ/openai-astra-covertly-underperforms-on-safety-research","Zach Stein-Perlman","zach-stein-perlman","127","41","4","2026-11-04T22:15:30.286Z","777","True"
+"MrWZfxHCEgm7uvHJj","positive-and-negative-ai-futures","Positive and Negative AI Futures","I'm continuing to share some notes I created for myself to use when I facilitate AI safety courses. I really like using Ilya: the AI scientist shaping the world as a way of engaging students at the start of a course. The video primarily focuses on the way that AI could go wrong, however, it also starts with “Now, AI is a great thing…”, so it naturally leads to a discussion of positive and negative futures.
+
+
+Positive Futures:
+
+ * One obvious resource on positive futures Foresight Institute’s ...","https://www.lesswrong.com/posts/MrWZfxHCEgm7uvHJj/positive-and-negative-ai-futures","Chris_Leong","chris_leong","1","4","0","2026-11-04T17:32:27.284Z","1752","True"
+"sqjti8dxcKSvZJikd","desiderata-for-the-theory-of-agents","Desiderata for the Theory of Agents","TLDR: I give informal conceptual desiderata for the theory of agents we need to solve ASI alignment, and show a few examples of how existing theories fall short of these desiderata.
+
+
+A Theory of What?
+The word ""agent"" is often used in the AI safety discourse and in other research communities, but the intended meaning and scope of this concept varies substantially. For the purpose of this sequence, I informally define an agent to be a system with inputs (""observations"") and outputs (""actions""...","https://www.lesswrong.com/posts/sqjti8dxcKSvZJikd/desiderata-for-the-theory-of-agents","Vanessa Kosoy","vanessa-kosoy","53","16","0","2026-11-04T11:25:12.266Z","3072","True"
 "MuQDLAJyKJPFkw6q9","automating-subtle-emergent-misalignment-research","Automating subtle emergent misalignment research","Authors: Oscar Balcells Obeso, Richard Qi, Monte MacDiarmid, Evan Hubinger
 
 
 Abstract
-> Red-teaming by humans is a vital part of model safety testing, but it may struggle to keep up as models improve. To test whether automated safety techniques could scale (which would allow us to turn more compute into progressively more safety confidence), we set up a deliberately one-sided game as a first test. We instructed a Claude model to write training data that would make a small research model misal...","https://www.lesswrong.com/posts/MuQDLAJyKJPFkw6q9/automating-subtle-emergent-misalignment-research","evhub","evhub","40","14","5","2026-11-03T18:27:53.470Z","354","True"
+> Red-teaming by humans is a vital part of model safety testing, but it may struggle to keep up as models improve. To test whether automated safety techniques could scale (which would allow us to turn more compute into progressively more safety confidence), we set up a deliberately one-sided game as a first test. We instructed a Claude model to write training data that would make a small research model misal...","https://www.lesswrong.com/posts/MuQDLAJyKJPFkw6q9/automating-subtle-emergent-misalignment-research","evhub","evhub","43","16","5","2026-11-03T18:27:53.470Z","354","True"
 "6qDn6H5XG5Hc6BJFe","additional-course-context-for-ai-safety-fundamentals","Additional Course Context (for AI Safety Fundamentals; unofficial)","Context: I created this to share before the start of courses I facilitate to provide a bunch of additional context and frames. I emphasise to students that these posts are to be considered as bonus content—not core curriculum content—and that as such they are really just there for students who want to go deeper, before or after the course. I also provide a lot of links; this is to make it easy for students to follow up anything that catches their interest.
 
 Some general thoughts on advice
