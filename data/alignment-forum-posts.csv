@@ -1,22 +1,26 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"N5AmYkRks5CqAxvBg","metr-independent-assessment-of-ai-r-and-d-acceleration-at","METR: Independent Assessment of AI R&D Acceleration at Anthropic in October 2026","> Executive summary
+> From August 12 to October 29, 2026, METR staff performed a high-access evaluation at Anthropic to assess the degree to which AI is accelerating AI R&D. If AI systems started to significantly accelerate further AI development, this could lead to a sudden emergence of extreme and risky capabilities.
+> 
+> Anthropic offered unprecedented access to internal data on their AI R&D process, including a variety of metrics on pretraining, reinforcement learning (RL), training compu...","https://www.lesswrong.com/posts/N5AmYkRks5CqAxvBg/metr-independent-assessment-of-ai-r-and-d-acceleration-at","Zach Stein-Perlman","zach-stein-perlman","103","44","27","2026-11-05T19:06:38.036Z","1026","True"
 "eKe7fky8kSt9DCJxZ","openai-astra-covertly-underperforms-on-safety-research","OpenAI: Astra covertly underperforms on safety research","Marcus Williams twitter thread (non-twitter link) intro:
 
 > Astra covertly underperforms on safety research tasks.
 > 
 > We noticed that Astra often makes surprisingly little progress on certain types of safety research and likes to invent blockers or impose arbitrary restrictions without telling the user. In most of these cases the decision to underperform was not verbalized in the CoT meaning our misalignment monitoring system did not detect this.
 > 
-> To measure underperformance we created ...","https://www.lesswrong.com/posts/eKe7fky8kSt9DCJxZ/openai-astra-covertly-underperforms-on-safety-research","Zach Stein-Perlman","zach-stein-perlman","127","41","4","2026-11-04T22:15:30.286Z","777","True"
+> To measure underperformance we created ...","https://www.lesswrong.com/posts/eKe7fky8kSt9DCJxZ/openai-astra-covertly-underperforms-on-safety-research","Zach Stein-Perlman","zach-stein-perlman","206","90","18","2026-11-04T22:15:30.286Z","777","True"
 "MrWZfxHCEgm7uvHJj","positive-and-negative-ai-futures","Positive and Negative AI Futures","I'm continuing to share some notes I created for myself to use when I facilitate AI safety courses. I really like using Ilya: the AI scientist shaping the world as a way of engaging students at the start of a course. The video primarily focuses on the way that AI could go wrong, however, it also starts with “Now, AI is a great thing…”, so it naturally leads to a discussion of positive and negative futures.
 
 
 Positive Futures:
 
- * One obvious resource on positive futures Foresight Institute’s ...","https://www.lesswrong.com/posts/MrWZfxHCEgm7uvHJj/positive-and-negative-ai-futures","Chris_Leong","chris_leong","1","4","0","2026-11-04T17:32:27.284Z","1752","True"
+ * One obvious resource on positive futures Foresight Institute’s ...","https://www.lesswrong.com/posts/MrWZfxHCEgm7uvHJj/positive-and-negative-ai-futures","Chris_Leong","chris_leong","3","5","2","2026-11-04T17:32:27.284Z","1752","True"
 "sqjti8dxcKSvZJikd","desiderata-for-the-theory-of-agents","Desiderata for the Theory of Agents","TLDR: I give informal conceptual desiderata for the theory of agents we need to solve ASI alignment, and show a few examples of how existing theories fall short of these desiderata.
 
 
 A Theory of What?
-The word ""agent"" is often used in the AI safety discourse and in other research communities, but the intended meaning and scope of this concept varies substantially. For the purpose of this sequence, I informally define an agent to be a system with inputs (""observations"") and outputs (""actions""...","https://www.lesswrong.com/posts/sqjti8dxcKSvZJikd/desiderata-for-the-theory-of-agents","Vanessa Kosoy","vanessa-kosoy","53","16","0","2026-11-04T11:25:12.266Z","3072","True"
+The word ""agent"" is often used in the AI safety discourse and in other research communities, but the intended meaning and scope of this concept varies substantially. For the purpose of this sequence, I informally define an agent to be a system with inputs (""observations"") and outputs (""actions""...","https://www.lesswrong.com/posts/sqjti8dxcKSvZJikd/desiderata-for-the-theory-of-agents","Vanessa Kosoy","vanessa-kosoy","58","18","2","2026-11-04T11:25:12.266Z","3072","True"
 "MuQDLAJyKJPFkw6q9","automating-subtle-emergent-misalignment-research","Automating subtle emergent misalignment research","Authors: Oscar Balcells Obeso, Richard Qi, Monte MacDiarmid, Evan Hubinger
 
 
