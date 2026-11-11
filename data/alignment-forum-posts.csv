@@ -1,7 +1,19 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"XNLhpWgzhF8GYZ4Er","delaying-internal-deployments-until-after-x-days-of-safety","Delaying Internal Deployments Until After X Days of Safety Testing","This post reflects my own takes, and not that of my employer's.
+
+This is a simple idea: before a new model can be deployed internally, you must first test it for a minimum, fixed period.
+
+You can adjust various axes of this proposal:
+
+ 1. Duration of the wait: in calendar time, or until you fulfill some condition.
+ 2. What it blocks: external deployment, internal deployment, or the training of future checkpoints.
+ 3. When the fixed period starts: from the first checkpoint, the final checkpoin...","https://www.lesswrong.com/posts/XNLhpWgzhF8GYZ4Er/delaying-internal-deployments-until-after-x-days-of-safety","annawang","annawang","18","4","1","2026-11-11T00:18:16.501Z","2327","True"
+"f9PajMLmBYzmWzyDv","q3-5-timelines-update-looks-like-the-intelligence-explosion","Q3.5 Timelines Update: Looks Like the Intelligence Explosion Will Happen in 2027 After All","We want to get this post out quickly given the urgency of the topic. It’s possible that there are some errors in the modeling, but we think it’s very unlikely that they undermine the high level conclusions. We would love to be corrected on any mistakes we made.
+
+METR recently estimated that Anthropic is now making AI progress about twice as fast as its historical rate (they would not be surprised by anything from 1.3x to 3x), and guessed that “perhaps ≈80%” of the current acceleration is due ...","https://www.lesswrong.com/posts/f9PajMLmBYzmWzyDv/q3-5-timelines-update-looks-like-the-intelligence-explosion","Thomas Larsen","thomas-larsen","90","39","26","2026-11-10T16:30:09.741Z","16016","True"
 "wPrpnfaNL5JP9i6KT","where-is-all-the-ai-safety-research-uplift","Where is all the AI safety research uplift?","(Thanks to @Goutham Nalagatla for discussion and for sitting with me and talking about it while I wrote it.)
 
-METR recently released a report estimating that Anthropic is getting an overall 1.7x acceleration in AI capability progress as a result of AI accelerating their work. As many have noted (see e.g. Ajeya’s post), this 1.7x acceleration implies that research is being sped up by much more than 1.7x; Ajeya speculates 10x (which is similar to the ~12x uplift estimated by Anthropic staff).  ...","https://www.lesswrong.com/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift","Buck","buck","103","51","21","2026-11-09T18:02:01.019Z","950","True"
+METR recently released a report estimating that Anthropic is getting an overall 1.7x acceleration in AI capability progress as a result of AI accelerating their work. As many have noted (see e.g. Ajeya’s post), this 1.7x acceleration implies that research is being sped up by much more than 1.7x; Ajeya speculates 10x (which is similar to the ~12x uplift estimated by Anthropic staff).  ...","https://www.lesswrong.com/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift","Buck","buck","133","69","26","2026-11-09T18:02:01.019Z","950","True"
 "8tL9f5HZxsTvn2LHp","ajeya-ai-is-dramatically-accelerating-ai-research-right-now","Ajeya: AI is dramatically accelerating AI research right now","> Earlier this week, Anthropic stated in their S1 that they “may imminently meet” the threshold of “dramatically accelerated progress due to AI” as defined in their Responsible Scaling Policy. In their latest RSP (effective July 2026), say this threshold will be met when:
 > 
 >  1. They observe or expect overall capabilities progress to be going twice as fast as the fastest sustained rate before AI was contributing much to AI R&D.
