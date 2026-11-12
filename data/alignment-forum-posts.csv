@@ -1,4 +1,8 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"NFkj9J2BBLSjNuH5G","how-i-m-thinking-about-different-types-of-automated","How I'm thinking about different types of automated alignment","I used to think of ""automating alignment"" as a natural category. But when I tried to think through the strategic implications, I realised that it depends a lot on the type of work. I'm now thinking of it in three buckets:
+
+ 1. Empirical alignment research: design and execution of alignment-relevant experiments (for a given notion of what we’re aiming for)
+ 2. Conceptual alignment research: theoretical or judgement-driven work to improve our understanding of what we’re aiming for and how to ac...","https://www.lesswrong.com/posts/NFkj9J2BBLSjNuH5G/how-i-m-thinking-about-different-types-of-automated","owencb","owencb","18","4","0","2026-11-11T09:49:37.378Z","1710","True"
 "XNLhpWgzhF8GYZ4Er","delaying-internal-deployments-until-after-x-days-of-safety","Delaying Internal Deployments Until After X Days of Safety Testing","This post reflects my own takes, and not that of my employer's.
 
 This is a simple idea: before a new model can be deployed internally, you must first test it for a minimum, fixed period.
@@ -7,10 +11,10 @@ You can adjust various axes of this proposal:
 
  1. Duration of the wait: in calendar time, or until you fulfill some condition.
  2. What it blocks: external deployment, internal deployment, or the training of future checkpoints.
- 3. When the fixed period starts: from the first checkpoint, the final checkpoin...","https://www.lesswrong.com/posts/XNLhpWgzhF8GYZ4Er/delaying-internal-deployments-until-after-x-days-of-safety","annawang","annawang","18","4","1","2026-11-11T00:18:16.501Z","2327","True"
+ 3. When the fixed period starts: from the first checkpoint, the final checkpoin...","https://www.lesswrong.com/posts/XNLhpWgzhF8GYZ4Er/delaying-internal-deployments-until-after-x-days-of-safety","annawang","annawang","20","6","1","2026-11-11T00:18:16.501Z","2327","True"
 "f9PajMLmBYzmWzyDv","q3-5-timelines-update-looks-like-the-intelligence-explosion","Q3.5 Timelines Update: Looks Like the Intelligence Explosion Will Happen in 2027 After All","We want to get this post out quickly given the urgency of the topic. It’s possible that there are some errors in the modeling, but we think it’s very unlikely that they undermine the high level conclusions. We would love to be corrected on any mistakes we made.
 
-METR recently estimated that Anthropic is now making AI progress about twice as fast as its historical rate (they would not be surprised by anything from 1.3x to 3x), and guessed that “perhaps ≈80%” of the current acceleration is due ...","https://www.lesswrong.com/posts/f9PajMLmBYzmWzyDv/q3-5-timelines-update-looks-like-the-intelligence-explosion","Thomas Larsen","thomas-larsen","90","39","26","2026-11-10T16:30:09.741Z","16016","True"
+METR recently estimated that Anthropic is now making AI progress about twice as fast as its historical rate (they would not be surprised by anything from 1.3x to 3x), and guessed that “perhaps ≈80%” of the current acceleration is due ...","https://www.lesswrong.com/posts/f9PajMLmBYzmWzyDv/q3-5-timelines-update-looks-like-the-intelligence-explosion","Thomas Larsen","thomas-larsen","132","55","54","2026-11-10T16:30:09.741Z","16016","True"
 "wPrpnfaNL5JP9i6KT","where-is-all-the-ai-safety-research-uplift","Where is all the AI safety research uplift?","(Thanks to @Goutham Nalagatla for discussion and for sitting with me and talking about it while I wrote it.)
 
 METR recently released a report estimating that Anthropic is getting an overall 1.7x acceleration in AI capability progress as a result of AI accelerating their work. As many have noted (see e.g. Ajeya’s post), this 1.7x acceleration implies that research is being sped up by much more than 1.7x; Ajeya speculates 10x (which is similar to the ~12x uplift estimated by Anthropic staff).  ...","https://www.lesswrong.com/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift","Buck","buck","133","69","26","2026-11-09T18:02:01.019Z","950","True"
