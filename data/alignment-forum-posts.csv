@@ -1,4 +1,11 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"nvrFYAwciyyj9T5ir","solomonoff-induction-with-reflective-oracles","Solomonoff induction with reflective oracles","Linkpost for https://arxiv.org/html/2611.14454v1
+
+Our PIBBSS fellow Damini Kusum wrote an excellent paper on prediction with reflective oracle Solomonoff Induction (rOSI).
+
+Reflective oracles are best known for their game-theoretic applications, where they are often dismissed because ""why would all players choose the same reflective oracle?""
+
+It turns out that reflective oracles can also be used to construct a version of Solomonoff induction (called rOSI) with very nice sequence prediction pr...","https://www.lesswrong.com/posts/nvrFYAwciyyj9T5ir/solomonoff-induction-with-reflective-oracles","Cole Wyeth","cole-wyeth","29","8","0","2026-11-19T04:36:27.629Z","162","True"
 "NFkj9J2BBLSjNuH5G","how-i-m-thinking-about-different-types-of-automated","How I'm thinking about different types of automated alignment","I used to think of ""automating alignment"" as a natural category. But when I tried to think through the strategic implications, I realised that it depends a lot on the type of work. I'm now thinking of it in three buckets:
 
  1. Empirical alignment research: design and execution of alignment-relevant experiments (for a given notion of what we’re aiming for)
