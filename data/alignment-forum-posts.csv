@@ -1,4 +1,9 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"e758PJCpwAwyodvEj","comparing-ai-r-and-d-compute-caps-and-deployment-lags","Comparing AI R&D compute caps and deployment lags","I’m publishing this a bit rougher than usual because it’s very pertinent to Evan Hubinger’s recent shortform, which advocates for blocking internal deployment as a pacing mechanism over compute reallocation (he mostly discusses it in the context of a risk-assessment-based regime, while this post discusses the policies standalone). (see my response to Evan which also summarizes this post.)
+
+I compare 2 classes of policies:
+
+ 1. AI R&D compute cap: A cap on the percentage of compute used for ca...","https://www.lesswrong.com/posts/e758PJCpwAwyodvEj/comparing-ai-r-and-d-compute-caps-and-deployment-lags","elifland","elifland","16","2","0","2026-11-24T02:23:44.460Z","1719","True"
 "nvrFYAwciyyj9T5ir","solomonoff-induction-with-reflective-oracles","Solomonoff induction with reflective oracles","Linkpost for https://arxiv.org/html/2611.14454v1
 
 Our PIBBSS fellow Damini Kusum wrote an excellent paper on prediction with reflective oracle Solomonoff Induction (rOSI).
