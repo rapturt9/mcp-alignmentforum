@@ -1,4 +1,9 @@
 "_id","slug","title","summary","pageUrl","author","authorSlug","karma","voteCount","commentsCount","postedAt","wordCount","af"
+"o9dPGxEbpQrnasgDB","i-don-t-expect-superposition-in-transformer-mlp-neurons","I don’t expect superposition in transformer MLP neurons","I currently believe that in a typical (well trained and under-parametrized) transformer model, there is something like superposition-type compression in the residual stream, but not in the MLP neurons.
+
+By ""superposition-type compression"", I mean some way of storing extra features using the fact that you can have almost orthogonal directions embedded in .[1]
+
+I've included the caveats ""well trained and under-parametrized[2]"" because I'm talking about networks that are at or close to full capa...","https://www.lesswrong.com/posts/o9dPGxEbpQrnasgDB/i-don-t-expect-superposition-in-transformer-mlp-neurons","Linda Linsefors","linda-linsefors","34","10","0","2026-11-27T12:44:01.682Z","1568","True"
 "e758PJCpwAwyodvEj","comparing-ai-r-and-d-compute-caps-and-deployment-lags","Comparing AI R&D compute caps and deployment lags","I’m publishing this a bit rougher than usual because it’s very pertinent to Evan Hubinger’s recent shortform, which advocates for blocking internal deployment as a pacing mechanism over compute reallocation (he mostly discusses it in the context of a risk-assessment-based regime, while this post discusses the policies standalone). (see my response to Evan which also summarizes this post.)
 
 I compare 2 classes of policies:
